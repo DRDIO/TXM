@@ -1,0 +1,18 @@
+<div class="content-block">
+    <div class="block-header">
+        Browse the Community Forums!
+    </div>
+
+    <div class="padding-links community-index">
+
+<?php foreach ($this->forums as $row): ?>
+
+        <a href="/community/forum/<?php echo $row['id']; ?>" title="<?php echo $row['name']; ?>">
+            <strong><?php echo $row['name']; ?></strong><br />
+            <?php echo $row['description']; ?>
+        </a>
+
+<?php endforeach; ?>
+        
+    </div>
+</div>

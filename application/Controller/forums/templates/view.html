@@ -1,0 +1,186 @@
+<div class="main">
+		<div class="col-w1x3">
+
+<!-- BEGIN topics -->    
+        <div class="col-pad grn-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+<!-- BEGIN loggedin -->
+            <a href="{SITE_LEVEL}forums/reply/{topics.id}/" title="Comment On This Article" onclick="return jumpToComment();" class="link-header grn-dbck icon-comment">Comment On This Article</a>
+<!-- END loggedin -->
+<!-- BEGIN loggedout -->
+						<a href="{SITE_LEVEL}forums/reply/{topics.id}/" onmouseover="$('post').focus(); alert($('post')); return false;" title="Comment On This Article" class="link-header grn-dbck icon-comment">Comment On This Article</a>
+<!-- END loggedout -->            
+        <b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>    
+<!-- END topics -->
+
+    		<div class="col-pad grn-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+      			<div class="blk-hedr grn-dbck">
+        					More Forum Posts
+            </div>
+
+      			<div class="grn-back grn-brdr">            
+<!-- BEGIN forums -->
+      					<a href="{SITE_LEVEL}forums/{forums.id}/{forums.title_link}/" title="{forums.title}" class="dft-lnk {forums.color}">{forums.title}</a>
+<!-- END forums -->
+						</div>
+        <b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div> 
+    </div>
+
+		<div class="col-w2x3">          	
+<!-- BEGIN topics -->
+
+    		<div class="col-pad blu-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+            <div class="blu-dbck">              
+                <a href="{SITE_LEVEL}forums/{topics.id}/{topics.title_link}/" title="Read Article and {topics.replies} Comments or Copy for Permalink" class="blk-hedr blu-dbck" style="float: left;">{topics.title}</a>
+                <a href="http://www.addthis.com/bookmark.php" onmouseover="return addthis_open(this, '', 'http://{SITE_DOMAIN}forums/{topics.id}/{topics.title_link}/', '{topics.title}');" onmouseout="return addthis_close();" onclick="return addthis_sendto();" style="background: url(http://s9.addthis.com/button0-share.gif) no-repeat 0 0; margin: 2px 4px; display: block; float: right; width: 83px; height: 16px; text-indent: -9999em;" title="AddThis">AddThis</a>
+                <div class="clr"></div>
+            </div>
+              
+            <div class="blu-back blu-brdr">                  
+                <div class="dft-cnt dft-alt">
+                    <a href="http://{topics.link_name}.{break}SITE_DOMAIN}" title="View Profile" ><img src="{SITE_LEVEL}{topics.avatar}" alt="icon{topics.id}" width="50" height="50" class="blk-img" /></a>
+                  
+                    <div>
+                        By <a href="http://{topics.link_name}.{break}SITE_DOMAIN}" title="View Profile" >{topics.nick_name}</a> on {topics.date}.<br />
+                        Article has {topics.views} views and <a href="{SITE_LEVEL}forums/{topics.id}/{topics.title_link}/" title="Permalink &amp; Read {topics.replies} Comments">{topics.replies} comments</a>.
+                        <br />
+
+<!-- BEGIN admin_edit -->      
+            						<a href="{SITE_LEVEL}forums/edit-post/{topics.id}/" title="Edit Article">Edit Article</a> |
+<!-- END admin_edit -->                        
+                        <a href="{SITE_LEVEL}forums/reply/{topics.id}/" title="Post a Comment or Reply">Comment</a> | 
+                        <a href="{SITE_LEVEL}forums/{topics.id}/{topics.title_link}/" title="Read Article and {topics.replies} Comments or Copy for Permalink">Read Article</a>
+                		</div>
+                </div>
+                      
+                <div class="dft-cnt">
+                  {topics.post}
+                </div>
+            </div>
+        <b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+
+<!-- BEGIN pagination -->
+		<div class="col-pad blu-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+        <div class="blu-dbck pagination">
+<!-- BEGIN row -->
+            <a href="{SITE_LEVEL}forums/{topics.id}/{topics.title_link}/{topics.pagination.row.page}" title="Jump to Page {topics.pagination.row.page}">{topics.pagination.row.title}</a>
+<!-- END row -->
+            <div class="clr"></div>   
+        </div>
+    <b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+<!-- END pagination -->
+
+<!-- BEGIN loggedin -->
+    <div id="comment" class="col-pad grn-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+        <div class="blk-hedr grn-dbck icon-comment">
+            Comment On This Article
+        </div>
+
+        <div id="commentContent" class="grn-dbck grn-brdr dft-cnt">            
+            <form id="post_form" action="{SITE_LEVEL}forums/reply/{topics.id}/" method="post" enctype="multipart/form-data">                
+                <div class="col-pad white-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+										<textarea id="post" name="post" style="display: block; border: none; margin: 0; padding: 0px 4px; width: 526px; height: 54px;"></textarea>                    
+                <b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+               	
+                <input type="submit" name="submit" value="Submit Your Comment" style="float: right;" /></td>
+            </form>
+        </div>              
+    <b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>            
+<!-- END loggedin -->
+        
+<!-- BEGIN posts -->
+    <div id="post{topics.posts.id}" class="col-pad blu-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+        <div class="blu-dbck curve-padding">
+            <div style="float: left; margin-right: 4px;">
+            		<img src="{SITE_LEVEL}{topics.posts.avatar}" alt="icon{topics.posts.id}" width="50" height="50" style="border: 2px solid #ffffff;" />
+            </div>
+            
+            <div>
+            		<div style="height: 18px;">
+                		<div style="float: left;">
+                  			By <a href="http://{topics.posts.link_name}.{SITE_DOMAIN}" title="View Profile">{topics.posts.nick_name}</a> {topics.posts.date}
+            				</div>
+                    <div style="float: right;">
+<!-- BEGIN delete -->                    
+                    		<a id="post{topics.posts.id}del" href="{SITE_LEVEL}forums/deletecomment/{topics.posts.id}/" title="Delete Comment" onclick="return deleteComment({topics.posts.id});" class="button-icon icon-delete">X</a>
+<!-- END delete -->                        
+                    </div>
+                    <div class="clr"></div>
+                </div>
+                
+                <div style="overflow: hidden;">
+                  <div class="white-blck" style="margin-top: 4px;"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>       				
+                  <div class="white-dbck curve-padding"> 
+                      {topics.posts.post}
+                  </div>
+                  <b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div> 
+                </div>
+            </div>
+            
+            <div class="clr"></div>
+        </div>              
+    <b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+<!-- END posts -->
+
+<!-- BEGIN pagination -->
+		<div class="col-pad blu-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+        <div class="blu-dbck pagination">
+<!-- BEGIN row -->
+            <a href="{SITE_LEVEL}forums/{topics.id}/{topics.title_link}/{topics.pagination.row.page}" title="Jump to Page {topics.pagination.row.page}">{topics.pagination.row.title}</a>
+<!-- END row -->
+            <div class="clr"></div>   
+        </div>
+    <b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+<!-- END pagination -->
+    
+<!-- END topics -->
+  </div>
+  
+  	<div class="clr"></div>
+</div>
+
+<script type="text/javascript">
+		function jumpToComment()
+		{
+				$("comment").scrollTo();
+				$("post").focus();
+				return false;
+		};
+
+		function deleteComment(id)
+		{
+				$("post" + id + "del").style.display = "none";
+				
+				new Ajax.Request("{SITE_LEVEL}forums/deletecomment/{topics.posts.id}/", {
+						method: "post",
+						parameters: { id: id, method: "ajax" },
+						onLoading: function() {
+								new Effect.Opacity("post" + id, { from: 1, to: 0.5, duration: 0.1 });											
+						},
+						onSuccess: function(response, json) {            
+								var response;
+								var class;
+				
+								if (json && json.success) {
+										Effect.BlindUp("post" + id, { duration: 0.5 });
+								} else {
+										new Effect.Opacity("post" + id, { from: 0.5, to: 1, duration: 0.1 });
+										$("post" + id + "del").style.display = "";											
+								}
+						},
+						onFailure: function() {
+								new Effect.Opacity("post" + id, { from: 0.5, to: 1, duration: 0.1 });
+								$("post" + id + "del").style.display = "";		
+						}
+				});
+				
+				return false;
+		};
+		
+		function addComment()
+		{
+				$("commentContent").blindUp();
+				$("commentLoading").appear();	
+				return false;	
+		};
+</script>
+		

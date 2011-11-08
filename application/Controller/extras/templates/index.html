@@ -1,0 +1,62 @@
+<div class="dft-top">
+  <div class="dft-hdr dft-ldr icn-news">
+    Explanation of Member Rankings</div> 
+
+  <div class="dft-cnt" style="float: left; width: 383px;">
+    This summarizes member activity using an additive formula.  
+    Values such as Bootleg Views are estimated since there were no existing records of the values.<br /><br />
+
+    These issues will be ammended as more features are added to TXM.com and the weights for the 
+    formula are tweaked the better portray member's fame, status, and respect in the community.<br /><br />
+    
+    Future ideas include the ability for members to rank their peers, and additional weights will be added for
+    blogs and advertising campaigns as they are released.</div>
+  
+  <div style="float: right; text-align: right;">
+    <table border="0" cellspacing="0" cellpadding="4" border="0" width="180">  		
+      <tr><td align="right">1 * </td><td>Media Views</td><td>+</td></tr>
+      <tr class="grn-alt"><td align="right">20 * </td><td>Media Uploads</td><td>+</td></tr>
+      <tr><td align="right">3 * </td><td>Media Comments</td><td>+</td></tr>
+      <tr class="grn-alt"><td align="right">1 * </td><td>Media Views</td><td>+</td></tr>
+      <tr><td align="right">3 * </td><td>Forum Replies</td><td>+</td></tr>
+      <tr class="grn-alt"><td align="right">2 * </td><td>Forum Posts</td><td>+</td></tr>
+      <tr><td class="grn-bdr">10 * </td><td class="grn-bdr">Date of Sign Up</td><td class="grn-bdr">+</td></tr>
+      <tr class="grn-alt"><td colspan="2" align="right">Total Points</td><td>=</td></tr>
+    </table></div>
+  <br class="clr" />
+</div>
+
+<div class="dft-top">
+  <div class="dft-hdr dft-ldr icn-news">
+    Member Rankings Summary</div> 
+      
+  <table border="0" cellspacing="0" cellpadding="4" border="0" width="100%">
+    <tr>
+      <td class="grn-bdr">
+        Rank</td>
+      <td class="grn-bdr">
+        Member</td>
+      <td class="grn-bdr">
+        Percent</td>
+      <td class="grn-bdr">
+        Points</td>
+      <td class="grn-bdr">
+        Graph</td>
+    </tr>
+    
+<!-- BEGIN respect -->
+    <tr class="{respect.color}">
+      <td>
+        {respect.rank}</td>
+      <td>
+        <a href="http://{respect.link_name}.{SITE_DOMAIN}" title="View {respect.nick_name}'s Profile">{respect.nick_name}</a></td>
+      <td align="right">
+        {respect.percent}%</td>
+      <td align="right">
+        {respect.respect}</td>
+      <td>
+        <div style="background: #ffffff; width: {respect.width}px; height: 10px;"></div></td>
+    </tr>
+<!-- END respect -->														
+  </table>
+</div>

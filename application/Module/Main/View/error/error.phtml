@@ -1,0 +1,49 @@
+<div class="content-block">
+    <div class="block-header">
+      Well This is Awkward...
+    </div>
+
+    <div class="padding-content">
+        Sorry for the inconvenience, but <?php echo $this->errorMessage; ?>.
+        <br /><br />
+
+<?php if ($this->errorSuggestions): ?>
+
+        Were you trying to visit this URL instead?
+        <ul>
+
+<?php foreach ($this->errorSuggestions as $suggestion): ?>
+
+            <li>
+                <a href="{index.suggestion.url}" title="Go Here Instead">
+                    {index.suggestion.url}
+                </a>
+            </li>
+
+<?php endforeach; ?>
+
+        </ul>
+
+<?php endif; ?>
+
+        If your page cannot be located, try the following.
+
+        <ul>
+            <li>
+                <a href="<?php echo $this->siteLevel; ?>/" title="Return to TXM.com">
+                    Return To TXM.com
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo $this->siteLevel; ?>/account/create" title="Create an Account &amp; Join the Fun!">
+                    Create Account
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo $this->siteLevel; ?>/account/signin" title="Sign In to Your Account">
+                    Sign In
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

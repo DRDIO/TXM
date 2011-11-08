@@ -1,0 +1,133 @@
+<div id="viewFactory">
+    <input id="viewId"           type="hidden" value="{id}" />                                    
+    <input id="viewHeight"       type="hidden" value="{height}" />                                    
+    <input id="viewScreenHidden" type="hidden" value='' />
+    <object type="application/x-shockwave-flash" width="{width}" height="{height}" data="/media/games/{id}.swf">
+    	<param name="allowAccessScript" value="never" />
+        <param name="wmode" value="opaque" />                    
+        <param name="game" value="/media/games/{id}.swf" />
+	</object>
+    
+    <div id="viewScreen" class="col-pad blu-blck" style="display: none;"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+        <div class="blk-hedr blu-dbck">
+            <div id="viewTitle" class="left"><em>Shhh!</em> <span class="enlarge">{title}</span> is starting...</div>
+            <div id="viewClose" class="right">Close</div>
+            <div class="clr"></div>
+        </div>
+        
+        <div id="viewScreenCore" class="blu-brdr"></div>
+    <b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+</div>
+        
+<div class="col-w3x4">
+	<div class="col-pad blu-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+        <div class="blk-hedr blu-dbck">
+						<span class="enlarge">{title}</span>: The Game
+        </div>
+        
+        <div class="blu-dbck blu-brdr">				
+            <div id="ratings" class="left" style="margin: 2px 4px;">
+                <img src="/games/images/ratings/{rating}.gif" alt="Rating {rating}" /><br />
+                <img src="/games/images/types/{type}.gif" alt="Type {type}" />
+            </div>
+                            
+            <div id="viewOptions" class="left" style="margin: 0 4px 4px 4px;">
+            		<img src="/media/{avatar}.gif" style="width: 300px; height: 300px; position: absolute; z-index: 0; top: 0; left: 0; margin: -75px 0 0 -17px;" /></a>
+            		<a id="viewPlay" href="/games/play/{id}/{title_link}/" title="Click To Watch Game">Play Game</a>
+            </div>
+            
+            <div class="viewDetails right">
+            		<div class="white-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+                    <table border="0" cellspacing="0" cellpadding="0" class="white-dbck">
+                        <tr>
+                            <td>Author:</td><td><b><a href="http://{link_name}.txmafia.com/" title="View Profile">{nick_name}</a></b></td></tr>
+                        <tr>  
+                            <td>Website:</td><td><b><a href="{web_url}" title="website">{web_title}</a></b></td></tr>
+                        <tr>  
+                            <td valign="top">Score:</td><td valign="top"><strong class="score">{score}</strong> out of 10.00</td></tr>
+                        <tr>
+                            <td>Uploaded:</td><td>{date}</td></tr>
+                        <tr>
+                            <td>Size:</td><td>{size} MB</td></tr>
+                        <tr>
+                            <td>Status:</td><td>{votes} Votes &amp; {reviews} Reviews</td></tr>
+                        <tr>
+                            <td>Views:</td><td>{views} Plays</td></tr>
+                    </table>
+                <b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+            </div>
+            <div class="clr"></div>
+        		
+            <div class="viewComment">
+            		<div class="white-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+                		<div class="white-dbck">
+		                    {commentary}
+                    </div>
+                <b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+            </div>
+		</div>
+	<b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+</div>
+
+<div class="col-w1x4">
+	<div class="col-pad blu-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+        <div class="blk-hedr blu-dbck icn-games">
+			Watch a Random Game</div>
+
+        <div class="blu-back blu-brdr">      
+<!-- BEGIN random -->
+        <a href="/games/{random.id}/{random.title_link}/" title="{random.title}" class="blk-lnk {random.color}">
+            <img src="/media/{random.avatar}.gif" width="50" height="50" alt="{random.id}" />
+            <span>
+                <strong>{random.title}</strong><br />
+                {random.synopsis}<br />
+            </span><br class="clr" />
+        </a>
+<!-- END random -->
+		</div>
+	<b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+
+	<div class="col-pad blu-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+        <div class="blk-hedr blu-dbck icn-games">
+			Watch More by Author</div>
+
+        <div class="blu-back blu-brdr">                  
+<!-- BEGIN games_more -->
+            <a href="/games/{games_more.id}/{games_more.title_link}/" title="{games_more.title}" class="blk-lnk {games_more.color}">
+                <img src="/media/{games_more.avatar}.gif" width="50" height="50" alt="{games_more.id}" />
+                <span>
+                    <strong>{games_more.title}</strong><br />
+                    {games_more.synopsis}<br />
+                </span><br class="clr" />
+            </a>
+<!-- END games_more -->
+		</div>
+	<b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+</div>
+
+<div class="col-w2x4">
+	<div class="col-pad grn-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+        <div class="blk-hedr grn-dbck">
+			Read Latest Comments
+        </div>
+
+        <div class="grn-back grn-brdr">                  
+<!-- BEGIN comments -->
+            <div class="dft-cnt {comments.color}" style="min-height: 50px;">
+                <img src="/media/{comments.avatar}.gif" width="50" height="50" alt="{comments.id}" class="blk-lnk-img" />
+                <div>              
+                    <a href="http://{comments.link_name}.{SITE_DOMAIN}"><strong>{comments.nick_name}</strong></a>
+                    <span class="grn-txt">on {comments.date_comment}</span>
+                    <div class="blu-brd" style="margin: 3px 0px 4px 0px;"></div>
+                    {comments.comment}<br />
+                    <span class="blu-brd">{comments.reply}</span>
+                </div>
+                <br class="clr" />
+            </div>
+<!-- END comments -->
+<!-- BEGIN comments_more -->
+            <div class="index-more">Viewing 5 of {reviews} reviews.</div>
+<!-- END comments_more -->
+		</div>
+	<b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+</div>

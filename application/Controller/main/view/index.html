@@ -1,0 +1,240 @@
+<div class="main">
+    <div class="col-w2x3">
+        <div class="col-w1x3">
+            <div class="col-pad mainBlue roundedBorders12">
+                <div class="blk-hedr blu-dbck icn-movies">
+                    Daily Movies</div>
+
+                <div class="blu-back blu-brdr">
+                    <!-- BEGIN movies -->
+                    <a href="/movies/view/{movies.id}/{movies.title_link}/" title="{movies.title_safe}" class="blk-lnk {movies.color}">
+                        <img src="{movies.avatar}" width="50" height="50" alt="{movies.title_safe}" class="blk-img" />
+                        <span>
+                            <strong>{movies.title}</strong><br />
+                            {movies.synopsis}
+                        </span>
+                    </a>
+                    <!-- END movies -->
+                    <a href="/movies/" class="dft-lnb dft-hlt">Watch more of {movies_total} movies!</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-w1x3">
+            <div class="col-pad blu-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+                <div class="blk-hedr blu-dbck icn-games">
+        	Daily Games</div>
+
+                <div class="blu-back blu-brdr">
+                    <!-- BEGIN games -->
+                    <a href="/games/view/{games.id}/{games.title_link}/" title="{games.title_safe}" class="blk-lnk {games.color}">
+                        <img src="{games.avatar}" border="0" width="50" height="50" alt="{games.title_safe}" class="blk-img" />
+                        <span>
+                            <strong>{games.title}</strong><br />
+                            {games.synopsis}
+                        </span>
+                    </a>
+                    <!-- END games -->
+                    <a href="/games/" class="dft-lnb dft-hlt">Play more of {games_total} games!</a>
+                </div>
+                <b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+        </div>
+        <div class="clr"></div>
+
+        <!-- {begin} admin_post -->
+        <div class="col-pad grn-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+
+            <a href="/forums/post" title="New Topic" class="blk-hedr grn-dbck" style="padding-bottom: 0px;">Create a New Topic</a>
+
+            <b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+        <!-- {end} admin_post -->
+
+        <!-- {begin} news -->
+        <div class="col-pad blu-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+            <div class="blu-dbck">
+                <a href="/forums/{break}news.id}/{break}news.title_link}/" title="Read Article and {break}news.replies} Comments or Copy for Permalink" class="blk-hedr blu-dbck" style="float: left;">{break}news.title}</a>
+                <a href="http://www.addthis.com/bookmark.php" onmouseover="return addthis_open(this, '', '/forums/{break}news.id}/{break}news.title_link}/', '{break}news.title}');" onmouseout="return addthis_close();" onclick="return addthis_sendto();" style="background: url(http://s9.addthis.com/button0-share.gif) no-repeat 0 0; margin: 2px 4px; display: block; float: right; width: 83px; height: 16px; text-indent: -9999em;" title="AddThis">AddThis</a>
+                <div class="clr"></div>
+            </div>
+
+            <div class="blu-back blu-brdr">
+                <div class="dft-cnt dft-alt">
+                    <a href="http://{break}news.link_name}.{break}SITE_DOMAIN}" title="View Profile" ><img src="{break}news.avatar}" alt="icon{break}news.id}" width="50" height="50" class="blk-img" /></a>
+
+                    <div>
+                        By <a href="http://{break}news.link_name}.{break}SITE_DOMAIN}" title="View Profile" >{break}news.nick_name}</a> on {break}news.date}.<br />
+                        Article has {break}news.views} views and <a href="/forums/{break}news.id}/{break}news.title_link}/" title="Permalink &amp; Read {break}news.replies} Comments">{break}news.replies} comments</a>.
+                        <br />
+
+                        <a href="/forums/reply/{break}news.id}/" title="Post a Comment or Reply">Comment</a> |
+                        <a href="/forums/{break}news.id}/{break}news.title_link}/" title="Read Article and {break}news.replies} Comments or Copy for Permalink">Read Article</a>
+                    </div>
+                </div>
+
+                <div class="dft-cnt">
+                    {break}news.post}
+                </div>
+            </div>
+            <b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+        <!-- {end} news -->
+    </div>
+
+    <div class="col-w1x3">
+        <!-- {begin} loggedOut -->
+        <div class="col-pad grn-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+            <div class="blk-hedr grn-dbck">
+                Log In</div>
+
+            <div class="grn-back grn-brdr">
+                <form id="login_form" action="/misc/login/" method="post">
+                    <table border="0" cellspacing="0" cellpadding="4" width="100%">
+                        <tr class="red-tda">
+                            <td>Email:</td>
+                            <td align="right">
+                                <input type="text" id="SITE_email" name="email" value="{break}SITE_email}" maxlength="100" style="width: 140px;" /></td>
+                        </tr>
+                        <tr>
+                            <td>Password:</td>
+                            <td align="right">
+                                <input type="password" id="SITE_password" name="password" maxlength="25" style="width: 140px;" /></td>
+                        </tr>
+                        <tr class="red-tda">
+                            <td></td>
+                            <td align="right">
+                                <input type="submit" name="rl_submit" value="Login" class="submit" style="width: 146px;" />
+                                <input type="hidden" name="redirect" value="{break}REDIRECT}" style="display: none;" />
+                                <input type="hidden" name="login" value="1" style="display: none;" /></td>
+                        </tr>
+                    </table>
+                </form>
+
+                <script type="text/javascript">
+                    var email = document.getElementById('SITE_email');
+                    var password = document.getElementById('SITE_password');
+                    email.value == "" ? email.focus() : password.focus();
+                </script>
+
+                <div class="dft-cnt">
+                    If you do not remember the email address you registered with, you may log in using your link name (formerly 'usernames').  <br />
+                    We are working on password resetting.</div>
+
+                <a href="/misc/register/" title="Sign Up with TXM.com!" class="dft-lnb red-hlt">...or Sign Up with TXM.com!</a>
+            </div>
+            <b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+        <!-- {end} loggedOut -->
+
+        <div class="col-pad blu-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+            <div class="blk-hedr blu-dbck">
+                Our Latest Projects</div>
+
+            <div class="dft-cnt blu-back blu-brdr center">
+                <a href="http://www.athwt.com/" title="Visit ATHWT.com For Soap Opera Machinima" target="_blank"><img src="/media/promos/athwt.gif" alt="As The Hamster Wheel Turns Promo" style="margin-bottom: 4px;" /></a>
+
+                <a href="http://video.google.com/videoplay?docid=-2188039848619050232" title="Watch Cooler Movie on Google Videos" target="_blank"><img src="/media/promos/coolermovie.gif" alt="Cooler Movie: Noir Short Film" /></a>
+            </div>
+            <b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+
+        <div class="col-pad blu-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+            <div class="blk-hedr blu-dbck">
+                More News Posts</div>
+
+            <div class="blu-back blu-brdr">
+                <!-- {begin} forums -->
+                <a href="/forums/{break}forums.id}/{break}forums.title_link}/" title="{break}forums.title}" class="dft-lnk {break}forums.color}" style="overflow: hidden;">{break}forums.title}</a>
+                <!-- {end} forums -->
+            </div>
+            <b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+
+        <div class="col-pad grn-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+            <a href="http://twitter.com/txmdotcom" title="Add TXM.com On Twitter!" class="link-header grn-dbck icon-comment">TXM.com Twitter Updates</a>
+
+            <div class="twitter dft-cnt grn-back grn-brdr">
+                <ul id="twitter_update_list"></ul>
+            </div>
+            <b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+
+        <div class="col-pad blu-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+            <div class="blk-hedr blu-dbck">
+                Sponsored Partnerships</div>
+
+            <div class="blu-back blu-brdr">
+                <a href="http://www.youtube.com/lorenandtxm" title="Austin Based Film and Animation Studio" target="_blank" class="dft-lnk dft-alt">Loren Productions (Short Films)</a>
+                <a href="http://www.diverge.ws/" title="Multiplayer Online Flash Games" target="_blank" class="dft-lnk">Diverge Creations (Online Games)</a>
+                <a href="http://www.gamingsfinest.com/" title="Gaming Review Site" target="_blank" class="dft-lnk dft-alt">Gamings Finest (Arcade &amp; Videos)</a>
+                <a href="http://gamemusic4all.blogspot.com/" title="Promotion of Gaming Music" target="_blank" class="dft-lnk">Game Music 4 All (Music Promoter)</a>
+                <a href="http://grimstudios.phrozenflame.com/" title="Comedy Flash Shorts" target="_blank" class="dft-lnk dft-alt">Grim Studios (Comedy Flash Shorts)</a>
+                <a href="http://www.shamoozal.com/" title="Episodic Rabbit Cartoon" target="_blank" class="dft-lnk">Shamoozal (Episodic Comedy)</a>
+
+                <a href="http://www.videogamedc.com/" target="_blank" class="dft-lnk dft-alt">Video Game DC</a>
+                <a href="http://www.razoric.com/" target="_blank" class="dft-lnk">Razoric</a>
+                <a href="http://www.psychogoldfish.com/" target="_blank" class="dft-lnk dft-alt">Psycho Goldfish</a>
+                <a href="http://www.crazyeightproductions.tk" target="_blank" class="dft-lnk">Crazy Eight Productions</a>
+                <a href="http://www.revivaleyes.com/" target="_blank" class="dft-lnk dft-alt">Revival Eyes</a>
+                <a href="http://www.shedboystudios.tk/" target="_blank" class="dft-lnk">Shed Boy Studios</a>
+            </div>
+
+            <b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+
+        <div class="col-pad blu-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+            <div class="blk-hedr blu-dbck">
+                Blog Sites We Enjoy</div>
+
+            <div class="blu-back blu-brdr">
+                <a href="http://www.kotaku.com/" title="Gaming Blog" target="_blank" class="dft-lnk dft-alt">Kotaku (Sensible Gaming)</a>
+                <a href="http://www.destructoid.com/" title="Frantic Gaming Blog" target="_blank" class="dft-lnk">Destructoid (Gaming FTW)</a>
+                <a href="http://gamemusic4all.blogspot.com/" title="Promotion of Gaming Music" target="_blank" class="dft-lnk dft-alt">Game Music 4 All (Music Promoter)</a>
+                <a href="http://notcot.com/" title="Design, Ideas, Aesthetics, Amusement" target="_blank" class="dft-lnk">NOTCOT (Creative Design Blog)</a>
+                <a href="http://angryzenmaster.com/" title="Movies, Comics, &amp; Japan" target="_blank" class="dft-lnk dft-alt">Angry Zen Master (Movies &amp; Comics)</a>
+            </div>
+
+            <b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+
+        <div class="col-pad blu-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+            <div class="blk-hedr blu-dbck">
+                Additional Flash Portals</div>
+
+            <div class="blu-back blu-brdr">
+                <a href="http://www.newgrounds.com/" title="Flash Movies &amp; Games" target="_blank" class="dft-lnk dft-alt">Newgrounds (Forefather of Flash)</a>
+                <a href="http://www.flashportal.com/" title="Manul Flash Uploads" target="_blank" class="dft-lnk">Flash Portal (Manual Flash Portal)</a>
+            </div>
+
+            <b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+
+        <div class="col-pad blu-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+            <div class="blk-hedr blu-dbck">
+                TXM.com Staff</div>
+
+            <div class="blu-back blu-brdr">
+                <a href="http://www.myspace.com/kevinnuut" title="Kevin Nuut's Myspace" target="_blank" class="dft-lnk dft-alt">Kevin Nuut's MySpace (Add Us)</a>
+                <a href="http://www.myspace.com/jessehuertas" title="Jesse Huertas' Myspace" target="_blank" class="dft-lnk">Jesse Huertas' Myspace (Add Us)</a>
+                <a href="http://www.myspace.com/lorenproductions" title="Seth Webber's Myspace" target="_blank" class="dft-lnk dft-alt">Seth Webber's Myspace (Add Us)</a>
+            </div>
+
+            <b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+
+        <div class="col-pad blu-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+            <div class="blk-hedr blu-dbck">
+                What We Are About</div>
+
+            <div class="dft-cnt blu-back blu-brdr">
+                If you are a fan of internet games, fun puzzles, well animated comedy skits, or adventurous stories of Mario and friends, then
+                <strong>TXM.com</strong> is for you.<br /><br />
+
+                We push the next generation of artists into the spotlight through our all Flash
+                <a href="/movies/" title="Watch Movies">Movies</a> and
+                <a href="/games/" title="Play Games">Games</a> portals. Not only that, but we
+                strive to have one of the most diverse Forums around through our unique
+                community and knowledgable database.<br /><br />
+
+                <a href="/misc/register/" title="Register With TXM.com">Create a TXM.com Profile</a> to get with one of the fastest growing Flash portals around and become part of the experience.<br /><br />
+
+                Not only do you unlock the ability to upload your own art, critique Flash, and vote in the Forums, but members experience no pop-ups or banners ever!<br /><br />
+
+                If you are already a member, start uploading your Flash right away!  We encourage a community of fair critiques and ample voting
+                to give artists the best in feedback for constant improvement.
+            </div>
+            <b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+
+    </div>
+    <div class="clr"></div>
+</div>

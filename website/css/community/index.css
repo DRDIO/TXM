@@ -1,0 +1,25 @@
+#forums-content {
+    overflow: hidden;
+    width: auto;
+}
+
+.community-index a {
+    float: left;
+    width: 447px;
+    color: #333;
+    border-right: 1px solid #ddd;
+}
+
+.community-index a:nth-child(2n) {
+    border-right: none;
+    width: 448px;
+}
+
+.community-index strong {
+    color: #2688ED;
+    font-size: 1.167em;
+}
+
+.community-index a:nth-last-child(2) {
+    border-bottom: none;
+}

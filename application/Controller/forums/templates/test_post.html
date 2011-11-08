@@ -1,0 +1,60 @@
+<!-- BEGIN errors -->
+<div class="grn-top"><div class="dft-btm"><div class="dft-rht"><div class="dft-lft"><div class="grn-ctl"><div class="grn-ctr">
+  <div class="dft-hdr grn-bdr">
+    Unable to Upload Flash Game</div>            
+<!-- BEGIN row -->
+  <div class="{errors.row.color}" style="padding: 2px 4px 2px 4px;">
+    {errors.row.text}</div>
+<!-- END row -->                
+</div></div></div></div></div></div>
+<!-- END errors -->
+
+<div class="blu-top"><div class="dft-btm"><div class="dft-rht"><div class="dft-lft"><div class="blu-ctl"><div class="blu-ctr">
+  <div class="dft-hdr blu-bdr">
+    Write a Forum Topic</div>
+
+  <div class="dft-cnt">
+    We are currently testing our news upload system.</div>
+
+<!-- BEGIN post -->  
+  <form id="post_form" action="" method="post" enctype="multipart/form-data">
+  <table border="0" cellspacing="0" cellpadding="4" width="100%">
+    <tr class="blu-alt">
+      <td width="110">
+        Title:</td>
+			<td width="200">
+      	<input type="text" id="title" name="title" value="{post.title}" maxlength="50" class="form-dft-wdt" /></td>
+      <td colspan="2" class="blu-txt">
+      	Title of your topic. Must be under 50 characters.</td>
+    </tr>
+
+    <tr>
+      <td width="110">
+        Forum:</td>
+			<td width="200">
+      	<select name="id_forum" style="width: 204px;">
+<!-- BEGIN forum -->
+					<option value="{post.forum.id}" {post.forum.selected}>{post.forum.name}</option>
+<!-- END forum -->
+				</select></td>
+      <td colspan="2" class="blu-txt">
+      	Each forum adheres to a different set of rules you MUST follow.</td>
+    </tr>
+        
+    <tr class="blu-alt">
+      <td>
+        Topic:</td>
+      <td colspan="2">
+				<textarea name="post" cols="100" rows="20">{post.post}</textarea></td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td>
+        <input type="submit" name="submit" value="Post Your Topic" class="inp-btn" style="width: 204px;" /></td>
+      <td colspan="2" class="blu-txt">By posting on TXM.com, you are agreeing to the terms below.</td>
+    </tr>    
+  </table>
+ 	</form>
+<!-- END post -->
+</div></div></div></div></div></div>

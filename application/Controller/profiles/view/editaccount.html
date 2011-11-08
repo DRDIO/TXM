@@ -1,0 +1,117 @@
+<div class="main">
+<!-- BEGIN edit_success -->
+  	<div class="col-pad blu-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+        <div class="blk-hedr blu-dbck">
+          	Your Account Has Been Updated!</div>
+    
+        <div class="blu-back blu-brdr dft-cnt">
+            Congratulations, your account has been updated.  TXM.com currently doesn't
+            send out emails nor remember your previous changes, so please remember
+            your updates!
+        </div>
+    <b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+<!-- END edit_success -->
+                   
+<!-- BEGIN edit_errors -->
+  	<div class="col-pad grn-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+        <div class="blk-hedr grn-dbck">
+          	Unable to Create Profile
+        </div> 
+        
+        <div class="blu-back grn-brdr">           
+<!-- BEGIN row -->
+            <div class="dft-cnt {edit_errors.row.class}">
+                {edit_errors.row.message}
+            </div>    
+<!-- END row -->                
+				</div>
+    <b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+<!-- END edit_errors -->
+    
+<!-- BEGIN edit -->     
+		<div class="col-pad blu-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+        <div class="blk-hedr blu-dbck">
+          	Update Your Account Information</div>
+    
+        <div class="blu-back blu-brdr">
+        		<div class="dft-cnt">
+                <ul>
+                  <li>A confirmation email will be sent to verify your sign up.</li>
+                </ul>
+            </div>
+      
+            <form action="" enctype="multipart/form-data" method="post">
+                <table border="0" cellspacing="0" cellpadding="4" width="100%">
+                  <tr class="td-alt">
+                    <td width="210" valign="top" align="right">
+                      Link Name: &nbsp; </td>
+                    <td width="210">
+                      <input type="text" id="link_name" name="link_name" value="{edit.link_name}" maxlength="25" style="width: 200px;" tabindex="1" /></td>
+                    <td class="dft-clr">
+                      Up to 25 letters, numbers, '-', or '_' (<em>linkname</em>.txm.com)</td>
+                  </tr>
+                  
+                  <tr>
+                    <td width="210" valign="top" align="right">
+                      Nick Name: &nbsp; </td>
+                    <td width="210">
+                      <input type="text" id="nick_name" name="nick_name" value="{edit.nick_name}" maxlength="25" style="width: 200px;" tabindex="1" /></td>
+                    <td class="dft-clr">
+                      Up to 25 characters</td>
+                  </tr>                  
+                  
+                  <tr class="td-alt">
+                    <td valign="top" align="right">
+                      Email: &nbsp; </td>
+                    <td>
+                      <input type="text" name="email" value="{edit.email}" maxlength="100" style="width: 200px;" tabindex="2" /></td>
+                    <td class="dft-clr">
+                      Must reply to confirmation</td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" align="right">
+                      Current Password: &nbsp; </td>
+                    <td>
+                      <input type="password" name="pass_old" value="{edit.pass_old}" maxlength="16" style="width: 200px;" tabindex="3" /></td>
+                    <td class="dft-clr">        
+                      Required to validate account update</td>
+                  </tr>
+                  
+                  <tr class="td-alt">
+                    <td valign="top" align="right">
+                      New Password: &nbsp; </td>
+                    <td>
+                      <input type="password" name="pass" value="{edit.pass}" maxlength="16" style="width: 133px; float: left;" onkeyup="pass_strength(this);" tabindex="3" />
+                      <div class="pass-box"><div id="pass_bar" class="pass-bar"></div><div class="pass-text">strength</div></div>
+                      <br class="clr" /></td>
+                    <td class="dft-clr">        
+                      Only if you want to change password<br />
+                      Must be 6 to 16 characters</td>
+                  </tr>
+                                    
+                  <tr>
+                    <td valign="top" align="right">
+                      Birth Date: &nbsp; </td>
+                    <td>
+                      <select name="date_m" style="width: 72px;" tabindex="4">{edit.date_m}
+                      </select><select name="date_d" style="width: 66px;" tabindex="5">{edit.date_d}
+                      </select><select name="date_y" style="width: 66px;" tabindex="6">{edit.date_y}</select></<br />
+                    <td class="dft-clr">
+                      Must be over 13</td>
+                  </tr>
+                        
+                  <tr class="td-alt">
+                    <td></td>
+                    <td colspan="2">
+                      <input type="submit" name="edit" value="Update Account" class="submit" style="width: 206px;" tabindex="9" /></td>
+                  </tr>
+                </table>
+            </form>
+        </div>
+		<b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+<!-- END edit -->
+</div>
+
+<script type="text/javascript" src="{SITE_LEVEL}misc/scripts/register.js"></script>
+  	

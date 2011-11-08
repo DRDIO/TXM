@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	Options +FollowSymlinks
+	RewriteBase /extras
+	
+	RewriteRule ^([a-z-]+)/?$ $1.php?id=$2 [QSA,L]
+</IfModule>

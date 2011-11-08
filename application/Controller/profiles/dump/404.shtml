@@ -1,0 +1,18 @@
+<HTML>
+<STYLE>
+a:link, a:active, a:visited { color: #E7C235; }
+a:hover { text-decoration: underline; color: #E7C235; }
+</STYLE>
+
+<BODY BGCOLOR='#212121' TEXT='#FFFFFF'>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH='100%' HEIGHT='100%'>
+<TR><TD ALIGN='center' VALIGN='middle'>
+<FONT STYLE='font:bold 10px Verdana'>
+[ http://txmafia.com<!--#echo var="REQUEST_URI" --> ] is bad Request.<BR><BR>
+<A HREF='http://www.txmafia.com'><IMG SRC='http://www.txmafia.com/images/monkey.jpg' BORDER=0></A><BR><BR>
+[ http://txmafia.com<!--#echo var="REQUEST_URI" --> ] is bad Request.
+</TD></TR>
+</TABLE>
+</BODY>
+</HTML>
+

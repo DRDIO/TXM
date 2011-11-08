@@ -1,0 +1,128 @@
+<div class="main">
+<!-- BEGIN success -->
+  	<div class="col-pad blu-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+        <div class="blk-hedr blu-dbck">
+          	Welcome to TXM.com!</div>
+    
+        <div class="blu-back blu-brdr dft-cnt">
+            Congratulations, you are now a member of TXM.com. You can upload 
+            movies, games, music, and assets, make posts, and reply to news, 
+            forums, and blogs.  You can view your profile, check your messages, 
+            and organize your media at:<br /><br />
+            
+            <a href="{SITE_LINK_NAME}" title="View Your Profile" class="lnk-ful">{SITE_LINK_NAME}</a><br />
+            
+            From all of the staff at TXM.com, We welcome you to the community!
+        </div>
+    <b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+<!-- END success -->
+                   
+<!-- BEGIN errors -->
+  	<div class="col-pad grn-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+        <div class="blk-hedr grn-dbck">
+          	Unable to Create Profile
+        </div> 
+        
+        <div class="blu-back grn-brdr">           
+<!-- BEGIN row -->
+            <div class="dft-cnt {errors.row.color}">
+                {errors.row.text}
+            </div>    
+<!-- END row -->                
+				</div>
+    <b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+<!-- END errors -->
+    
+<!-- BEGIN register -->     
+		<div class="col-pad blu-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+        <div class="blk-hedr blu-dbck">
+          	Sign Up With TXM.com!</div>
+    
+        <div class="blu-back blu-brdr">
+        		<div class="dft-cnt">
+                <ul>
+                  <li><strong>Signing up is easy!</strong></li>
+                  <li>Upload movies and games, write critiques, and vote your favorite content.</li>
+                  <li>Create a profile linkname like 
+                  '<a href="http://kevin.txm.com/" title="Kevin Nuut's Profile"><em>kevin</em>.txm.com</a>'
+                  to organize friends and follow artists.</li>
+                  <li>A confirmation email will be sent to verify your sign up.</li>
+                </ul>
+            </div>
+      
+            <form action="" enctype="multipart/form-data" method="post">
+                <table border="0" cellspacing="0" cellpadding="4" width="100%">
+                  <tr class="td-alt">
+                    <td width="210" valign="top" align="right">
+                      Link Name: &nbsp; </td>
+                    <td width="210">
+                      <input type="text" id="link_name" name="link_name" value="{register.link_name}" maxlength="25" style="width: 200px;" tabindex="1" /></td>
+                    <td class="dft-clr">
+                      Up to 25 letters, numbers, '-', or '_' (<em>linkname</em>.txm.com)</td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" align="right">
+                      Email: &nbsp; </td>
+                    <td>
+                      <input type="text" name="email" value="{register.email}" maxlength="100" style="width: 200px;" tabindex="2" /></td>
+                    <td class="dft-clr">
+                      Must reply to confirmation</td>
+                  </tr>
+                  
+                  <tr class="td-alt">
+                    <td valign="top" align="right">
+                      Password: &nbsp; </td>
+                    <td>
+                      <input type="password" name="pass" value="{register.pass}" maxlength="16" style="width: 133px; float: left;" onkeyup="pass_strength(this);" tabindex="3" />
+                      <div class="pass-box"><div id="pass_bar" class="pass-bar"></div><div class="pass-text">strength</div></div>
+                      <br class="clr" /></td>
+                    <td class="dft-clr">        
+                      Must be 6 to 16 characters</td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" align="right">
+                      Birth Date: &nbsp; </td>
+                    <td>
+                      <select name="date_m" style="width: 72px;" tabindex="4">{register.date_m}
+                      </select><select name="date_d" style="width: 66px;" tabindex="5">{register.date_d}
+                      </select><select name="date_y" style="width: 66px;" tabindex="6">{register.date_y}</select></<br />
+                    <td class="dft-clr">
+                      Must be over 13</td>
+                  </tr>
+                  
+                  <tr class="td-alt">
+                    <td valign="top" align="right">
+                      Validation: &nbsp; </td>
+                    <td>
+                      <img id="captcha" src="http://www.txm.com/misc/captcha.php" alt="CAPTCHA" /><br />
+                      <input type="text" name="validate" value="" maxlength="6" style="width: 200px;" tabindex="7" /></td>
+                    <td class="dft-clr">        
+                      Retype the 6 letters<br />Problems? <a href="" onclick="captcha_refresh(); return false;">Refresh Image</a></td>
+                  </tr>
+                  
+                  <tr>
+                    <td valign="top" align="right">
+                      Terms: &nbsp; </td>
+                    <td class="dft-clr">
+                      <input type="checkbox" name="terms" tabindex="8" {register.terms_checked} /> &nbsp; I agree to the following:</td>
+                    <td class="dft-clr">        
+                      <a href="http://www.txm.com/misc/terms-of-use.php" target="_blank" title="Terms of Use">Terms of Use</a> and 
+                      <a href="http://www.txm.com/misc/terms-of-use.php" target="_blank" title="Privacy Policy">Privacy Policy</a></td>
+                  </tr>
+                        
+                  <tr class="td-alt">
+                    <td></td>
+                    <td colspan="2">
+                      <input type="submit" name="register" value="Sign Up" class="submit" style="width: 206px;" tabindex="9" /></td>
+                  </tr>
+                </table>
+            </form>
+        </div>
+		<b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+<!-- END register -->
+</div>
+
+<script type="text/javascript" language="javascript1.2" src="{SITE_LEVEL}misc/scripts/register.js"></script>
+  	

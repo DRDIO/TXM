@@ -1,0 +1,289 @@
+<script type="text/javascript" language="javascript1.2" src="{SITE_LEVEL}games/scripts/upload.js"></script>
+
+<div id="notice" class="col-pad error-blck" style="display: none;"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+    <div class="curve-padding error-dbck" style="color: #fff;">
+    		We recently initiated a policy of only allowing <strong>{limit}</strong> every <strong>{interval}</strong>.<br />
+        Please keep this in mind when uploading your Flash. We suggest starting with your best work.
+    </div>
+<b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+          
+<!-- BEGIN errors -->
+          <div class="grn-top"><div class="dft-btm"><div class="dft-rht"><div class="dft-lft"><div class="grn-ctl"><div class="grn-ctr">
+            <div class="dft-hdr grn-bdr">
+              Unable to Upload Flash Game</div>
+<!-- BEGIN row -->
+            <div class="{errors.row.color}" style="padding: 2px 4px 2px 4px;">
+              {errors.row.text}</div>
+<!-- END row -->                
+          </div></div></div></div></div></div>
+<!-- END errors -->
+
+<!-- BEGIN upload -->     
+<div class="col-pad blu-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+    <div class="blk-hedr blu-dbck icn-games">
+        Upload a Flash Game
+    </div>
+            
+    <div class="dft-cnt blu-back blu-brdr">
+        Complete the form below to upload your Adobe Flash game to TXM.com.
+        By uploading your game, you recognize that TXM.com reserves the right to alter,
+        distribute, or delete your submission title, description, and uploaded file.
+        Furthermore,<br /><br />
+        
+        <ul>
+            <li>
+                <strong>DO NOT</strong> upload incomplete games with poorly managed graphics, out of sync audio, or loop issues.</li>
+            <li>
+                <strong>DO NOT</strong> upload games which personally insult or attack an individual whom you personally know.</li>
+            <li>
+                Limit racism, sexism, and any form of prejudice to moderate amounts and refrain from excessive nudity and vulgarity.</li>
+            <li>
+                Though not required, adding simple functionality such as preloaders and play buttons is recommended.</li>
+        </ul>             
+	</div>
+<b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+        
+<div class="col-pad blu-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+    <div class="blk-hedr blu-dbck">
+        Required Fields
+    </div>                        
+
+    <div class="blu-back blu-brdr">              
+        <form id="form" action="" enctype="multipart/form-data" method="post">
+            <table border="0" cellspacing="0" cellpadding="4" width="100%">
+                <tr class="blu-alt">
+                    <td width="110">
+                    	Title:</td>
+                    <td width="200">
+                    	<input type="text" id="title" name="title" value="{upload.title}" maxlength="25" class="form-dft-wdt" /></td>
+                    <td colspan="2" class="blu-txt">
+                    	Title of your game. Must be under 25 characters.</td>
+                </tr>
+                <tr>
+                    <td>Game File:</td>
+                    <td>
+                        <input type="hidden" id="file_temp" name="file_temp" value="{upload.file_temp}" />
+                        <iframe id="upload-swf-iframe" src="../upload-swf/" frameborder="0"></iframe>
+                        <div id="upload-swf-status" class="blu-txt"></div></td>
+                    <td width="50">
+                        <img src="{SITE_LEVEL}media/assets/games-upload.gif" id="upload-swf-image" style="width: 50px; height: 50px; border: 1px solid #ffffff;" /></td>
+                    <td width="600" class="blu-txt">
+                        Must be a valid Flash publish (.SWF) file.<br />
+                        Games larger than 778 x 578 will be proportionally scaled.<br />
+                        File limit is 10 MB (10240000 bytes exactly).</td>
+                </tr>              
+                <tr class="blu-alt">
+                    <td>
+                    	Synopsis:</td>
+                    <td colspan="3" class="blu-txt">
+                    	<input type="text" id="synopsis" name="synopsis" value="{upload.synopsis}" style="width: 630px;" /><br />
+                    	A synopsis is brief description of your game used for spotlights or front page media.</td>
+                </tr>
+                <tr>
+                    <td>
+                    	Commentary:</td>
+                    <td colspan="3" class="blu-txt">
+                    	<textarea id="commentary" name="commentary" rows="100" cols="3" style="width: 630px; height: 60px;">{upload.commentary}</textarea><br />
+                    	Your commentary may include personal thoughts, credits, your creative process, or links relating to the game.</td>
+                </tr>
+                <tr>
+                    <td>
+                    	Keywords:</td>
+                    <td colspan="3" class="blu-txt">
+                    	<input type="text" id="keywords" name="keywords" value="{upload.keywords}" style="width: 630px;" /><br />
+                    	Enter up to 10 keywords seperated by spaces. Grossly erroneous keywords may result in deletion.</td>
+                </tr>
+                <tr class="blu-alt">
+                    <td>Age Rating:</td>
+                    <td><select id="id_rating" name="id_rating" style="width: 200px;">{options_id_rating}</select></td>
+                    <td colspan="2" class="blu-txt"><a href="">View Age Rating Guide.</a> An inproper rating will result in deletion.</td>
+                </tr>
+                <tr>
+                    <td>Game Type:</td>
+                    <td><select id="id_type" name="id_type" style="width: 200px;">{options_id_type}</select></td>
+                    <td colspan="2" class="blu-txt">A properly categorized game may help increase views.</td>
+                </tr>
+                <tr class="blu-alt">
+                    <td>Game Icon:</td>
+                    <td>
+                        <input type="hidden" id="icon_temp" name="icon_temp" value="{upload.icon_temp}" />
+                        <iframe id="upload-icon-iframe" src="../upload-icon/" frameborder="0"></iframe>
+                        <div id="upload-icon-status" class="blu-txt"></div></td>
+                    <td><img src="{SITE_LEVEL}media/assets/games-icon.gif" id="upload-icon-image" style="width: 50px; height: 50px; border: 1px solid #ffffff;" /></td>
+                    <td class="blu-txt">
+                        An icon will increase your chances of getting noticed.<br />
+                        Must be a valid image (.GIF, .JPG, .PNG) file.<br />
+                        All icons are converted to 100 x 100 pixel gifs.</td>
+                </tr>                            
+                <tr>
+                    <td>Validate:</td>
+                    <td><img id="captcha" src="http://www.txm.com/misc/captcha.php" alt="CAPTCHA" /><br /><input type="text" id="validate" name="validate" value="" maxlength="6" class="form-dft-wdt" /></td>
+                    <td colspan="2" class="blu-txt">Retype the 6 validation letters in the box below it.<br />If you do not see 6 letters, <a href="" onclick="captcha_refresh(); return false;">Refresh the Image</a>.</td>
+                </tr>
+                <tr class="blu-alt">
+                    <td></td>
+                    <td>
+                    	<input type="submit" name="upload" value="Upload Your Game" class="inp-btn" style="width: 204px;" /></td>
+                    <td colspan="2" class="blu-txt">
+                    	By uploading to TXM.com, you are agreeing to the terms below.</td>
+                </tr>
+            </table>
+        </form>
+	</div>
+<b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+ 
+<div class="col-pad grn-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+    <div class="blk-hedr grn-dbck">
+        Legalese (Terms of Agreement) Summary</div> 
+                        
+    <div class="dft-cnt grn-back grn-brdr">
+        The following is a common sense summary of the Legalese Terms of Agreement.
+        However, you are required by law to read the full Legalese below before 
+        you upload with TXM.com.<br />
+        <ol>
+            <li>
+                You must be over the age of thirteen (13) to upload with TXM.com.</li>
+            <li>
+                Any information you divulge will become public information.</li>
+            <li>
+                TXM.com reserves the right to track your access on TXM.com.</li>
+            <li>
+                Do not post anything too offensive or anything copywritten by someone other than yourself.</li>
+            <li>
+                You may not upload if you are legally restricted from communicating with someone uploaded with TXM.com.</li>
+            <li>
+                TXM.com reserves the right to alter your account in anyway if we deem it.</li>
+        </ol>
+		</div>
+<b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+ 
+<div class="col-pad grn-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+    <div class="blk-hedr grn-dbck">
+        Legalese (Terms of Agreement) In Detail</div>
+            
+    <div class="dft-cnt grn-back grn-brdr">
+        Due to legal and financial issues, before you upload with TXM.com
+        or any of it's affiliates, we are required by law to request that you
+        read our terms and conditions, and agree to adhere to the utmost of
+        your ability.<br />
+        <ol>
+          <li>
+            In accordance with the
+            <a href="http://www.ftc.gov/ogc/coppa1.htm" target="_blank">Federal
+              Trade Commission's Children's Online Privacy Protection
+            Act of 1998 (COPPA)</a>, no individual under the age of 13
+            may upload with any website that requires personal
+            information to be collected, documented, and/or displayed
+            to other individuals without express permission of a
+            parental figure.<br /><br />
+            
+            As this website often contains adult-oriented information,
+            TXM.com will not accept members under the age of 13
+            with or without parental permission; any account used by
+            a minor under this age will be subject to deletion
+            and/or banning upon acquisition of this information.<br /><br />
+          </li>
+          <li>
+            Any information collected during registration or the
+            duration of your membership is the property of TXM.com and the staff, and may be distributed to other
+            members of this forum. As some fields are optional,
+            you may elect to decline to share some of this
+            information with general members. Information that
+            you elect to share becomes public property, and
+            thereby subject to the laws that govern it. By
+            entering this data, you agree that this information
+            is truthful and correct to the best of your knowledge.<br /><br />
+            
+            TXM.com and the staff will not release your
+            personal information to mailing lists or other
+            companies with or without compensation. However, we
+            reserve the right to make known any of your personal
+            information to legal authorities in the event of a
+            complaint, or legal action taken against you if
+            provided the legal documentation to release such
+            knowledge. TXM.com, the staff, and our
+            affiliates will not be held accountable if this
+            information gathered unlawfully.<br /><br />
+          </li>
+          <li>
+            TXM.com reserves the right to record all webpage &quot;hits&quot; and
+            referrals to this site.  Users who are logged in will be associated
+            with their webpage &quot;hits&quot; and referrals.  All access related to
+            the TXM.com domain name of TXM.com are recorded into
+            seperate logs from the web serve application that only TXM.com
+            staff have access to.<br /><br />
+            
+            TXM.com and staff will not release you information to
+            third-parties.  However, we reserve the right to make known any of
+            this information to legal authorities in the event of a complant,
+            or legal action taken against you if provided the legal documentation
+            to release such knowledge.<br /><br />
+          </li>
+          <li>
+            You are the sole responsible agent for your posts
+            and submissions to TXM.com. Your conduct and
+            submissions will serve as a partial basis for
+            progression, stasis, regression, and/or deletion.
+            Do not post intentionally offensive material that
+            may or may not be limited to discrimination on the
+            basis of race, gender, religion, socio-economic
+            status, or sexual preference. You may post jokes
+            and other material at your own risk, though they are
+            subject to review, editing, and/or deletion by our
+            staff members. Any overt display of sexual
+            genitalia, male or female, will be deleted.
+            Harassment of members is not tolerated by our
+            community, and may result in punitive action or
+            deletion of your account. By submitting posts to
+            the forum or animations to the portal, you hereby
+            claim that this work is your personal intellectual
+            property, physical or otherwise, and you are
+            authorizing permission for public display of such
+            work. If material is copyright of another individual,
+            you hereby claim that you have express permission of
+            said individual and have cited the source. Any theft
+            occurring from TXM.com by other individuals
+            should be considered unlawful, and is up to the
+            owner of such property to prosecute. TXM.com and
+            the staff will not be held accountable for such
+            actions.<br /><br />
+          </li>
+          <li>
+            Due to the nature of TXM.com being an electronic
+            communications tool between its members, you agree that you
+            are not the person,
+            a friend of the person, or the family member of the person listed
+            in any legal or court orders that restrict you from
+            communication with any protected person(s) that are member(s) of
+            TXM.com. These legal or court orders include, but are not
+            limited to: witness protection,
+            restraining orders, and order of protections.<br /><br />
+          
+            Registration will
+            constitute as a form of electronicly communication and contact to
+            the protected person(s) that are member(s) of TXM.com.
+            Any member of TXM.com that are found to be violating these
+            legal or court orders upon or after registration
+            will be reported to proper legal authorities upon discovery.<br /><br />
+            
+            If you are a protected person by legal or court orders that
+            restrict someone(s) from communication to you electronically,
+            please contact one of the Site Admins by email first before
+            registration to check for any possible conflicts and be placed
+            upon file.<br /><br />
+          </li>
+          <li>
+            TXM.com reserves the right to: clarify and
+            define all terms; add, change, or alter in any way
+            the existing rules and regulations; edit, alter,
+            ban, or delete any information, accounts, posts, or
+            submissions to TXM.com without notice or
+            explanation. You may request a written or verbal
+            explanation, but it is the sole discretion of the
+            staff and TXM.com if we choose to answer your
+            request.
+          </li>
+        </ol>         
+		</div>
+<b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+<!-- END upload -->

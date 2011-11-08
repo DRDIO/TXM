@@ -1,0 +1,54 @@
+<div class="main">
+
+<!-- BEGIN errors -->
+  	<div class="col-pad grn-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+        <div class="blk-hedr grn-dbck">
+          	Oops! We Encountered An Error
+        </div> 
+        
+        <div class="blu-back grn-brdr">           
+<!-- BEGIN row -->
+            <div class="dft-cnt {errors.row.class}">
+                {errors.row.message}
+            </div>    
+<!-- END row -->                
+				</div>
+    <b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+<!-- END errors -->
+
+<!-- BEGIN post -->  
+    <div class="col-pad grn-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+        <div class="blk-hedr grn-dbck">
+            Comment On {post.title}
+        </div>
+
+        <div class="grn-back grn-brdr">                    
+            <form id="post_form" action="" method="post" enctype="multipart/form-data">
+                <table border="0" cellspacing="0" cellpadding="4" width="100%">
+                    <tr class="blu-alt">
+                        <td>
+                            Topic Reply:</td>
+                        <td colspan="2">
+                            <input type="image" id="pb_bold" value="B" class="pb" src="{SITE_LEVEL}forums/images/bold.gif" />
+                            <input type="image" id="pb_italic" value="I" class="pb" src="{SITE_LEVEL}forums/images/italic.gif" />
+                            <input type="image" id="pb_underline" value="U" class="pb" src="{SITE_LEVEL}forums/images/underline.gif" />
+                            <br />
+                            
+                            <iframe id="post" class="post-iframe"></iframe></td>
+                    </tr>
+                
+                    <tr>
+                        <td></td>
+                        <td>
+                          <input type="hidden" id="post_final" name="post" value="{post.post}" />
+                          <input type="submit" name="submit" value="Post Your Reply" class="inp-btn" style="width: 204px;" /></td>
+                        <td colspan="2" class="blu-txt">By posting on TXM.com, you are agreeing to the terms below.</td>
+                    </tr>    
+                </table>
+            </form>
+        </div>              
+    <b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div> 
+<!-- END post -->
+</div>
+
+<script type="text/javascript" language="javascript1.2" src="{SITE_LEVEL}forums/scripts/post.js"></script>

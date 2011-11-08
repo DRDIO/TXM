@@ -1,0 +1,68 @@
+<div class="main">
+<!-- BEGIN error -->
+	<div class="mainGreen mainBox">
+    	<div class="blockTitle">
+          	Oops! We Encountered An Error
+        </div> 
+        
+		<div class="mainWhite borderSideDotted borderGreen">        
+<!-- BEGIN row -->
+            <div class="dft-cnt {error.row.color}">
+                {error.row.text}
+            </div>    
+<!-- END row -->                
+				</div>
+    <b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+<!-- END error -->
+
+<!-- BEGIN loggedOut -->
+	<div class="mainBlue mainBox">
+    	<div class="blockTitle">
+          	Log In</div>
+                          
+		<div class="mainWhite borderSideDotted borderBlue">
+			<div class="dft-cnt">
+				<ul>
+					<li>
+					  	Don't have an account yet? <a href="http://www.{SITE_DOMAIN}misc/register/" title="Sign Up with TXM.com!"><strong>Sign Up with TXM.com!</strong></a></li>
+					<li>
+					  	Don't know your email address? You may log in using your link name.</li>
+					<li>
+					  	Don't know your link name either? You should try to remember.</li></ul></div>
+                
+            <form id="login_form" action="" method="post">
+                <table border="0" cellspacing="0" cellpadding="4" width="100%">
+                    <tr class="altBlue">
+                        <td width="210" valign="top" align="right">
+                          Email: &nbsp;</td>
+                        <td width="210">
+                          <input type="text" id="SITE_email" name="email" value="{SITE_email}" maxlength="100" style="width: 200px;" /></td>
+                        <td class="dft-clr">
+                          Forgot your email address? Read Above</td>.
+                    </tr>
+                    
+                    <tr>
+                        <td valign="top" align="right">
+                          Password: &nbsp;</td>
+                        <td>
+                          <input type="password" id="SITE_password" name="password" maxlength="25" style="width: 200px;" /></td>
+                        <td class="dft-clr">
+                          Forgot your password? <a href="http://www.{SITE_DOMAIN}misc/reset-password/" title="Reset Password">Reset It</a>.</td>
+                    </tr>
+                    
+                    <tr class="altBlue">
+                        <td></td>
+                        <td colspan="2">
+                          <input type="submit" name="rl_submit" value="Login" class="submit" style="width: 206px;" />
+                          <input type="hidden" name="redirect" value="{REDIRECT}" style="display: none;" />
+                          <input type="hidden" name="login" value="1" style="display: none;" /></td>
+                    </tr>
+                </table></form></div></div>
+    
+		<script type="text/javascript">			
+				var email = document.getElementById('SITE_email');
+				var password = document.getElementById('SITE_password');
+				email.value == "" ? email.focus() : password.focus();
+    </script>  
+<!-- END loggedOut -->	 
+</div>   

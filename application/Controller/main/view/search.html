@@ -1,0 +1,29 @@
+<!-- BEGIN errors -->
+          <div class="grn-top"><div class="dft-btm"><div class="dft-rht"><div class="dft-lft"><div class="grn-ctl"><div class="grn-ctr">
+            <div class="dft-hdr grn-brd">
+              Unable to Search TXM.com</div>            
+<!-- BEGIN row -->
+            <div class="dft-cnt {errors.row.color}">
+              {errors.row.text}</div>
+<!-- END row -->                
+         	</div></div></div></div></div></div>
+<!-- END errors -->
+    
+<div class="blu-top"><div class="dft-btm"><div class="dft-rht"><div class="dft-lft"><div class="blu-ctl"><div class="blu-ctr">
+  <div class="dft-hdr blu-bdr">
+    Search TXM.com {uctype} for '{search}'</div>
+<!-- BEGIN result -->
+	<a href="{SITE_LEVEL}{type}/{result.id}/{result.title_link}/" title="{result.title}" class="blk-lnk {result.color}">
+  	<img src="{SITE_LEVEL}media/{result.avatar}.gif" alt="m{result.id}" width="50" height="50" />
+    <span>
+    	<strong>{result.title}</strong> by {result.nick_name}<br />
+      {result.synopsis}<br />
+      <em>Keywords: {result.keywords}</em></span>
+    <br class="clr" />
+  	</a>
+<!-- END result -->
+<!-- BEGIN empty -->
+	<div class="dft-cnt">
+  	No results exist.</div>
+<!-- END empty -->
+</div></div></div></div></div></div>

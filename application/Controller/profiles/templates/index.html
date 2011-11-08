@@ -1,0 +1,166 @@
+<style>
+	fieldset { border: 1px dashed #83b340; padding: 4px; margin: 4px; }
+	legend { font: bold 12px Arial, Helvetica, sans-serif; color: #ffffff; }	
+</style>
+
+    <div style="float: left; width: 257px;"> 
+<!-- BEGIN member_photo -->      		
+      <div class="grn-top"><div class="dft-btm"><div class="dft-rht"><div class="dft-lft"><div class="grn-ctl"><div class="grn-ctr">
+        <div class="dft-hdr grn-bdr">
+          Member Photo</div>           
+        <div class="dft-cnt" style="text-align: center;">
+          {PHOTO}</div>
+      </div></div></div></div></div></div>
+<!-- END member_photo -->  		
+<!-- BEGIN contacts -->
+      <div class="grn-top"><div class="dft-btm"><div class="dft-rht"><div class="dft-lft"><div class="grn-ctl"><div class="grn-ctr">
+        <div class="dft-hdr grn-bdr">
+          Contact Information</div>           
+        <div class="dft-cnt" style="text-align: center;">
+          <table border='0' cellspacing='0' cellpadding='2'>
+            {EMAIL}
+            {AIM}
+            {ICQ}
+            {MSN}
+            {YIM}
+          </table></div>
+      </div></div></div></div></div></div>          
+<!-- END contacts -->
+<!-- BEGIN friends_exist_3 -->
+      <fieldset>
+      <legend>{friends_exist_3.FRIENDS_SHOWN} of {friends_exist_3.FRIENDS_TOTAL} {friends_exist_3.FRIENDS_LEVEL}</legend>
+      <!-- END friends_exist_3 -->
+      <!-- BEGIN friends_3 -->
+        <a href='http://{friends_3.NAME}.txmafia.com/'>{friends_3.AVATAR}</a>
+      <!-- END friends_3 -->
+      <!-- BEGIN friends_exist_3 -->
+        <br /><a href='#' style='color: #403214; font: bold 10px Verdana;'>[ View All ]</a>
+      </fieldset>
+<!-- END friends_exist_3 -->
+<!-- BEGIN friends_exist_2 -->
+      <fieldset>
+      <legend>{friends_exist_2.FRIENDS_SHOWN} of {friends_exist_2.FRIENDS_TOTAL} {friends_exist_2.FRIENDS_LEVEL}</legend>
+      <!-- END friends_exist_2 -->
+      <!-- BEGIN friends_2 -->
+        <a href='http://{friends_2.NAME}.txmafia.com/'>{friends_2.AVATAR}</a>
+      <!-- END friends_2 -->
+      <!-- BEGIN friends_exist_2 -->
+        <br /><a href='#' style='color: #403214; font: bold 10px Verdana;'>[ View All ]</a>
+      </fieldset>
+<!-- END friends_exist_2 -->
+<!-- BEGIN friends_exist_1 -->
+      <fieldset>
+      <legend>{friends_exist_1.FRIENDS_SHOWN} of {friends_exist_1.FRIENDS_TOTAL} {friends_exist_1.FRIENDS_LEVEL}</legend>
+      <!-- END friends_exist_1 -->
+      <!-- BEGIN friends_1 -->
+        <a href='http://{friends_1.NAME}.txmafia.com/'>{friends_1.AVATAR}</a>
+      <!-- END friends_1 -->
+      <!-- BEGIN friends_exist_1 -->
+        <br /><a href='#' style='color: #403214; font: bold 10px Verdana;'>[ View All ]</a>
+      </fieldset>
+<!-- END friends_exist_1 -->                
+<!-- BEGIN friends_exist_0 -->
+      <fieldset>
+      <legend>{friends_exist_0.FRIENDS_SHOWN} of {friends_exist_0.FRIENDS_TOTAL} {friends_exist_0.FRIENDS_LEVEL}</legend>
+      <!-- END friends_exist_0 -->
+      <!-- BEGIN friends_0 -->
+        <a href='http://{friends_0.NAME}.txmafia.com/'>{friends_0.AVATAR}</a>
+      <!-- END friends_0 -->
+      <!-- BEGIN friends_exist_0 -->
+        <br /><a href='#' style='color: #403214; font: bold 10px Verdana;'>[ View All ]</a>
+      </fieldset>
+<!-- END friends_exist_0 -->
+
+      <div class="grn-top"><div class="dft-btm"><div class="dft-rht"><div class="dft-lft"><div class="grn-ctl"><div class="grn-ctr">
+        <div class="dft-hdr grn-bdr">
+          Member Activity</div>
+          
+        <table border="0" cellspacing="0" cellpadding="4">
+          <tr><td valign='top' class='info'>Forums Status:</td><td class='profile' style='padding-bottom: 8px;'>
+            {POSTS} Total Posts<br>
+            {POST_PERCENT} Posts Per Day<br>
+            {POST_DAY}% of All Posts<br>
+          </td></tr>         
+
+          <tr><td valign='top' class='info'>Total Respect:</td><td class='profile' style='padding-bottom: 8px;'>
+            {RESPECT} Points<br>
+            {RESPECT_PERCENT}% Of Top<br>
+          </td></tr>																																						
+        </table>
+     	</div></div></div></div></div></div>
+		</div>
+    
+    <div style="float: right; width: 512px;">
+      <div class="grn-top"><div class="dft-btm"><div class="dft-rht"><div class="dft-lft"><div class="grn-ctl"><div class="grn-ctr">
+        <div class="dft-hdr grn-bdr">
+          Member Profile</div>     
+        
+        <img src="http://www.{SITE_DOMAIN}media/{avatar}.gif" width="50" height="50" class="dft-img" style="display: block; float: left;" />
+        <div>
+        	<span style="font-weight: bold; font-size: 32px;">{nick_name}</span><br />
+          Link @ <a href="http://{link_name}.{SITE_DOMAIN}" title="{nick_name}'s Profile">http://{link_name}.{SITE_DOMAIN}</a>
+        </div>
+        <br class="clr" />
+        	
+        <fieldset>
+          <legend>Basic Information</legend>
+          <table border="0" cellspacing="0" cellpadding="0" width="100%">
+          	<tr>
+            	<td>Ranking:</td><td>{POSTER_RANK}</td>
+            </tr>
+            <tr>
+              <td>Last Visit:</td><td>{LAST_VISIT}</td>
+            </tr>
+            {JOINED}
+            {BORN}
+            {SEX}
+            {WEBSITE}
+            {OCCUPATION}
+            {SKILLS}
+          </table>
+        </fieldset>
+							            
+        <!-- BEGIN personal_information -->
+        <fieldset>
+          <legend>Personal Information</legend>
+          <table border='0' cellspacing='0' cellpadding='2'>
+            {NAME}
+            {PI_RELATIONSHIP}
+            {PI_PREFERENCE}
+            {PI_STATUS}
+            {PI_INTERESTS}
+            {PI_ABOUT}
+        </table>
+        </fieldset>
+        <!-- END basic_information -->
+        
+        <!-- BEGIN favorites -->
+        <fieldset>
+          <legend>Favorites</legend>
+          <table border='0' cellspacing='0' cellpadding='2'>
+            {FV_MUSIC}
+            {FV_MOVIES}
+            {FV_GAMES}
+            {FV_BOOKS}
+            {FV_ARTISTS}
+            {FV_QUOTES}
+          </table>
+        </fieldset>
+        <!-- END favorites -->       
+			</div></div></div></div></div></div>
+		</div>
+    <br class="clr" />
+  
+    <div class="blu-top"><div class="dft-btm"><div class="dft-rht"><div class="dft-lft"><div class="blu-ctl"><div class="blu-ctr">
+    	<div class="dft-hdr blu-bdr">
+      	Movies By Author</div>
+<!-- BEGIN movies -->
+      <a href="http://www.txm.com/movies/{movies.id}/{movies.title_link}/" title="{movies.title}" class="blk-lnk {movies.color}">
+        <img src="http://www.txm.com/media/{movies.avatar}.gif" width="50" height="50" alt="{movies.id}" />
+        <span>
+          <strong>{movies.title}</strong><br />
+          {movies.synopsis}<br />
+        </span><br class="clr" />
+      </a>
+<!-- END movies -->
+		</div></div></div></div></div></div>

@@ -1,0 +1,386 @@
+<div class="main">
+    <script type="text/javascript">
+        $('html').hide();
+
+        $(function() {
+            $('html').show();
+            
+            $('#txm-index-synopsis').hide();
+
+            $('#txm-index-splash a').mouseenter(function() {
+                $('.txm-index-splash-clone').remove();
+
+                $('#txm-index-synopsis:hidden').show('blind', 250);
+                $('#txm-index-synopsis').html($(this).html());
+                
+                $(this)
+                    .clone()
+                    .appendTo('#txm-index-splash')
+                    .addClass('txm-index-splash-clone ui-corner-all')
+                    .position({my: 'center', at: 'center', of: $(this), offset: '-11 -11'})
+                    .css({width: '124px', height: '124px'});
+            }).addClass('ui-corner-all');
+
+            $('#txm-index-splash')
+                .mouseleave(function() {
+                    $('#txm-index-synopsis').hide('blind', 250);
+                    $('.txm-index-splash-clone').remove();
+                });
+
+
+            if ($('#SITE_email').val() != '') {
+                $('#SITE_email').focus();
+            } else {
+                $('#SITE_password').focus();
+            }
+
+            $(':submit').button();
+        });
+    </script>
+
+    <style type="text/css">
+        body {
+            font-size: 12px;
+        }
+        
+        #txm-index-splash {
+            overflow: hidden;
+            padding: 0.666em;
+            height: 236px;
+        }
+        
+        #txm-index-splash a, .txm-index-splash-clone {
+            display: block;
+            float: left;
+            width: 102px;
+            height: 102px;
+            text-indent: -9999em;
+            -webkit-background-size: auto 100%;
+            -moz-background-size: auto 100%;
+            background-repeat: no-repeat;
+            background-color: #fff;
+            margin: 0.666em;
+        }
+
+        .txm-index-splash-clone {
+            position: absolute;
+            -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.8);
+            -moz-box-shadow: 0 0 16px rgba(0, 0, 0, 0.8);
+            border: 8px solid #fff;
+            top: 0;
+            left: 0;
+        }
+
+        .margin-btm-8 {
+            margin-bottom: 1.333em;
+        }
+
+        #txm-index-synopsis {
+            margin: 0 12px 12px;
+            padding: 6px;
+        }
+
+        #txm-index-synopsis strong {
+            display: block;
+            font-size: 1.2em;
+        }
+
+        #txm-index-synopsis span {
+            font-weight: normal;
+        }
+
+        .ui-widget-content .ui-state-default, .ui-widget-content .ui-state-hover {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+
+        .blk-lnk {
+            border-bottom: 1px solid #DDD;
+        }
+
+        .blk-img {
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+        }
+    </style>
+
+    <div class="ui-widget-content ui-corner-all margin-btm-8">
+        <div class="ui-widget-header ui-state-hover">
+            Enjoy These Movies &amp; Games!
+        </div>
+
+        <div id="txm-index-splash">
+            <!-- BEGIN splash -->
+            <a href="/movies/view/{splash.id}" style="background-image: url(/media/movies/screenshots/{splash.id}.gif)">
+                <strong>{splash.title}</strong>
+                <span>{splash.synopsis}</span>
+            </a>
+            <!-- END splash -->            
+        </div>
+
+        <div id="txm-index-synopsis" class="ui-widget-content ui-corner-all ui-state-hover"></div>
+    </div>
+
+    <div style="float: left; width: 644px; margin-right: 1.333em;">
+        <div style="float: left; width: 314px; margin-right: 1.333em;">
+            <div class="ui-widget-content ui-corner-all margin-btm-8">
+                <div class="ui-widget-header ui-state-hover ui-state-default">
+                    Daily Movies
+                </div>
+                
+                <div>
+                    <a href="/movies/view/2126/dumbass-luigi/" title="" class="blk-lnk">
+                        <img src="/media/movies/screenshots/2126.gif" width="50" height="50" alt="" class="blk-img" />
+                        <span>
+                            <strong>Dumbass Luigi</strong><br />
+					    Luigi is quite the fellow.
+                        </span>
+                    </a>
+
+                    <a href="/movies/view/1833/mario-bros-arcade/" title="" class="blk-lnk">
+                        <img src="/media/movies/screenshots/1833.gif" width="50" height="50" alt="" class="blk-img" />
+                        <span>
+                            <strong>Mario Bros. Arcade</strong><br />
+					    Hey guys, Here is my latest movie, and first blooper reel. I used Mario Bros. Arcade becuase there i
+                        </span>
+                    </a>
+
+                    <a href="/movies/view/1131/sonic-revenge-ii/" title="" class="blk-lnk">
+                        <img src="/media/movies/screenshots/1131.gif" width="50" height="50" alt="" class="blk-img" />
+                        <span>
+                            <strong>Sonic: Revenge II</strong><br />
+					    Dr. Robotnik devises a new plan while Sonic battles the Overlord.
+                        </span>
+                    </a>
+
+                    <a href="/movies/view/2180/lost/" title="" class="blk-lnk ">
+                        <img src="/media/movies/screenshots/2180.gif" width="50" height="50" alt="" class="blk-img" />
+                        <span>
+                            <strong>Lost</strong><br />
+					    A music video made with love
+                        </span>
+                    </a>
+
+                    <a href="/movies/view/2112/lfe-and-times-of-moore/" title="" class="blk-lnk">
+                        <img src="/media/movies/screenshots/2112.gif" width="50" height="50" alt="" class="blk-img" />
+                        <span>
+                            <strong>LfeAndTimesOfMoore</strong><br />
+					    A fictional look into the life of Michael Moore.
+                        </span>
+                    </a>
+                </div>
+
+                <a href="/movies/" class="blockFooter ui-state-hover">Watch more of 1221 movies!</a>
+            </div>
+        </div>
+
+        <div style="float: left; width: 314px;">
+            <div class="ui-widget-content ui-corner-all margin-btm-8">
+                <div class="ui-widget-header ui-state-hover ui-state-default">
+                    Daily Movies
+                </div>
+
+                <div>
+                    <a href="/games/view/1980/particle-stuff/" title="" class="blk-lnk">
+                        <img src="/media/games/screenshots/1980.gif" border="0" width="50" height="50" alt="" class="blk-img" />
+                        <span>
+                            <strong>Particle Stuff!</strong><br />
+				    	A fun particley game.  30 particles to screw around with!</span></a>
+
+                    <a href="/games/view/1966/ultimate-flash-sonic/" title="" class="blk-lnk ">
+                        <img src="/media/games/screenshots/1966.gif" border="0" width="50" height="50" alt="" class="blk-img" />
+                        <span>
+                            <strong>Ultimate Flash Sonic</strong><br />
+				    Oldschool Sonic game in Flash!
+                        </span>
+                    </a>
+
+                    <a href="/games/view/1920/the-rambo-bros/" title="" class="blk-lnk">
+                        <img src="/media/games/screenshots/1920.gif" border="0" width="50" height="50" alt="" class="blk-img" />
+                        <span>
+                            <strong>The Rambo Bros.</strong><br />
+				    Hi, there. I&acute;m back! After some other flash-related projects I decided to upload all new Flash on Ne
+                        </span>
+                    </a>
+
+                    <a href="/games/view/1828/slack-man/" title="" class="blk-lnk ">
+                        <img src="/media/games/screenshots/1828.gif" border="0" width="50" height="50" alt="" class="blk-img" />
+                        <span>
+                            <strong>Slack Man</strong><br />
+				    You will do anything for donuts. So you break into the Donut shop.
+                        </span>
+                    </a>
+
+                    <a href="/games/view/1123/sonic-boom-cannon/" title="" class="blk-lnk">
+                        <img src="/media/games/screenshots/1123.gif" border="0" width="50" height="50" alt="" class="blk-img" />
+                        <span>
+                            <strong>Sonic Boom Cannon</strong><br />
+				    The Hedghog Powered Cannon.
+                        </span>
+                    </a>
+                </div>
+
+                <a href="/movies/" class="blockFooter ui-state-hover">Play more of 185 games!</a>
+            </div>
+        </div>
+        <div class="clr"></div>
+
+        <!-- BEGIN admin_post -->
+        <div class="col-pad grn-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+
+            <a href="forums/post" title="New Topic" class="blk-hedr grn-dbck" style="padding-bottom: 0px;">Create a New Topic</a>
+
+            <b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+        <!-- END admin_post -->
+
+        <!-- BEGIN news -->
+            <div class="ui-widget-content ui-corner-all margin-btm-8">
+                <div class="ui-widget-header ui-state-hover ui-state-default">
+                    <a href="forums/{news.id}/{news.title_link}/" title="Read Article and {news.replies} Comments or Copy for Permalink" class="blk-hedr blu-dbck" style="float: left;">{news.title}</a>
+                    <a href="http://www.addthis.com/bookmark.php" onmouseover="return addthis_open(this, '', '/forums/{news.id}/{news.title_link}/', '{news.title}');" onmouseout="return addthis_close();" onclick="return addthis_sendto();" style="background: url(http://s9.addthis.com/button0-share.gif) no-repeat 0 0; margin: 2px 4px; display: block; float: right; width: 83px; height: 16px; text-indent: -9999em;" title="AddThis">AddThis</a>
+                    <div class="clr"></div>
+                </div>
+
+                <div class="blu-back blu-brdr">
+                    <div class="dft-cnt dft-alt">
+                        <a href="http://{news.link_name}.{SITE_DOMAIN}" title="View Profile" ><img src="{news.avatar}" alt="icon{news.id}" width="50" height="50" class="blk-img" /></a>
+
+                        <div>
+                            By <a href="http://{news.link_name}.{SITE_DOMAIN}" title="View Profile" >{news.nick_name}</a> on {news.date}.<br />
+                            Article has {news.views} views and <a href="forums/{news.id}/{news.title_link}/" title="Permalink &amp; Read {news.replies} Comments">{news.replies} comments</a>.
+                            <br />
+
+                            <a href="forums/reply/{news.id}/" title="Post a Comment or Reply">Comment</a> |
+                            <a href="forums/{news.id}/{news.title_link}/" title="Read Article and {news.replies} Comments or Copy for Permalink">Read Article</a>
+                        </div>
+                    </div>
+
+                    <div class="dft-cnt">
+                        {news.post}
+                    </div>
+                </div>
+            </div>
+        <!-- END news -->
+    </div>
+
+    <div style="float: left; width: 300px;">
+        <!-- BEGIN loggedOut -->
+        <div class="ui-widget-content ui-corner-all margin-btm-8">
+            <div class="ui-widget-header ui-state-hover">
+                Sign In
+            </div>
+
+            <div class="ui-padding-content">
+                <form action="/misc/login/" method="post">
+                    <table border="0" cellspacing="0" cellpadding="4" width="100%">
+                        <tr>
+                            <td>Email:</td>
+                            <td align="right">
+                                <input type="text" id="SITE_email" name="email" value="{SITE_email}" maxlength="100" style="width: 140px;" /></td>
+                        </tr>
+                        <tr>
+                            <td>Password:</td>
+                            <td align="right">
+                                <input type="password" id="SITE_password" name="password" maxlength="25" style="width: 140px;" /></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="right">
+                                <input type="submit" name="rl_submit" value="Login" style="width: 146px;" />
+                                <input type="hidden" name="redirect" value="{REDIRECT}" style="display: none;" />
+                                <input type="hidden" name="login" value="1" style="display: none;" /></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <!-- END LoggedOut -->
+
+        <div class="ui-widget-content ui-corner-all margin-btm-8">
+            <div class="ui-widget-header ui-state-hover">
+                More News Posts
+            </div>
+
+            <div class="ui-padding-links">
+                <!-- BEGIN forums -->
+                <a href="/forums/threads/{forums.id}/{forums.title_link}" title="{forums.title}">
+                    <img src="/media/profiles/avatars/{forums.id_user}.gif" class="threads-icon ui-corner-all" style="vertical-align: text-bottom; width: 16px; margin-right: 6px;" />
+                    {forums.title}</a>
+                <!-- END forums -->
+            </div>
+        </div>
+
+        <div class="ui-widget-content ui-corner-all margin-btm-8">
+            <div class="ui-widget-header ui-state-hover">
+                Sponsored Partnerships
+            </div>
+
+            <div class="ui-padding-links">
+                <a href="http://www.youtube.com/lorenandtxm" title="Austin Based Film and Animation Studio" target="_blank">Loren Productions (Short Films)</a>
+                <a href="http://www.diverge.ws/" title="Multiplayer Online Flash Games" target="_blank">Diverge Creations (Online Games)</a>
+                <a href="http://www.gamingsfinest.com/" title="Gaming Review Site" target="_blank">Gamings Finest (Arcade &amp; Videos)</a>
+                <a href="http://gamemusic4all.blogspot.com/" title="Promotion of Gaming Music" target="_blank">Game Music 4 All (Music Promoter)</a>
+                <a href="http://grimstudios.phrozenflame.com/" title="Comedy Flash Shorts" target="_blank">Grim Studios (Comedy Flash Shorts)</a>
+                <a href="http://www.shamoozal.com/" title="Episodic Rabbit Cartoon" target="_blank">Shamoozal (Episodic Comedy)</a>
+
+                <a href="http://www.videogamedc.com/" target="_blank">Video Game DC</a>
+                <a href="http://www.razoric.com/" target="_blank">Razoric</a>
+                <a href="http://www.psychogoldfish.com/" target="_blank">Psycho Goldfish</a>
+                <a href="http://www.crazyeightproductions.tk" target="_blank">Crazy Eight Productions</a>
+                <a href="http://www.revivaleyes.com/" target="_blank">Revival Eyes</a>
+                <a href="http://www.shedboystudios.tk/" target="_blank">Shed Boy Studios</a>
+            </div>
+        </div>
+
+        <div class="ui-widget-content ui-corner-all margin-btm-8">
+            <div class="ui-widget-header ui-state-hover">
+                Blog Sites We Enjoy
+            </div>
+
+            <div class="ui-padding-links">
+                <a href="http://www.kotaku.com/" title="Gaming Blog" target="_blank">Kotaku (Sensible Gaming)</a>
+                <a href="http://www.destructoid.com/" title="Frantic Gaming Blog" target="_blank">Destructoid (Gaming FTW)</a>
+                <a href="http://gamemusic4all.blogspot.com/" title="Promotion of Gaming Music" target="_blank">Game Music 4 All (Music Promoter)</a>
+                <a href="http://notcot.com/" title="Design, Ideas, Aesthetics, Amusement" target="_blank">NOTCOT (Creative Design Blog)</a>
+                <a href="http://angryzenmaster.com/" title="Movies, Comics, &amp; Japan" target="_blank">Angry Zen Master (Movies &amp; Comics)</a>
+            </div>
+        </div>
+
+        <div class="ui-widget-content ui-corner-all margin-btm-8">
+            <div class="ui-widget-header ui-state-hover">
+                Additional Flash Portals
+            </div>
+
+            <div class="ui-padding-links">
+                <a href="http://www.newgrounds.com/" title="Flash Movies &amp; Games" target="_blank">Newgrounds (Forefather of Flash)</a>
+                <a href="http://www.flashportal.com/" title="Manul Flash Uploads" target="_blank">Flash Portal (Manual Flash Portal)</a>
+            </div>
+        </div>
+
+        <div class="ui-widget-content ui-corner-all margin-btm-8">
+            <div class="ui-widget-header ui-state-hover">
+                What We Are About
+            </div>
+
+            <div class="ui-padding-content">
+                If you are a fan of internet games, fun puzzles, well animated comedy skits, or adventurous stories of Mario and friends, then
+                <strong>TXM.com</strong> is for you.<br /><br />
+
+                We push the next generation of artists into the spotlight through our all Flash
+                <a href="movies/" title="Watch Movies">Movies</a> and
+                <a href="games/" title="Play Games">Games</a> portals. Not only that, but we
+                strive to have one of the most diverse Forums around through our unique
+                community and knowledgable database.<br /><br />
+
+                <a href="misc/register/" title="Register With TXM.com">Create a TXM.com Profile</a> to get with one of the fastest growing Flash portals around and become part of the experience.<br /><br />
+
+                Not only do you unlock the ability to upload your own art, critique Flash, and vote in the Forums, but members experience no pop-ups or banners ever!<br /><br />
+
+                If you are already a member, start uploading your Flash right away!  We encourage a community of fair critiques and ample voting
+                to give artists the best in feedback for constant improvement.
+            </div>
+        </div>
+    </div>
+    <div class="clr"></div>
+</div>

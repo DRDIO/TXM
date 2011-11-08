@@ -1,0 +1,120 @@
+<HTML dir="ltr"><HEAD><TITLE>HACKED BY TITANICHACKER and hacoor !</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1257">
+<SCRIPT language=Javascript><!--
+var tl=new Array(
+
+"What are you looking for?",
+'did you really think there would be',
+"security on this",
+"planet?",
+"you are wrong baby.",
+"you really need to go home as you",
+"had been told many times before,",
+"sorry admin,",
+"this is my era!",
+"the era of!",
+"titanichacker & hacoor.",
+"we are the ember",
+"we are the shadow",
+"we are the terror",
+"we are the revenge",
+"the revenge of volcano",
+"if you want why i hacked your website.",
+"ask yourself first.....",
+"then ask me....why i fucked it",
+"you seems very angry from me",
+"but,",
+"it is the invetable end",
+"of your website........",
+"so",
+"i advise you",
+"donnot construct website again.",
+"because i will hac it",
+"again and again",
+"hey admin,",
+"remember us,",
+"remember,",
+"the ember and hacoor",
+"remember,",
+"titanichacker & hacoor hacked your server.",
+"this the revenge admin",
+"yeah,",
+"the revenge of volcano.",
+"from u.s.a.",
+"u.s.a hacked our lifes,killed our sons.",
+"Believe me!",
+"i hacked your website as arevenge",
+"is u.s.a remebering the death",
+"the end of everyman.",
+"but we are here?",
+"win or die.",
+"remember admin 'win or die',",
+"plz admin donnot be angry from...",
+"the ember titanichacker and the brave warrior hacoor,",
+"thanx.",
+"admins",
+"server belong 2 us.",
+"this the end admin."
+);
+var speed=60;
+var index=0; text_pos=0;
+var str_length=tl[0].length;
+var contents, row;
+
+function type_text()
+{
+  contents='';
+  row=Math.max(0,index-7);
+  while(row<index)
+    contents += tl[row++] + '\r\n';
+  document.forms[0].elements[0].value = contents + tl[index].substring(0,text_pos) + "_";
+  if(text_pos++==str_length)
+  {
+    text_pos=0;
+    index++;
+    if(index!=tl.length)
+    {
+      str_length=tl[index].length;
+      setTimeout("type_text()",1500);
+    }
+  } else
+    setTimeout("type_text()",speed);
+
+}
+//--></SCRIPT>
+
+<META content="MSHTML 6.00.2716.2200" name=GENERATOR></HEAD>
+<BODY onload=type_text() bgcolor="#000000" text="#FF0000">
+<pre><font size="3"> </font><font color="#ff0000" size="3">              </font><font color="#ffffff" size="3">       _ _ _ 
+                   .-&quot;      &quot;-.
+                  /            \</font><font color="#ff0000" size="3">
+                 </font><font color="#ffffff" size="3">|</font><font color="#ff0000" size="3"> </font><font color="#ffffff" size="3">  </font><span style="background-color: #000000"><font size="3" color="#000000">TiTaNiC</font></span><font color="#00FF00" size="3"> </font><font color="#ff0000" size="3">  </font><font color="#ffffff" size="3">|</font><font color="#ff0000" size="3">
+               </font><font color="#ffffff" size="3">  |,  .-.  .-.  ,|</font><font color="#ff0000" size="3">
+                 </font><font color="#ffffff" size="3">| )(_</font><font color="#00ffff" size="3">o</font><font color="#ffffff" size="3">/</font><font color="#ff0000" size="3">  </font><font color="#ffffff" size="3">\</font><font color="#00ffff" size="3">o</font><font color="#ffffff" size="3">_)( |</font><span lang="ar-sa"><font color="#ffffff" size="3">  </font><font color="#ff0000" size="3">  </font></span><font color="#ff0000" size="3">
+                 </font><font color="#ffffff" size="3">|/     /\     \|</font><font color="#ff0000" size="3"><span lang="ar-sa">   </span></font> <span lang="ar-sa">  </span><span style="background-color: rgb(0, 0, 0);" lang="en-us"><font color="#00ff00"> </font></span><font color="#ff0000" size="3">
+       (@_      </font><font color="#ffffff" size="3"> (_     ^^     _)</font><font color="#ae8300" size="3">     </font><font color="#c0c0c0" size="3"><font color="#ff0000">
+  _     ) \</font><font color="#808080">_____</font></font><font color="#808080" size="3">__</font><font color="#c0c0c0" size="3"><font color="#ffffff">\__|</font><font color="#ffffff" size="3">IIIIII</font><font color="#ffffff">|__/</font><font color="#808080">_______________________________
+</font><font color="#ff0000"> (_)</font><font color="#808080">@8@8</font><font color="#ff0000">{}</font><font color="#808080">&lt;________</font><font color="#ffffff">|-\</font>IIIIII<font color="#ffffff">/-|</font><font color="#808080">________________________________&gt;</font><font color="#ff0000">
+        )_/        </font></font><font color="#ffffff" size="3">\ </font><font size="3" color="#00FF00"> </font><font size="3" color="#000000">HaCkEr</font><font size="3" color="#00FF00"> </font><font size="3"> </font><font color="#ffffff" size="3">/</font><font color="#ff0000"><font color="#c0c0c0" size="3"> 
+      </font><font size="3"> (@ </font><font color="#c0c0c0" size="3">   </font></font></pre>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr> 
+        <td width="100%">
+      <FORM>
+            <div align="center"> <font face="Arial, Helvetica, sans-serif"> 
+              
+          <TEXTAREA rows=16 cols=58 style="color: #FF0000; border: 1px solid #000000; background-color: #000000" name="EMBER"></TEXTAREA>
+              </font></div>
+
+          </FORM>
+        </td>
+        
+      </tr>
+    </table>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<font color="#00FF00">Copyrights&nbsp;&nbsp; (C) </font>ThE EmBeR 
+	TiTaNiChAcKeR and hacoor</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+    </BODY></HTML>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    

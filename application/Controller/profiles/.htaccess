@@ -1,0 +1,10 @@
+AddHandler application/x-httpd-php5 .php
+
+RewriteEngine On
+RewriteBase /profiles
+
+RewriteCond %{SERVER_NAME} ^(w|ww|www|wwww)\.txm\.loc$ [NC]
+RewriteRule ^(.*)$ http://txm.loc/profiles/$1 [R,L,NE,QSA]
+
+RewriteCond %{SERVER_NAME} ^(.*)\.txm\.loc$ [NC]
+RewriteRule ^(.*)$ http://google.com/ [L,NE,QSA]

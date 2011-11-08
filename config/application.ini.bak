@@ -1,0 +1,40 @@
+[production]
+
+    resources.session.cookie_domain = ".txm.com"
+
+    phpSettings.display_startup_errors = 0
+    phpSettings.display_errors         = 0
+
+    includePaths.application = APPLICATION_PATH
+
+    bootstrap.path  = APPLICATION_PATH "/Bootstrap.php"
+    bootstrap.class = "Bootstrap"
+
+    resources.frontController.moduleControllerDirectoryName = "Controller"
+    resources.frontController.moduleDirectory               = APPLICATION_PATH "/Module"
+    resources.frontController.defaultModule                 = "Main"
+    resources.frontController.prefixDefaultModule           = "true"
+
+    resources.modules = ""
+
+    resources.db.adapter         = "mysqli"
+    resources.db.params.host     = "localhost"
+    resources.db.params.username = ""
+    resources.db.params.password = ""
+    resources.db.params.dbname   = ""
+
+    resources.layout.layout     = "layout"
+    resources.layout.layoutpath = APPLICATION_PATH "/Layout"
+
+    resources.view.doctype = "HTML5"    
+
+[development : production]
+
+    phpSettings.display_startup_errors = 1
+    phpSettings.display_errors         = 1
+
+    resources.session.cookie_domain = ".txm.loc"
+
+    resources.db.params.username = "txm"
+    resources.db.params.password = "ZsDUSTSrvpRxbqM5"
+    resources.db.params.dbname   = "txm"    

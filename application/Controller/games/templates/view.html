@@ -1,0 +1,104 @@
+<div class="col-w3x4">
+	<div class="col-pad blu-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+        <div class="blk-hedr blu-dbck icn-games">
+			Game: '{title}' By {nick_name}
+        </div>
+        
+        <div class="blu-back blu-brdr">				
+            <div style="float: left; width: 75px;">
+                <img src="{SITE_LEVEL}games/images/ratings/{rating}.gif" alt="Rating {rating}" style="margin: 6px 4px 4px 10px;" /><br />
+                <img src="{SITE_LEVEL}games/images/types/{type}.gif" alt="Type {type}" style="margin: 6px 4px 4px 10px;" />
+            </div>
+                            
+            <div style="float: left;">      
+                <table width="260" border="0" cellspacing="4" cellpadding="0">
+                    <tr>
+                        <td width="80">Title:</td><td><b>{title}</b></td></tr>
+                    <tr>
+                        <td>Author:</td><td><b><a href="http://{link_name}.txmafia.com/" title="View Profile">{nick_name}</a></b></td></tr>
+                    <tr>  
+                        <td>Website:</td><td><b><a href="{web_url}" title="website">{web_title}</a></b></td></tr>
+                    <tr>  
+                        <td valign="top">Score:</td><td valign="top"><b style="font-size: 18px; vertical-align: text-top;">{score}</b> out of 10.00</td></tr>
+                    <tr>
+                        <td>Uploaded:</td><td>{date}</td></tr>
+                    <tr>
+                        <td>Size:</td><td>{size} MB @ {speed} (56 kbps)</td></tr>
+                    <tr>
+                        <td>Status:</td><td>{votes} Votes &amp; {reviews} Reviews</td></tr>
+                    <tr>
+                        <td>Views:</td><td>{views} Plays</td></tr>
+                </table>
+            </div>
+                            
+            <a href="{SITE_LEVEL}games/play/{id}/{title_link}/" onclick="return flaPLAY({id}, {width}, {height});" style="display: block; float: right; margin: 20px 4px 4px 4px; width: 232px; height: 142px; background: url({SITE_LEVEL}games/images/play.gif) no-repeat; text-indent: -9999em; border: 2px solid #ffffff;">Play Game</a>
+            <br class="clr" />
+        
+            <div class="dft-cnt blu-alt">
+                {commentary}
+            </div>
+		</div>
+	<b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+</div>
+
+<div class="col-w1x4">
+	<div class="col-pad blu-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+        <div class="blk-hedr blu-dbck icn-games">
+			Play a Random Game</div>
+
+        <div class="blu-back blu-brdr">      
+<!-- BEGIN random -->
+        <a href="{SITE_LEVEL}games/{random.id}/{random.title_link}/" title="{random.title}" class="blk-lnk {random.color}">
+            <img src="{SITE_LEVEL}media/{random.avatar}.gif" width="50" height="50" alt="{random.id}" />
+            <span>
+                <strong>{random.title}</strong><br />
+                {random.synopsis}<br />
+            </span><br class="clr" />
+        </a>
+<!-- END random -->
+		</div>
+	<b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+
+	<div class="col-pad blu-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+        <div class="blk-hedr blu-dbck icn-games">
+			Play More by Author</div>
+
+        <div class="blu-back blu-brdr">                  
+<!-- BEGIN games_more -->
+            <a href="{SITE_LEVEL}games/{games_more.id}/{games_more.title_link}/" title="{games_more.title}" class="blk-lnk {games_more.color}">
+                <img src="{SITE_LEVEL}media/{games_more.avatar}.gif" width="50" height="50" alt="{games_more.id}" />
+                <span>
+                    <strong>{games_more.title}</strong><br />
+                    {games_more.synopsis}<br />
+                </span><br class="clr" />
+            </a>
+<!-- END games_more -->
+		</div>
+	<b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+</div>
+
+<div class="col-w2x4">
+	<div class="col-pad grn-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+        <div class="blk-hedr grn-dbck">
+			Read Latest Comments
+        </div>
+
+        <div class="grn-back grn-brdr">                  
+<!-- BEGIN comments -->
+            <div class="dft-cnt {comments.color}" style="min-height: 50px;">
+            <img src="{SITE_LEVEL}media/{comments.avatar}.gif" width="50" height="50" alt="{comments.id}" class="blk-lnk-img" />
+            <div>              
+                <a href="http://{comments.link_name}.{SITE_DOMAIN}"><strong>{comments.nick_name}</strong></a>
+                <span class="grn-txt">on {comments.date_comment}</span>
+                <div class="blu-brd" style="margin: 3px 0px 4px 0px;"></div>
+                {comments.comment}<br />
+                <span class="blu-brd">{comments.reply}</span>
+            </div><br class="clr" />
+            </div>
+<!-- END comments -->
+<!-- BEGIN comments_more -->
+            <div class="index-more">Viewing 5 of {reviews} reviews.</div>
+<!-- END comments_more -->
+		</div>
+	<b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+</div>

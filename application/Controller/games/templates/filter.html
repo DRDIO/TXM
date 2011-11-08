@@ -1,0 +1,51 @@
+<div class="col-w3x4">
+<!-- BEGIN pagination -->
+		<div class="col-pad blu-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+        <div class="blu-dbck pagination">
+<!-- BEGIN row -->
+            <a href="{SITE_LEVEL}games/filter/{mode}/{pagination.row.page}" title="Jump to Page {pagination.row.page}">{pagination.row.title}</a>
+<!-- END row -->
+            <div class="clr"></div>   
+        </div>
+    <b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+<!-- END pagination --> 
+
+		<div class="col-pad blu-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+        <div class="blk-hedr blu-dbck icn-games">
+						Games Filtered By {title}
+        </div>
+				
+        <div class="blu-brdr blu-back">
+            <!-- BEGIN listflash -->
+            <a href="{SITE_LEVEL}games/{listflash.id}/{listflash.title_link}/" title="{listflash.title}" class="blk-lnk {listflash.color}">
+                <img src="{listflash.avatar}" width="50" height="50" alt="{listflash.title}" />
+                <span>
+                    <strong>{listflash.title}</strong><br />
+                    {listflash.synopsis}<br />
+
+                    {listflash.id_user} -
+                    {listflash.link_name} -
+                    {listflash.nick_name} -
+                    {listflash.rating} -
+                    {listflash.type} -
+                    {listflash.views} -
+                    {listflash.votes} -
+                    {listflash.score}
+                                        
+                </span><br class="clr" />
+            </a>
+            <!-- END listflash -->
+        </div>
+		<b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>
+
+<!-- BEGIN pagination -->
+		<div class="col-pad blu-blck"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b>
+		    <div class="blu-dbck pagination">
+<!-- BEGIN row -->
+            <a href="{SITE_LEVEL}games/filter/{mode}/{pagination.row.page}" title="Jump to Page {pagination.row.page}">{pagination.row.title}</a>
+<!-- END row -->
+            <div class="clr"></div>   
+        </div>
+		<b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></div>  
+<!-- END pagination -->   
+</div>       

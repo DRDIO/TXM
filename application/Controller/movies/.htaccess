@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteBase /movies
+
+RewriteCond %{SERVER_NAME} ^(.*)txmafia\.com$ [NC]
+RewriteRule ^(.*)$ http://%1txm.com/$1 [R,NE,QSA]
+
+RewriteCond %{SERVER_NAME} ^(w|ww|www|wwww)\.txm\.com$ [NC]
+RewriteRule ^(.*)$ http://txm.com/$1 [R,NE,QSA]
+
+RewriteRule ^([0-9]+)/?(.*)$ view.php?id=$1 [QSA,L]
+
+RewriteRule ^([a-z-]+)/?([a-z0-9-]*)/?([a-z0-9-]*)/?$ $1.php?id=$2&page=$3 [QSA,L]

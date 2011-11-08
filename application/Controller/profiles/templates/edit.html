@@ -1,0 +1,281 @@
+<STYLE>
+	fieldset { color: #403214; font: 12px Verdana; border: 1px solid #8E7B1B; padding: 4px; margin: 0px 0px 4px 0px; }
+	legend { color: #8E7B1B; font-weight: bold }
+	dt { float: left; font-weight: bold; text-align: right; width: 30%; }
+	dd { text-align: right; }
+
+	.info { color: #403214; font: bold 12px Verdana; text-align: right; width: 120px; padding-right: 24px; }
+	.profile { vertical-align: top; padding: 2px 0px 0px 0px; height: 24px; color: #403214; font: 12px Verdana; text-align: left; }
+	.text { font: 12px Verdana; width: 214px; height: 20px; padding: 2px; margin: 0px 2px 4px 2px; }
+	.textarea { font: 12px Verdana; width: 214px; height: 48px; padding: 2px; margin: 0px 2px 4px 2px; overflow: auto; }
+	.select { font: 12px Verdana; margin: 0px 0px 4px 0px; padding: 0px; }
+	.option { font: 12px Verdana; }
+</STYLE>
+
+<FORM ACTION='{S_PROFILE_ACTION}' ENCTYPE='multipart/form-data' METHOD='post'>
+					
+<TABLE BORDER='0' CELLSPACING='0' CELLPADDING='0'>			
+	<TR>
+		<TD COLSPAN='2' VALIGN='top' ALIGN='left' STYLE='background-image:url({SITE_FOLDER}images/top_back.gif);'>
+			{PROFILE_HEADER}</TD>
+
+		<TD COLSPAN='2' VALIGN='top' ALIGN='right' STYLE='background-image:url({SITE_FOLDER}images/top_back.gif);'>
+			<A HREF='{SITE_LINK}'><IMG BORDER='0' HEIGHT='45' SRC='{SITE_FOLDER}images/top_title_index.gif' ALT='index'></A></TD>
+	</TR>
+
+	<TR>
+		<TD WIDTH='10' STYLE='background-color: #C4C3AF; background-image: url({SITE_FOLDER}images/left.gif); background-repeat: repeat-y;'></TD>
+		
+		<TD VALIGN='top' ALIGN='center' COLSPAN='2' STYLE='background-color: #C4C3AF;'>
+			<TABLE BORDER='0' WIDTH='100%' CELLSPACING='0' CELLPADDING='4'>
+				<TR><TD WIDTH='50%' VALIGN='top'>
+					{ERROR}
+					
+					<FIELDSET>
+					<LEGEND>Basic User Information</LEGEND>
+					<TABLE WIDTH='100%' BORDER='0' CELLSPACING='0' CELLPADDING='0'>
+						<TR><TD WIDTH='140' CLASS='profile'><LABEL FOR='username'>Username:</LABEL></TD>
+						<TD CLASS='profile' STYLE='padding-left: 4px;'>{USERNAME}</TD></TR>
+					
+						<TR><TD CLASS='profile'><LABEL FOR='user_nick_name'>Nick Name:</LABEL></TD>
+						<TD><INPUT CLASS='text' TYPE='text' NAME='user_nick_name' VALUE='{USER_NICK_NAME}' MAXLENGTH='100'></TD></TR>
+					
+						<TR><TD CLASS='profile'><LABEL FOR='user_email'>Email:</LABEL></TD>
+						<TD><INPUT CLASS='text' TYPE='text' NAME='user_email' VALUE='{USER_EMAIL}' MAXLENGTH='100'></TD></TR>
+					
+						<TR><TD CLASS='profile'><LABEL FOR='cur_password'>Old Password:</LABEL></TD>
+						<TD><INPUT CLASS='text' TYPE='password' NAME='cur_password' VALUE='{CUR_PASSWORD}' MAXLENGTH='32'></TD></TR>
+					
+						<TR><TD CLASS='profile'><LABEL FOR='new_password'>New Password:</LABEL></TD>
+						<TD><INPUT CLASS='text' TYPE='password' NAME='new_password' VALUE='{NEW_PASSWORD}' MAXLENGTH='32'></TD></TR>
+					
+						<TR><TD CLASS='profile'><LABEL FOR='password_confirm'>Confirm Password:</LABEL></TD>
+						<TD><INPUT CLASS='text' TYPE='password' NAME='password_confirm' VALUE='{PASSWORD_CONFIRM}' MAXLENGTH='32'></TD></TR>
+					</TABLE>
+					</FIELDSET>
+					<FIELDSET>
+					<LEGEND>Personal Website</LEGEND>
+					<TABLE BORDER='0' CELLSPACING='0' CELLPADDING='0'>
+						<TR><TD WIDTH='140' CLASS='profile'><LABEL FOR='user_website_title'>Website Title:</LABEL></TD>
+						<TD><INPUT CLASS='text' TYPE='text' NAME='user_website_title' VALUE='{USER_WEBSITE_TITLE}' MAXLENGTH='100'></TD></TR>
+					
+						<TR><TD CLASS='profile'><LABEL FOR='user_website'>Website URL:</LABEL></TD>
+						<TD><INPUT CLASS='text' TYPE='text' NAME='user_website' VALUE='{USER_WEBSITE}' MAXLENGTH='100'></TD></TR>
+					
+						<TR><TD CLASS='profile'><LABEL FOR='user_website_desc'>Description:</LABEL></TD>
+						<TD><TEXTAREA COLS='10' ROWS='3' CLASS='textarea' NAME='user_website_desc' CLASS='textarea'>{USER_WEBSITE_DESC}</TEXTAREA></TD></TR>
+					</TABLE>
+					</FIELDSET>
+					<FIELDSET>
+					<LEGEND>Image Settings</LEGEND>
+					<TABLE WIDTH='100%' BORDER='0' CELLSPACING='0' CELLPADDING='0'>
+						<TR><TD COLSPAN='2' CLASS='profile'>
+							Your avatar will be resized to 100 x 100 pixels, and will be seen at 50 x 50 pixels in the forums. Your photo will be resized to 210 x ? pixels to fit in the profiles.<BR /><BR /></TD>
+						</TR>
+						
+						<TR><TD WIDTH='140' CLASS='profile'><LABEL FOR='avatar_remote_url'>Avatar:</LABEL></TD>
+						<TD><INPUT CLASS='text' TYPE='text' NAME='avatar_remote_url'></TD></TR>
+						<TR><TD CLASS='profile'></TD>
+						<TD><INPUT CLASS='text' TYPE='file' NAME='avatar_local' SIZE='25'></TD></TR>
+						<TR><TD CLASS='profile'></TD>
+						<TD CLASS='profile'><INPUT TYPE='checkbox' NAME='avatar_delete' value='1' STYLE='width: 20px; vertical-align: bottom; margin: 0px;'> Delete Avatar</TD></TR>
+				
+						<TR><TD CLASS='profile'><LABEL FOR='photo_remote_url'>Photo:</LABEL></TD>
+						<TD CLASS='profile'><INPUT CLASS='text' TYPE='text' NAME='photo_remote_url'></TD></TR>
+						<TR><TD CLASS='profile'></TD>
+						<TD><INPUT CLASS='text' TYPE='file' NAME='photo_local' SIZE='25'></TD></TR>
+						<TR><TD CLASS='profile'></TD>
+						<TD CLASS='profile'><INPUT TYPE='checkbox' NAME='photo_delete' value='1' STYLE='width: 20px; vertical-align: bottom; margin: 0px;'> Delete Photo</TD></TR>
+						
+						<TR><TD VALIGN='top' ALIGN='center' COLSPAN='2'>
+							<IMG SRC='http://www.txmafia.com/profiles/avatars/{USER_ID}.gif' WIDTH='100' HEIGHT='100' ALT='Avatar' STYLE='vertical-align: top;'>
+							<IMG SRC='http://www.txmafia.com/profiles/photos/{USER_ID}.gif' WIDTH='210' ALT='Photo'></TD></TR>						
+					</TABLE>
+					</FIELDSET>
+					<FIELDSET>
+					<LEGEND>Preferences</LEGEND>
+					<TABLE BORDER='0' CELLSPACING='0' CELLPADDING='0'>
+						<TR><TD COLSPAN='2' CLASS='profile'>
+							Your signature will be removed if you disable them.<BR /><BR /></TD>
+						</TR>
+						
+						<TR><TD WIDTH='140' CLASS='profile'><LABEL FOR='user_view_email'>Display Your Email:</LABEL></TD>
+						<TD CLASS='profile'><INPUT TYPE='radio' NAME='user_view_email' value='1' STYLE='width: 20px; vertical-align: bottom; margin: 0px;' {USER_VIEWEMAIL_YES}> Yes
+						&nbsp;&nbsp;<INPUT TYPE='radio' NAME='user_view_email' value='0' STYLE='width: 20px; vertical-align: bottom; margin: 0px; margin-left: 60px;' {USER_VIEWEMAIL_NO}> No</TD></TR>
+					
+						<TR><TD CLASS='profile'><LABEL FOR='user_allow_viewonline'>Hide Online Status:</LABEL></TD>
+						<TD CLASS='profile'><INPUT TYPE='radio' NAME='user_allow_viewonline' value='0' STYLE='width: 20px; vertical-align: bottom; margin: 0px;' {USER_ALLOW_VIEWONLINE_NO}> Yes
+						&nbsp;&nbsp;<INPUT TYPE='radio' NAME='user_allow_viewonline' value='1' STYLE='width: 20px; vertical-align: bottom; margin: 0px; margin-left: 60px;' {USER_ALLOW_VIEWONLINE_YES}> No</TD></TR>
+					
+						<TR><TD CLASS='profile'><LABEL FOR='user_notify'>Receive Emails:</LABEL></TD>
+						<TD CLASS='profile'><INPUT TYPE='radio' NAME='user_notify' value='1' STYLE='width: 20px; vertical-align: bottom; margin: 0px;' {USER_NOTIFY_YES}> Yes
+						&nbsp;&nbsp;<INPUT TYPE='radio' NAME='user_notify' value='0' STYLE='width: 20px; vertical-align: bottom; margin: 0px; margin-left: 60px;' {USER_NOTIFY_NO}> No</TD></TR>
+															
+						<TR><TD CLASS='profile'><LABEL FOR='user_sig'>Forum Signature:</LABEL></TD>
+						<TD CLASS='profile'><TEXTAREA NAME='user_sig' CLASS='textarea'>{USER_SIG}</TEXTAREA></TD></TR>
+						
+						<TR><TD CLASS='profile'><LABEL FOR='user_attachsig'>Allow Signatures:</LABEL></TD>
+						<TD CLASS='profile'><INPUT TYPE='radio' NAME='user_attachsig' value='1' STYLE='width: 20px; vertical-align: bottom; margin: 0px;' {USER_ATTACHSIG_YES}> Yes
+						&nbsp;&nbsp;<INPUT TYPE='radio' NAME='user_attachsig' value='0' STYLE='width: 20px; vertical-align: bottom; margin: 0px; margin-left: 60px;' {USER_ATTACHSIG_NO}> No</TD></TR>						
+					</TABLE>
+					</FIELDSET><FIELDSET>
+					<LEGEND>Friend Levels</LEGEND>
+					<TABLE BORDER='0' CELLSPACING='0' CELLPADDING='0'>
+						<TR><TD COLSPAN='2' CLASS='profile'>
+							You can assign custom friend level names for your profile. Add, promote, demote, and remove friends by viewing their profile and clicking Add, + Fav, - Fav, or Remove.<BR /><BR /></TD>
+						</TR>
+						
+						<TR><TD WIDTH='140' CLASS='profile'><LABEL FOR='friend_level_0'>Friend Level 0:</LABEL></TD>
+						<TD><INPUT CLASS='text' TYPE='text' NAME='friend_level_0' VALUE='{FRIEND_LEVEL_0}' MAXLENGTH='100'></TD></TR>
+						
+						<TR><TD WIDTH='140' CLASS='profile'><LABEL FOR='friend_level_1'>Friend Level 1:</LABEL></TD>
+						<TD><INPUT CLASS='text' TYPE='text' NAME='friend_level_1' VALUE='{FRIEND_LEVEL_1}' MAXLENGTH='100'></TD></TR>
+						
+						<TR><TD WIDTH='140' CLASS='profile'><LABEL FOR='friend_level_2'>Friend Level 2:</LABEL></TD>
+						<TD><INPUT CLASS='text' TYPE='text' NAME='friend_level_2' VALUE='{FRIEND_LEVEL_2}' MAXLENGTH='100'></TD></TR>
+						
+						<TR><TD WIDTH='140' CLASS='profile'><LABEL FOR='friend_level_3'>Friend Level 3:</LABEL></TD>
+						<TD><INPUT CLASS='text' TYPE='text' NAME='friend_level_3' VALUE='{FRIEND_LEVEL_3}' MAXLENGTH='100'></TD></TR>
+					</TABLE>
+					</FIELDSET></TD>
+					
+				<TD VALIGN='top' STYLE='font-size: 6px;'>
+					<FIELDSET>
+					<LEGEND>Personal Contacts</LEGEND>
+					<TABLE BORDER='0' CELLSPACING='0' CELLPADDING='0'>												
+						<TR><TD WIDTH='140' CLASS='profile'><LABEL FOR='icq'>ICQ UI Number:</LABEL></TD>
+						<TD><INPUT CLASS='text' TYPE='text' NAME='user_icq' VALUE='{USER_ICQ}' MAXLENGTH='100'></TD></TR>
+					
+						<TR><TD CLASS='profile'><LABEL FOR='aim'>AIM Screen Name:</LABEL></TD>
+						<TD><INPUT CLASS='text' TYPE='text' NAME='user_aim' VALUE='{USER_AIM}' MAXLENGTH='100'></TD></TR>
+					
+						<TR><TD CLASS='profile'><LABEL FOR='msn'>MSN Address:</LABEL></TD>
+						<TD><INPUT CLASS='text' TYPE='text' NAME='user_msnm' VALUE='{USER_MSNM}' MAXLENGTH='100'></TD></TR>
+					
+						<TR><TD CLASS='profile'><LABEL FOR='yahoo'>Yahoo Messenger:</LABEL></TD>
+						<TD><INPUT CLASS='text' TYPE='text' NAME='user_yim' VALUE='{USER_YIM}' MAXLENGTH='100'></TD></TR>
+					</TABLE>
+					</FIELDSET>
+					<FIELDSET>
+					<LEGEND>Visible Profile</LEGEND>
+					<TABLE BORDER='0' CELLSPACING='0' CELLPADDING='0'>
+						<TR><TD WIDTH='140' CLASS='profile'><LABEL FOR='user_full_name'>Full Name:</LABEL></TD>
+						<TD><INPUT CLASS='text' TYPE='text' NAME='user_full_name' VALUE='{USER_FULL_NAME}' MAXLENGTH='100'></TD></TR>
+											
+						<TR><TD CLASS='profile'><LABEL FOR='date_month'>Birthday:</LABEL></TD>
+						<TD><SELECT NAME='date_month' CLASS='select' STYLE='width: 98px; margin-left: 2px;'>
+									{DATE_MONTH_OPTIONS}				
+								</SELECT><SELECT NAME='date_day' CLASS='select' STYLE='width: 58px;'>
+									{DATE_DAY_OPTIONS}		
+								</SELECT><SELECT NAME='date_year' CLASS='select' STYLE='width: 58px;'>
+									{DATE_YEAR_OPTIONS}				
+								</SELECT></TD></TR>
+					
+						<TR><TD CLASS='profile'><LABEL FOR='viewemail'>Gender:</LABEL></TD>
+						<TD CLASS='profile'><INPUT TYPE='radio' NAME='pi_sex' value='2' STYLE='width: 20px; vertical-align: bottom; margin: 0px;' {PI_SEX_MALE}> Male
+						<INPUT TYPE='radio' NAME='pi_sex' value='1' STYLE='width: 20px; vertical-align: bottom; margin: 0px; margin-left: 10px;' {PI_SEX_FEMALE}> Female
+						<INPUT TYPE='radio' NAME='pi_sex' value='0' STYLE='width: 20px; vertical-align: bottom; margin: 0px; margin-left: 10px;' {PI_SEX_NONE}> None
+						</TD></TR>
+				
+						<TR><TD CLASS='profile'><LABEL FOR='webtitle'>City:</LABEL></TD>
+						<TD><INPUT CLASS='text' TYPE='text' NAME='user_city' VALUE='{USER_CITY}' MAXLENGTH='100'></TD></TR>
+						
+						<TR><TD CLASS='profile'><LABEL FOR='webtitle'>State/Province:</LABEL></TD>
+						<TD><INPUT CLASS='text' TYPE='text' NAME='user_from' VALUE='{USER_FROM}' MAXLENGTH='100'></TD></TR>
+					
+						<TR><TD CLASS='profile'><LABEL FOR='webtitle'>Country:</LABEL></TD>
+						<TD><INPUT CLASS='text' TYPE='text' NAME='user_country' VALUE='{USER_COUNTRY}' MAXLENGTH='100'></TD></TR>
+					</TABLE>
+					</FIELDSET>
+					<FIELDSET>
+					<LEGEND>Further Details</LEGEND>	
+					<TABLE BORDER='0' CELLSPACING='0' CELLPADDING='0'>				
+						<TR><TD WIDTH='140' CLASS='profile'><LABEL FOR='user_occ'>Occupation:</LABEL></TD>
+						<TD><INPUT CLASS='text' TYPE='text' NAME='user_occ' VALUE='{USER_OCC}' MAXLENGTH='100'></TD></TR>
+				
+						<TR><TD CLASS='profile'><LABEL FOR='user_interests'>Skills:</LABEL></TD>
+						<TD><TEXTAREA NAME='user_interests' CLASS='textarea'>{USER_INTERESTS}</TEXTAREA></TD></TR>
+						
+						<TR><TD CLASS='profile'><LABEL FOR='pi_interests'>Interests:</LABEL></TD>
+						<TD><TEXTAREA NAME='pi_interests' CLASS='textarea'>{PI_INTERESTS}</TEXTAREA></TD></TR>
+						
+						
+						<TR><TD CLASS='profile'><LABEL FOR='pi_about'>About Yourself:</LABEL></TD>
+						<TD><TEXTAREA NAME='pi_about' CLASS='textarea'>{PI_ABOUT}</TEXTAREA></TD></TR>
+					</TABLE>
+					</FIELDSET>
+					<FIELDSET>
+					<LEGEND>Favourites</LEGEND>
+					<TABLE BORDER='0' CELLSPACING='0' CELLPADDING='0'>
+						<TR><TD COLSPAN='2' CLASS='profile'>
+							List your favorites for the following categories, with each title, object, or person seperated by a comma.<BR /><BR /></TD>
+						</TR>
+						
+						<TR><TD WIDTH='140' CLASS='profile'><LABEL FOR='fv_music'>Music:</LABEL></TD>
+						<TD CLASS='profile'><TEXTAREA NAME='fv_music' CLASS='textarea'>{FV_MUSIC}</TEXTAREA></TD></TR>
+					
+						<TR><TD WIDTH='140' CLASS='profile'><LABEL FOR='fv_movies'>Movies:</LABEL></TD>
+						<TD CLASS='profile'><TEXTAREA NAME='fv_movies' CLASS='textarea'>{FV_MOVIES}</TEXTAREA></TD></TR>
+					
+						<TR><TD WIDTH='140' CLASS='profile'><LABEL FOR='fv_games'>Games:</LABEL></TD>
+						<TD CLASS='profile'><TEXTAREA NAME='fv_games' CLASS='textarea'>{FV_GAMES}</TEXTAREA></TD></TR>
+					
+						<TR><TD WIDTH='140' CLASS='profile'><LABEL FOR='fv_books'>Books:</LABEL></TD>
+						<TD CLASS='profile'><TEXTAREA NAME='fv_books' CLASS='textarea'>{FV_BOOKS}</TEXTAREA></TD></TR>
+					
+						<TR><TD WIDTH='140' CLASS='profile'><LABEL FOR='fv_artists'>Artists:</LABEL></TD>
+						<TD CLASS='profile'><TEXTAREA NAME='fv_artists' CLASS='textarea'>{FV_ARTISTS}</TEXTAREA></TD></TR>
+					
+						<TR><TD WIDTH='140' CLASS='profile'><LABEL FOR='fv_quotes'>Quotes:</LABEL></TD>
+						<TD CLASS='profile'><TEXTAREA NAME='fv_quotes' CLASS='textarea'>{FV_QUOTES}</TEXTAREA></TD></TR>
+					</TABLE>
+					</FIELDSET></TD>
+				</TR>
+				<TR>
+					<TD COLSPAN='2' ALIGN='center'>
+						<FIELDSET STYLE='text-align: justify;'>
+							<LEGEND>Explanations</LEGEND>
+								Everytime you update your profile, you are agreeing to the same terms and agreements given to you upon registration.  Extreme 
+								use of vulgarity, prejudice, or lewdness is prohibited.  If you are have problems, please visit the 
+								<A HREF='http://forums.txmafia.com/help' STYLE='font-weight: bold;'>Guest Help Issues</A> forum.  The information you provide here
+								is public, with the exception of email address.
+						</FIELDSET></TD>
+				<TR>
+					<TD COLSPAN='2' ALIGN='center'>	
+						<INPUT TYPE='submit' STYLE='vertical-align: top; width: 100%; padding: 1px; height: 22px;' NAME='submit' VALUE='Update Safehouse Profile'></TD>
+				</TR>
+			</TABLE>
+		</TD>
+		
+		<TD WIDTH='10' STYLE='background-color: #C4C3AF; background-image: url({SITE_FOLDER}images/right.gif); background-repeat: repeat-y;'></TD>
+	</TR>
+	
+	<TR>
+		<TD COLSPAN='2' ALIGN='left' VALIGN='top' STYLE='background-image: url({SITE_FOLDER}images/bot.gif); background-repeat: repeat-x;'>
+			<IMG SRC='{SITE_FOLDER}images/bot_left.gif' WIDTH='30' HEIGHT='12' /></TD>
+
+		<TD COLSPAN='2' ALIGN='right' VALIGN='top' STYLE='background-image: url({SITE_FOLDER}images/bot.gif); background-repeat: repeat-x;'>
+			<IMG SRC='{SITE_FOLDER}images/bot_right.gif' WIDTH='30' HEIGHT='12' /></TD>
+	</TR>
+
+	<TR>
+		<TD COLSPAN='2' VALIGN='top' ALIGN='left' STYLE='background-image:url({SITE_FOLDER}images/top_back.gif);'>
+			{PROFILE_HEADER}</TD>
+
+		<TD COLSPAN='2' VALIGN='top' ALIGN='right' STYLE='background-image:url({SITE_FOLDER}images/top_back.gif);'>
+			<A HREF='{SITE_LINK}'><IMG BORDER='0' HEIGHT='45' SRC='{SITE_FOLDER}images/top_title_index.gif' ALT='index'></A></TD>
+	</TR>
+
+	<TR>
+		<TD COLSPAN='2' ALIGN='left' VALIGN='top' STYLE='background-image: url({SITE_FOLDER}images/bot.gif); background-repeat: repeat-x;'>
+			<IMG SRC='{SITE_FOLDER}images/bot_left.gif' WIDTH='30' HEIGHT='12' /></TD>
+
+		<TD COLSPAN='2' ALIGN='right' VALIGN='top' STYLE='background-image: url({SITE_FOLDER}images/bot.gif); background-repeat: repeat-x;'>
+			<IMG SRC='{SITE_FOLDER}images/bot_right.gif' WIDTH='30' HEIGHT='12' /></TD>
+	</TR>
+		
+	<TR><TD HEIGHT='1' WIDTH='10'></TD><TD WIDTH='376'></TD><TD WIDTH='376'></TD><TD WIDTH='10'></TD></TR>
+</TABLE>
+</FORM>
+
+

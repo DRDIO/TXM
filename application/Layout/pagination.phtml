@@ -1,0 +1,28 @@
+<div class="pagination">
+    <a class="left <?php echo ($this->previous ? '' : ' pagination-disabled'); ?>" rel="<?php echo $this->first; ?>" href="<?php echo $this->url(array('page' => $this->first)); ?>">
+        &laquo; First
+    </a>
+
+    <a class="left <?php echo ($this->previous ? '' : ' pagination-disabled'); ?>" rel="<?php echo $this->previous; ?>" href="<?php echo $this->url(array('page' => $this->previous)); ?>">
+        &lsaquo; Prev
+    </a>
+
+    <div class="left">
+        <?php foreach ($this->pagesInRange as $page): ?>
+            <?php if ($page != $this->current): ?>
+                <a rel="<?php echo $page; ?>" href="<?php echo $this->url(array('page' => $page)); ?>">
+                    <?php echo $page; ?></a>
+            <?php else: ?>
+                <span><?php echo $page; ?></span>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </div>
+
+    <a class="right <?php echo ($this->next ? '' : ' pagination-disabled'); ?>" rel="<?php echo $this->last; ?>" href="<?php echo $this->url(array('page' => $this->last)); ?>">
+        Last &raquo;
+    </a>
+
+    <a class="right <?php echo ($this->next ? '' : ' pagination-disabled'); ?>" rel="<?php echo $this->next; ?>" href="<?php echo $this->url(array('page' => $this->next)); ?>">
+        Next &rsaquo;
+    </a>
+</div>

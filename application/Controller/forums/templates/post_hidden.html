@@ -1,0 +1,85 @@
+<!-- Hidden Elements (Maybe we should use AJAX loading instead) -->
+            
+<div id="post_link" style="display: none;">
+  <div class="dft-hdr-min blu-bdr">
+    Insert Link</div>
+  
+  <table border="0" cellspacing="0" cellpadding="4" width="100%" class="blu-bdr">
+    <tr class="blu-alt">
+      <td width="110">
+        Title:</td>
+      <td>
+        <input type="text" id="post_link_title" style="width: 200px;" /></td>
+    </tr>
+    <tr>
+      <td width="110">
+        URL Link:</td>
+      <td>
+        <input type="text" id="post_link_url" value="http://" style="width: 200px;" /></td>
+    </tr>
+    <tr class="blu-alt">
+      <td></td>
+      <td>
+        <input type="button" name="submit" value="Insert Link" class="inp-btn" style="width: 204px;" onclick="post_link_set();" /></td>
+    </tr>    
+  </table>
+  
+  <div class="dft-cnt">
+    Images will be scaled down to a 498 pixel width and centered.</div>
+</div>
+  
+<div id="post_image" style="display: none;">
+  <div class="dft-hdr-min blu-bdr">
+    Insert Image</div>
+  
+  <table border="0" cellspacing="0" cellpadding="4" width="100%" class="blu-bdr">
+    <tr class="blu-alt">
+      <td width="110">
+        URL Link:</td>
+      <td>
+        <input type="text" id="post_image_url" value="http://" style="width: 200px;" /></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <input type="button" name="submit" value="Insert Image" class="inp-btn" style="width: 204px;" onclick="post_image_set();" /></td>
+    </tr>    
+  </table>
+  
+  <div class="dft-cnt">
+    Images will be scaled down to a 498 pixel width and centered.</div>
+</div>
+  
+<div id="post_flash" style="display: none;">
+  <form method="get" action="" enctype="multipart/form-data">
+    <div class="dft-hdr-min blu-bdr">
+      Insert Flash Media</div>
+    
+    <table border="0" cellspacing="0" cellpadding="4" width="100%" class="blu-bdr">
+      <tr class="blu-alt">
+        <td width="110">
+          Source:</td>
+        <td>
+          <select id="post_flash_source" style="width: 204px;">
+            <option value="txm">TXM.com Media Link</option>
+            <option value="youtube">YouTube Link</option>
+            <option value="direct">Direct SWF URL</option>
+          </select></td>
+      </tr>
+      <tr>
+        <td>
+          URL Link:</td>
+        <td>
+          <input type="text" id="post_flash_url" value="http://" style="width: 200px;" /></td>
+      </tr>
+      <tr class="blu-alt">
+        <td></td>
+        <td>
+          <input type="submit" name="submit" value="Insert Flash Media" class="inp-btn" style="width: 204px;" onclick="post_flash_set();" /></td>
+      </tr>    
+    </table>
+    
+    <div class="dft-cnt">
+      Flash Media will be scaled down to a 498 pixel width and centered.</div>     
+  </form>
+</div>
