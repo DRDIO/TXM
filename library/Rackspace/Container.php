@@ -542,11 +542,11 @@ class Rackspace_Container
      *
      * # Grab the list of all storage objects
      * #
-     * $all_objects = $images->get_objects();
+     * $all_objects = $images->getObjectList();
      *
      * # Grab subsets of all storage objects
      * #
-     * $first_ten = $images->get_objects(10);
+     * $first_ten = $images->getObjectList(10);
      *
      * # Note the use of the previous result's last object name being
      * # used as the 'marker' parameter to fetch the next 10 objects
@@ -556,14 +556,14 @@ class Rackspace_Container
      * # Grab images starting with "birthday_party" and default limit/marker
      * # to match all photos with that prefix
      * #
-     * $prefixed = $images->get_objects(0, NULL, "birthday");
+     * $prefixed = $images->getObjectList(0, NULL, "birthday");
      *
      * # Assuming you have created the appropriate directory marker Objects,
      * # you can traverse your pseudo-hierarchical containers
      * # with the "path" argument.
      * #
-     * $animals = $images->get_objects(0,NULL,NULL,"pictures/animals");
-     * $dogs = $images->get_objects(0,NULL,NULL,"pictures/animals/dogs");
+     * $animals = $images->getObjectList(0,NULL,NULL,"pictures/animals");
+     * $dogs = $images->getObjectList(0,NULL,NULL,"pictures/animals/dogs");
      * </code>
      *
      * @param int $limit <i>optional</i> only return $limit names
@@ -573,13 +573,13 @@ class Rackspace_Container
      * @return array array of strings
      * @throws Rackspace_Exception unexpected response
      */
-    function get_objects($limit=0, $marker=NULL, $prefix=NULL, $path=NULL)
+    function getObjectList($limit=0, $marker=NULL, $prefix=NULL, $path=NULL)
     {
         list($status, $reason, $obj_array) =
-            $this->cfs_http->get_objects($this->name, $limit,
+            $this->cfs_http->getObjectList($this->name, $limit,
                 $marker, $prefix, $path);
         #if ($status == 401 && $this->_re_auth()) {
-        #    return $this->get_objects($limit, $marker, $prefix, $path);
+        #    return $this->getObjectList($limit, $marker, $prefix, $path);
         #}
         if ($status < 200 || $status > 299) {
             throw new Rackspace_Exception(

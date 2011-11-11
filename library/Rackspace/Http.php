@@ -647,7 +647,7 @@ class Rackspace_Http
 
     # GET /v1/Account/Container?format=json
     #
-    function get_objects($cname,$limit=0,$marker=NULL,$prefix=NULL,$path=NULL)
+    function getObjectList($cname,$limit=0,$marker=NULL,$prefix=NULL,$path=NULL)
     {
         if (!$cname) {
             $this->error_str = "Container name not set.";
