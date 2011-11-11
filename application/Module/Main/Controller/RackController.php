@@ -13,6 +13,12 @@ class Main_RackController extends Zend_Controller_Action
         $connect   = new Rackspace_Connection($auth);
         $container = $connect->get_container('txm_media');
         
+        $objects = $container->get_objects();
+        
+        $output = array();
+        foreach ($objects as $object) {
+            $output[] = $object->name;
+        }
         $this->_helper->json('hello');
     }
 }
