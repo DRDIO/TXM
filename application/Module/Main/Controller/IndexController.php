@@ -7,17 +7,17 @@ class Main_IndexController extends Zend_Controller_Action
         // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
         // Generate Top Bar Movies
         $randomMovies = Main_Model_Index::getRandomMovies();
-        
+
         foreach ($randomMovies as $id => $row) {
             if (!$row['synopsis']) {
                 $randomMovies[$id]['synopsis'] = '...';
             }
         }
-        
+
         // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
         // Generate Daily News Posts
         $dailyNews = Main_Model_Index::getDailyNews();
-        
+
         foreach ($dailyNews as $id => $row) {
             $dailyNews[$id]['title_link'] = Helper_String::toLink($row['title']);
             $dailyNews[$id]['title']      = htmlentities($row['title']);

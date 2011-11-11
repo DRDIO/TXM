@@ -2,11 +2,43 @@
 
 class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 {
+    protected function _initModuleAutoloaders() 
+    { 
+        $this->bootstrap('FrontController'); 
+
+        $front = $this->getResource('FrontController'); 
+
+        foreach ($front->getControllerDirectory() as $module => $directory) { 
+            $module = ucfirst($module); 
+            $loader = new Zend_Application_Module_Autoloader(array( 
+                'namespace' => $module, 
+                'basePath'  => dirname($directory), 
+            ));
+
+            $loader->addResourceType('model', 'Model', 'Model');
+        }
+    }
+
+    protected function _initView()
+    {
+        // Bootstrap View and Autloader, which are called in Page
+        $view = new Helper_View();
+
+        $options      = $this->getOptions();
+        $viewRenderer = Zend_Controller_Action_HelperBroker::getStaticHelper('ViewRenderer');
+
+        $viewRenderer
+            ->setView($view)
+            ->setViewBasePathSpec($options['resources']['layout']['viewBasePathSpec'])
+            ->setViewScriptPathSpec(':controller/:action.:suffix');
+
+        return $view;
+    }
+
     protected function _initPage()
     {
         // Bootstrap View and Autloader, which are called in Page
         $this->bootstrap('view');
-        $this->bootstrap('autoloader');
         
         $view = $this->getResource('view');
 
@@ -24,8 +56,8 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         // Setup view variables
         $view->siteDomain   = $domain;
         $view->siteLevel    = $protocol . '://' . $domain . '/';
-        $view->siteMedia    = $protocol . '://media.txmafia.' . $tld . '/';
-        $view->siteAssets   = $protocol . '://assets.txmafia.' . $tld . '/';
+        $view->siteMedia    = $protocol . '://media.' . $domain . '/';
+        $view->siteAssets   = $protocol . '://assets.' . $domain . '/';
 
         $view->siteRedirect = $_SERVER['REQUEST_URI'];
         $view->siteIp       = $_SERVER['REMOTE_ADDR'];
@@ -44,54 +76,14 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
             ->appendFile($view->siteAssets . 'js/source/jquery-ui-1.8.2.custom.min.js')
             ->appendFile($view->siteAssets . 'js/default.js');
 
-        // Add it to the ViewRenderer
-        $viewRenderer = new Zend_Controller_Action_Helper_ViewRenderer($view, array(
-            'viewBasePathSpec'   => ':moduleDir/View'
-        ));
-
-        Zend_Controller_Action_HelperBroker::addHelper($viewRenderer);
-
         Zend_Paginator::setDefaultScrollingStyle('Elastic');
         Zend_View_Helper_PaginationControl::setDefaultViewPartial('../../../Layout/pagination.phtml');
         Zend_Paginator::setDefaultItemCountPerPage(15);
 
         Helper_Log::init(array('priority' => 'debug', 'fancy' => true));
-        
+
         // Set the registry and view for later use
         Zend_Registry::set('siteUser', $siteUser);
-        $view->siteUser     = $siteUser;        
-    }
-
-    /**
-     *
-     * @return Zend_View
-     */
-    protected function _initView()
-    {
-        $options = $this->getOption('resources');        
-        $view    = new Zend_View();
-
-        if (isset($options['view'])) {
-            if (isset($options['view']['scriptPath'])) {
-                $view->setScriptPath($options['view']['scriptPath']);
-            }
-
-            if (isset($options['view']['doctype'])) {
-                $view->doctype($options['view']['doctype']);
-            }
-        }        
-
-        $view->setLfiProtection(false);
-        
-        // Return it, so that it can be stored by the bootstrap
-        return $view;
-    }
-
-    protected function _initAutoloader()
-    {        
-        $autoloader = Zend_Loader_Autoloader::getInstance();
-        $autoloader->registerNamespace('Helper_');
-        
-        return $autoloader;
+        $view->siteUser     = $siteUser;
     }
 }
