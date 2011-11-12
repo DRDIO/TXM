@@ -80,7 +80,7 @@ class Rackspace_Connection
     {
         if (isset($_ENV['RACKSPACE_SERVICENET']))
             $servicenet=True;
-        $this->cfs_http = new Rackspace_Http(DEFAULT_Rackspace_API_VERSION);
+        $this->cfs_http = new Rackspace_Http(Rackspace_Authentication::DEFAULT_CF_API_VERSION);
         $this->cfs_auth = $cfs_auth;
         if (!$this->cfs_auth->authenticated()) {
             $e = "Need to pass in a previously authenticated ";
