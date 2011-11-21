@@ -27,7 +27,7 @@ class Main_MediaController extends Zend_Controller_Action
             
             if ($handle) {
                 $headers = get_headers($fileName);
-                
+        
                 foreach ($headers as $header) {
                     header($header);
                 }
