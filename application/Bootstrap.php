@@ -59,4 +59,16 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         $log->registerErrorHandler();        
         Helper_Log::init($log);
     }
+    
+    protected function _initConf()
+    {   
+        $this->bootstrap('view');
+         
+        $view     = $this->getResource('view');
+        $options  = $this->getOptions();        
+        $conf     = new Zend_Config($options['conf']);
+        
+        Zend_Registry::set('conf', $conf);
+        $view->conf = $conf;
+    }
 }

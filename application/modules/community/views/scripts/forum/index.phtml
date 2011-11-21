@@ -35,13 +35,13 @@
                         </a>
                     </td>
                     <td>
-                        <img src="<?php echo $this->siteMedia; ?>profile/<?php echo $topic['id_user']; ?>.gif" class="text-img" />
+                        <img src="<?php echo $this->conf->cdn->profile; ?><?php echo $topic['id_user']; ?>.gif" class="text-img" />
                         <a href="<?php echo $topic['author_link_name']; ?>" title="<?php echo $topic['author_nick_name']; ?>">
                             <?php echo $topic['author_nick_name']; ?>
                         </a>
                     </td>
                     <td>
-                        <img src="<?php echo $this->siteMedia; ?>profile/<?php echo $topic['reply_user_id']; ?>.gif" class="text-img" />
+                        <img src="<?php echo $this->conf->cdn->profile; ?><?php echo $topic['reply_user_id']; ?>.gif" class="text-img" />
                         <a href="<?php echo $topic['reply_link_name']; ?>" title="<?php echo $topic['reply_nick_name']; ?>">
                             <?php echo $topic['reply_nick_name']; ?>
                         </a>

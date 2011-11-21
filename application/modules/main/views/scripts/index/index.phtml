@@ -8,7 +8,7 @@
 <?php foreach ($this->randomMovies as $row): ?>
 
         <a href="/movies/view/<?php echo $row['id']; ?>" title="<?php echo htmlentities($row['title']); ?>"  txm-desc="<?php echo htmlentities($row['synopsis']); ?>">
-            <img src="<?php echo $this->siteMedia; ?>movieimg/<?php echo $row['id']; ?>.gif" alt="media-<?php echo $row['id']; ?>" />
+            <img src="<?php echo $this->conf->cdn->movieimg; ?><?php echo $row['id']; ?>.gif" alt="media-<?php echo $row['id']; ?>" />
         </a>
 
 <?php endforeach; ?>
@@ -27,7 +27,7 @@
 
             <div class="padding-links index-media">
                 <a href="/movies/view/2126/dumbass-luigi/" title="">
-                    <img src="<?php echo $this->siteMedia; ?>movieimg/2126.gif" />
+                    <img src="<?php echo $this->conf->cdn->movieimg; ?>2126.gif" />
                     <span>
                         <strong>Dumbass Luigi</strong><br />
                                         Luigi is quite the fellow.
@@ -35,7 +35,7 @@
                 </a>
 
                 <a href="/movies/view/1833/mario-bros-arcade/" title="" class="blk-lnk">
-                    <img src="<?php echo $this->siteMedia; ?>movieimg/1833.gif" />
+                    <img src="<?php echo $this->conf->cdn->movieimg; ?>1833.gif" />
                     <span>
                         <strong>Mario Bros. Arcade</strong><br />
                                         Hey guys, Here is my latest movie, and first blooper reel. I used Mario Bros. Arcade becuase there i
@@ -43,7 +43,7 @@
                 </a>
 
                 <a href="/movies/view/1131/sonic-revenge-ii/" title="" class="blk-lnk">
-                    <img src="<?php echo $this->siteMedia; ?>movieimg/1131.gif" />
+                    <img src="<?php echo $this->conf->cdn->movieimg; ?>1131.gif" />
                     <span>
                         <strong>Sonic: Revenge II</strong><br />
                                         Dr. Robotnik devises a new plan while Sonic battles the Overlord.
@@ -51,7 +51,7 @@
                 </a>
 
                 <a href="/movies/view/2180/lost/" title="" class="blk-lnk ">
-                    <img src="<?php echo $this->siteMedia; ?>movieimg/2180.gif" />
+                    <img src="<?php echo $this->conf->cdn->movieimg; ?>2180.gif" />
                     <span>
                         <strong>Lost</strong><br />
                                         A music video made with love
@@ -59,7 +59,7 @@
                 </a>
 
                 <a href="/movies/view/2112/lfe-and-times-of-moore/" title="" class="blk-lnk">
-                    <img src="<?php echo $this->siteMedia; ?>movieimg/2112.gif" />
+                    <img src="<?php echo $this->conf->cdn->movieimg; ?>2112.gif" />
                     <span>
                         <strong>LfeAndTimesOfMoore</strong><br />
                                         A fictional look into the life of Michael Moore.
@@ -77,13 +77,13 @@
 
             <div class="padding-links index-media">
                 <a href="/games/view/1980/particle-stuff/" title="" class="blk-lnk">
-                    <img src="<?php echo $this->siteMedia; ?>gameimg/1980.gif" />
+                    <img src="<?php echo $this->conf->cdn->gameimg; ?>1980.gif" />
                     <span>
                         <strong>Particle Stuff!</strong><br />
                                     A fun particley game.  30 particles to screw around with!</span></a>
 
                 <a href="/games/view/1966/ultimate-flash-sonic/" title="" class="blk-lnk ">
-                    <img src="<?php echo $this->siteMedia; ?>gameimg/1966.gif" />
+                    <img src="<?php echo $this->conf->cdn->gameimg; ?>1966.gif" />
                     <span>
                         <strong>Ultimate Flash Sonic</strong><br />
                                 Oldschool Sonic game in Flash!
@@ -91,7 +91,7 @@
                 </a>
 
                 <a href="/games/view/1920/the-rambo-bros/" title="" class="blk-lnk">
-                    <img src="<?php echo $this->siteMedia; ?>gameimg/1920.gif" />
+                    <img src="<?php echo $this->conf->cdn->gameimg; ?>1920.gif" />
                     <span>
                         <strong>The Rambo Bros.</strong><br />
                                 Hi, there. I&acute;m back! After some other flash-related projects I decided to upload all new Flash on Ne
@@ -99,7 +99,7 @@
                 </a>
 
                 <a href="/games/view/1828/slack-man/" title="" class="blk-lnk ">
-                    <img src="<?php echo $this->siteMedia; ?>gameimg/1828.gif" />
+                    <img src="<?php echo $this->conf->cdn->gameimg; ?>1828.gif" />
                     <span>
                         <strong>Slack Man</strong><br />
                                 You will do anything for donuts. So you break into the Donut shop.
@@ -107,7 +107,7 @@
                 </a>
 
                 <a href="/games/view/1123/sonic-boom-cannon/" title="" class="blk-lnk">
-                    <img src="<?php echo $this->siteMedia; ?>gameimg/1123.gif" />
+                    <img src="<?php echo $this->conf->cdn->gameimg; ?>1123.gif" />
                     <span>
                         <strong>Sonic Boom Cannon</strong><br />
                                 The Hedghog Powered Cannon.
@@ -132,7 +132,7 @@
         <div class="padding-content" style="width: auto; overflow: hidden; border-top: 1px solid #ddd;">
             <div class="left text-disabled">
                 <a href="http://<?php echo $row['link_name']; ?>.<?php echo $this->siteDomain; ?>" title="View Profile">
-                    <img src="<?php echo $this->siteMedia; ?>profile/<?php echo $row['id_user']; ?>.gif" alt="Icon" class="text-img" />
+                    <img src="<?php echo $this->conf->cdn->profile; ?><?php echo $row['id_user']; ?>.gif" alt="Icon" class="text-img" />
                 </a>
 
                 <a href="http://<?php echo $row['link_name']; ?>.<?php echo $this->siteDomain; ?>" title="View Profile" ><?php echo $row['nick_name']; ?></a> on <?php echo $row['date']; ?>
@@ -188,7 +188,7 @@
 <?php foreach ($this->sidebarNews as $row): ?>
 
             <a href="/forums/threads/<?php echo $row['id']; ?>/<?php echo Helper_String::toLink($row['title_link']); ?>" title="<?php echo htmlentities($row['title']); ?>">
-                <img src="<?php echo $this->siteMedia; ?>profile/<?php echo $row['id_user']; ?>.gif" alt="Icon" class="text-img" />
+                <img src="<?php echo $this->conf->cdn->profile; ?><?php echo $row['id_user']; ?>.gif" alt="Icon" class="text-img" />
                 <?php echo $row['title']; ?></a>
 
 <?php endforeach; ?>

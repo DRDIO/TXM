@@ -8,7 +8,7 @@
 <?php foreach ($this->newMovies as $movie): ?>
 
         <a href="/movies/<?php echo $movie['id']; ?>/<?php echo Helper_String::toLink($movie['title']); ?>/" title="<?php echo $movie['title']; ?>">
-            <img src="<?php echo $this->siteMedia; ?>movieimg/<?php echo $movie['id']; ?>.gif" alt="<?php echo $movie['title']; ?>" class="text-img" />
+            <img src="<?php echo $this->conf->cdn->movieimg; ?><?php echo $movie['id']; ?>.gif" alt="<?php echo $movie['title']; ?>" class="text-img" />
             <strong><?php echo $movie['title']; ?></strong>
         </a>
 
@@ -27,7 +27,7 @@
 <?php foreach ($this->popularMovies as $movie): ?>
 
         <a href="/movies/<?php echo $movie['id']; ?>/<?php echo Helper_String::toLink($movie['title']); ?>/" title="<?php echo $movie['title']; ?>">
-            <img src="<?php echo $this->siteMedia; ?>movieimg/<?php echo $movie['id']; ?>.gif" alt="<?php echo $movie['title']; ?>" class="text-img" />
+            <img src="<?php echo $this->conf->cdn->movieimg; ?><?php echo $movie['id']; ?>.gif" alt="<?php echo $movie['title']; ?>" class="text-img" />
             <strong><?php echo $movie['title']; ?></strong>
         </a>
 
@@ -46,7 +46,7 @@
 <?php foreach ($this->bestMovies as $movie): ?>
 
         <a href="/movies/<?php echo $movie['id']; ?>/<?php echo Helper_String::toLink($movie['title']); ?>/" title="<?php echo $movie['title']; ?>">
-            <img src="<?php echo $this->siteMedia; ?>movieimg/<?php echo $movie['id']; ?>.gif" alt="<?php echo $movie['title']; ?>" class="text-img" />
+            <img src="<?php echo $this->conf->cdn->movieimg; ?><?php echo $movie['id']; ?>.gif" alt="<?php echo $movie['title']; ?>" class="text-img" />
             <strong><?php echo $movie['title']; ?></strong>
         </a>
 

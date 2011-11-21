@@ -34,7 +34,7 @@
 
         <div class="padding-content text-disabled">
             <a href="http://<?php echo $thread['link_name']; ?>.<?php echo $this->siteDomain; ?>" title="View Profile" style="border-bottom: none; line-height: 0;">
-                <img src="<?php echo $this->siteMedia; ?>profile/<?php echo $thread['id_user']; ?>.gif" alt="Icon" class="text-img" />
+                <img src="<?php echo $this->conf->cdn->profile; ?><?php echo $thread['id_user']; ?>.gif" alt="Icon" class="text-img" />
                 <?php echo $thread['nick_name']; ?>
             </a> on <?php echo $thread['date']; ?>
         </div>

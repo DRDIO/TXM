@@ -11,16 +11,16 @@
     </div>
 
     <div style="border-bottom: 1px solid #ddd; background: #000;">
-        <object type="application/x-shockwave-flash" width="<?php echo $this->gameInfo['width']; ?>" height="<?php echo $this->gameInfo['height']; ?>" data="<?php echo $this->siteMedia; ?>game/<?php echo $this->gameInfo['id']; ?>.swf" style="display: block; margin: auto;">
+        <object type="application/x-shockwave-flash" width="<?php echo $this->gameInfo['width']; ?>" height="<?php echo $this->gameInfo['height']; ?>" data="<?php echo $this->conf->cdn->game; ?><?php echo $this->gameInfo['id']; ?>.swf" style="display: block; margin: auto;">
             <param name="allowAccessScript" value="never" />
             <param name="wmode" value="opaque" />
-            <param name="game" value="<?php echo $this->siteMedia; ?>game/<?php echo $this->gameInfo['id']; ?>.swf" />
+            <param name="game" value="<?php echo $this->conf->cdn->game; ?><?php echo $this->gameInfo['id']; ?>.swf" />
         </object>
     </div>
 
     <div class="padding-content text-disabled">
         <a href="http://<?php echo $this->gameInfo['link_name']; ?>.<?php echo $this->siteDomain; ?>" title="View Profile">
-            <img src="<?php echo $this->siteMedia; ?>profile/<?php echo $this->gameInfo['id_user']; ?>.gif" alt="Icon" class="text-img" />
+            <img src="<?php echo $this->conf->cdn->profile; ?><?php echo $this->gameInfo['id_user']; ?>.gif" alt="Icon" class="text-img" />
             <?php echo $this->gameInfo['nick_name']; ?>
         </a> on <?php echo $this->gameInfo['date']; ?>
     </div>
@@ -75,7 +75,7 @@
 
             <div class="padding-content text-disabled">
                 <a href="http://<?php echo $review['link_name']; ?>.<?php echo $this->siteDomain; ?>" title="View Profile">
-                    <img src="<?php echo $this->siteMedia; ?>profile/<?php echo $review['id_user']; ?>.gif" alt="Icon" class="text-img" />
+                    <img src="<?php echo $this->conf->cdn->profile; ?><?php echo $review['id_user']; ?>.gif" alt="Icon" class="text-img" />
                     <?php echo $review['nick_name']; ?>
                 </a> on <?php echo $review['date_comment']; ?>
             </div>
