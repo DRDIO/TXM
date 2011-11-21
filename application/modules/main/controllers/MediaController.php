@@ -38,6 +38,9 @@ class Main_MediaController extends Zend_Controller_Action
                 }
                 
                 echo file_get_contents($fileName);
+            } else {
+                header('content-type: image/gif');
+                echo file_get_contents(APPLICATION_DATA . '/../public/img/spacer.gif');
             }
             
             /*
