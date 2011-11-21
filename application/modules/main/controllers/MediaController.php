@@ -28,9 +28,10 @@ class Main_MediaController extends Zend_Controller_Action
             }
             
             $fileName = $cdnList[$section] . $this->_getParam('file');            
-            $headers  = get_headers($fileName);
             
-            if ($headers) {
+            if (file_exists($fileName)) {
+                $headers = get_headers($fileName);
+
                 foreach ($headers as $header) {
                     if (strpos($header, 'Content') === 0) {
                         header($header);
@@ -40,24 +41,8 @@ class Main_MediaController extends Zend_Controller_Action
                 echo file_get_contents($fileName);
             } else {
                 header('content-type: image/gif');
-                echo file_get_contents(APPLICATION_DATA . '/../public/img/spacer.gif');
+                echo file_get_contents(APPLICATION_PATH . '/../public/img/spacer.gif');
             }
-            
-            /*
-            $container = Rackspace_Api::getInstance($username, $key, $section);
-            
-            $filename = $this->_getParam('file');
-            $file     = $container->get_object($filename);
-
-            if ($file) {
-                $this->getResponse()->setHeader('content-type', $file->content_type);
-
-                $output = fopen('php://output', 'w');
-                $file->stream($output); # stream object content to PHP's output buffer
-                fclose($output);
-            }
-            */
-            
         } catch (Exception $e) {
             Helper_Log::err($e->getMessage());
         }
