@@ -1,0 +1,243 @@
+<div class="content-block">
+    <div class="block-header">
+        Enjoy These Movies &amp; Games!
+    </div>
+
+    <div id="txm-index-splash">
+
+<?php foreach ($this->randomMovies as $row): ?>
+
+        <a href="/movies/view/<?php echo $row['id']; ?>" title="<?php echo htmlentities($row['title']); ?>"  txm-desc="<?php echo htmlentities($row['synopsis']); ?>">
+            <img src="<?php echo $this->siteMedia; ?>movieimg/<?php echo $row['id']; ?>.gif" alt="media-<?php echo $row['id']; ?>" />
+        </a>
+
+<?php endforeach; ?>
+        
+    </div>
+
+    <div id="txm-index-synopsis" class="ui-widget-content ui-corner-all ui-state-hover"></div>
+</div>
+
+<div class="left" style="width: 644px; margin-right: 1.333em;">
+    <div class="left" style="width: 314px; margin-right: 1.333em;">
+        <div class="content-block">
+            <div class="block-header">
+                Daily Movies
+            </div>
+
+            <div class="padding-links index-media">
+                <a href="/movies/view/2126/dumbass-luigi/" title="">
+                    <img src="<?php echo $this->siteMedia; ?>movieimg/2126.gif" />
+                    <span>
+                        <strong>Dumbass Luigi</strong><br />
+                                        Luigi is quite the fellow.
+                    </span>
+                </a>
+
+                <a href="/movies/view/1833/mario-bros-arcade/" title="" class="blk-lnk">
+                    <img src="<?php echo $this->siteMedia; ?>movieimg/1833.gif" />
+                    <span>
+                        <strong>Mario Bros. Arcade</strong><br />
+                                        Hey guys, Here is my latest movie, and first blooper reel. I used Mario Bros. Arcade becuase there i
+                    </span>
+                </a>
+
+                <a href="/movies/view/1131/sonic-revenge-ii/" title="" class="blk-lnk">
+                    <img src="<?php echo $this->siteMedia; ?>movieimg/1131.gif" />
+                    <span>
+                        <strong>Sonic: Revenge II</strong><br />
+                                        Dr. Robotnik devises a new plan while Sonic battles the Overlord.
+                    </span>
+                </a>
+
+                <a href="/movies/view/2180/lost/" title="" class="blk-lnk ">
+                    <img src="<?php echo $this->siteMedia; ?>movieimg/2180.gif" />
+                    <span>
+                        <strong>Lost</strong><br />
+                                        A music video made with love
+                    </span>
+                </a>
+
+                <a href="/movies/view/2112/lfe-and-times-of-moore/" title="" class="blk-lnk">
+                    <img src="<?php echo $this->siteMedia; ?>movieimg/2112.gif" />
+                    <span>
+                        <strong>LfeAndTimesOfMoore</strong><br />
+                                        A fictional look into the life of Michael Moore.
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="left" style="width: 314px;">
+        <div class="content-block">
+            <div class="block-header">
+                Daily Games
+            </div>
+
+            <div class="padding-links index-media">
+                <a href="/games/view/1980/particle-stuff/" title="" class="blk-lnk">
+                    <img src="<?php echo $this->siteMedia; ?>gameimg/1980.gif" />
+                    <span>
+                        <strong>Particle Stuff!</strong><br />
+                                    A fun particley game.  30 particles to screw around with!</span></a>
+
+                <a href="/games/view/1966/ultimate-flash-sonic/" title="" class="blk-lnk ">
+                    <img src="<?php echo $this->siteMedia; ?>gameimg/1966.gif" />
+                    <span>
+                        <strong>Ultimate Flash Sonic</strong><br />
+                                Oldschool Sonic game in Flash!
+                    </span>
+                </a>
+
+                <a href="/games/view/1920/the-rambo-bros/" title="" class="blk-lnk">
+                    <img src="<?php echo $this->siteMedia; ?>gameimg/1920.gif" />
+                    <span>
+                        <strong>The Rambo Bros.</strong><br />
+                                Hi, there. I&acute;m back! After some other flash-related projects I decided to upload all new Flash on Ne
+                    </span>
+                </a>
+
+                <a href="/games/view/1828/slack-man/" title="" class="blk-lnk ">
+                    <img src="<?php echo $this->siteMedia; ?>gameimg/1828.gif" />
+                    <span>
+                        <strong>Slack Man</strong><br />
+                                You will do anything for donuts. So you break into the Donut shop.
+                    </span>
+                </a>
+
+                <a href="/games/view/1123/sonic-boom-cannon/" title="" class="blk-lnk">
+                    <img src="<?php echo $this->siteMedia; ?>gameimg/1123.gif" />
+                    <span>
+                        <strong>Sonic Boom Cannon</strong><br />
+                                The Hedghog Powered Cannon.
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="clr"></div>
+
+<?php foreach ($this->dailyNews as $row): ?>
+
+    <div class="content-block">
+        <a class="block-header" href="community/topic/<?php echo $row['id']; ?>/<?php echo $row['title_link']; ?>/" title="Read Article">
+            <?php echo $row['title']; ?>
+        </a>
+
+        <div class="padding-content">
+            <?php echo $row['post']; ?>
+        </div>
+
+        <div class="padding-content" style="width: auto; overflow: hidden; border-top: 1px solid #ddd;">
+            <div class="left text-disabled">
+                <a href="http://<?php echo $row['link_name']; ?>.<?php echo $this->siteDomain; ?>" title="View Profile">
+                    <img src="<?php echo $this->siteMedia; ?>profile/<?php echo $row['id_user']; ?>.gif" alt="Icon" class="text-img" />
+                </a>
+
+                <a href="http://<?php echo $row['link_name']; ?>.<?php echo $this->siteDomain; ?>" title="View Profile" ><?php echo $row['nick_name']; ?></a> on <?php echo $row['date']; ?>
+            </div>
+
+            <div style="text-align: right;">
+                <?php echo $row['views']; ?> Views &nbsp;|&nbsp;
+                <a href="community/topic/<?php echo $row['id']; ?>/<?php echo $row['title_link']; ?>/" title="Read <?php echo $row['replies']; ?> Comments">
+                    <?php echo $row['replies']; ?> Comments
+                </a>
+            </div>
+        </div>
+    </div>
+
+<?php endforeach; ?>
+
+</div>
+
+<div class="left" style="width: 300px;">
+
+    <div class="content-block">
+        <div class="block-header">
+            What We Are About
+        </div>
+
+        <div class="padding-content">
+            TXM.com <em>is</em> movies and games, created by people from across the Internet. It is a
+            community of artists, developers, and fans.
+            <br /><br />
+
+            It pushes the next generation of creators into the spotlight of animated
+            <a href="/movies" title="Watch Movies">Movies</a> and
+            <a href="/games" title="Play Games">Games</a> as it strives to have the most diverse
+            <a href="/community" title="Engage Community">Community</a>
+            with the help of loyal and caring fans.
+            <br /><br />
+            
+            TXM.com encourages an environment of fair critiques and ample voting
+            to give creators the best feedback for constant improvement.
+<!--            <br /><br />
+
+            <a href="/createaccount" title="Create Account">Create an Account</a> to become engaged!-->
+        </div>
+    </div>
+    
+    <div class="content-block">
+        <div class="block-header">
+            More News Posts
+        </div>
+
+        <div class="padding-links">
+
+<?php foreach ($this->sidebarNews as $row): ?>
+
+            <a href="/forums/threads/<?php echo $row['id']; ?>/<?php echo Helper_String::toLink($row['title_link']); ?>" title="<?php echo htmlentities($row['title']); ?>">
+                <img src="<?php echo $this->siteMedia; ?>profile/<?php echo $row['id_user']; ?>.gif" alt="Icon" class="text-img" />
+                <?php echo $row['title']; ?></a>
+
+<?php endforeach; ?>
+            
+        </div>
+    </div>
+
+    <div class="content-block">
+        <div class="block-header">
+            Sponsored Partnerships
+        </div>
+
+        <div class="padding-links">
+            <a href="http://www.youtube.com/lorenandtxm" title="Austin Based Film and Animation Studio" target="_blank">Loren Productions (Short Films)</a>
+            <a href="http://www.diverge.ws/" title="Multiplayer Online Flash Games" target="_blank">Diverge Creations (Online Games)</a>
+            <a href="http://gamemusic4all.blogspot.com/" title="Promotion of Gaming Music" target="_blank">Game Music 4 All (Music Promoter)</a>
+            <a href="http://www.shamoozal.com/" title="Episodic Rabbit Cartoon" target="_blank">Shamoozal (Episodic Comedy)</a>
+            <a href="http://www.videogamedc.com/" target="_blank">Video Game DC</a>
+            <a href="http://www.razoric.com/" target="_blank">Razoric</a>
+            <a href="http://www.psychogoldfish.com/" target="_blank">Psycho Goldfish</a>
+            <a href="http://www.revivaleyes.com/" target="_blank">Revival Eyes</a>
+            <a href="http://www.shedboystudios.tk/" target="_blank">Shed Boy Studios</a>
+        </div>
+    </div>
+
+    <div class="content-block">
+        <div class="block-header">
+            Blog Sites We Enjoy
+        </div>
+
+        <div class="padding-links">
+            <a href="http://www.kotaku.com/" title="Gaming Blog" target="_blank">Kotaku (Sensible Gaming)</a>
+            <a href="http://www.destructoid.com/" title="Frantic Gaming Blog" target="_blank">Destructoid (Gaming FTW)</a>
+            <a href="http://gamemusic4all.blogspot.com/" title="Promotion of Gaming Music" target="_blank">Game Music 4 All (Music Promoter)</a>
+            <a href="http://notcot.com/" title="Design, Ideas, Aesthetics, Amusement" target="_blank">NOTCOT (Creative Design Blog)</a>
+            <a href="http://angryzenmaster.com/" title="Movies, Comics, &amp; Japan" target="_blank">Angry Zen Master (Movies &amp; Comics)</a>
+        </div>
+    </div>
+
+    <div class="content-block">
+        <div class="block-header">
+            Additional Flash Portals
+        </div>
+
+        <div class="padding-links">
+            <a href="http://www.newgrounds.com/" title="Flash Movies &amp; Games" target="_blank">Newgrounds (Forefather of Flash)</a>
+            <a href="http://www.flashportal.com/" title="Manul Flash Uploads" target="_blank">Flash Portal (Manual Flash Portal)</a>
+        </div>
+    </div>
+</div>
+
+<div class="clr"></div>

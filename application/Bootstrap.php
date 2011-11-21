@@ -1,45 +1,11 @@
 <?php
 
 class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
-{
-    protected function _initModuleAutoloaders() 
-    { 
-        $this->bootstrap('FrontController'); 
-
-        $front = $this->getResource('FrontController'); 
-
-        foreach ($front->getControllerDirectory() as $module => $directory) { 
-            $module = ucfirst($module); 
-            $loader = new Zend_Application_Module_Autoloader(array( 
-                'namespace' => $module, 
-                'basePath'  => dirname($directory), 
-            ));
-
-            $loader->addResourceType('model', 'Model', 'Model');
-        }
-    }
-
-    protected function _initView()
-    {
-        // Bootstrap View and Autloader, which are called in Page
-        $view = new Helper_View();
-
-        $options      = $this->getOptions();
-        $viewRenderer = Zend_Controller_Action_HelperBroker::getStaticHelper('ViewRenderer');
-
-        $viewRenderer
-            ->setView($view)
-            ->setViewBasePathSpec($options['resources']['layout']['viewBasePathSpec'])
-            ->setViewScriptPathSpec(':controller/:action.:suffix');
-
-        return $view;
-    }
-
+{    
     protected function _initPage()
     {
         // Bootstrap View and Autloader, which are called in Page
         $this->bootstrap('view');
-        
         $view = $this->getResource('view');
 
         // Get the second and top level domain
@@ -80,10 +46,17 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         Zend_View_Helper_PaginationControl::setDefaultViewPartial('../../../Layout/pagination.phtml');
         Zend_Paginator::setDefaultItemCountPerPage(15);
 
-        Helper_Log::init(array('priority' => 'debug', 'fancy' => true));
-
         // Set the registry and view for later use
         Zend_Registry::set('siteUser', $siteUser);
         $view->siteUser     = $siteUser;
+    }
+    
+    protected function _initHelperLog()
+    {        
+        $this->bootstrap('log');
+        $log = $this->getResource('log');
+        
+        $log->registerErrorHandler();        
+        Helper_Log::init($log);
     }
 }

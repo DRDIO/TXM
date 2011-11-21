@@ -1,0 +1,90 @@
+<div class="content-block">
+    <div class="block-header">
+        <a href="/games" title="Return to Games">
+            Games
+        </a>
+
+        &nbsp;&raquo;&nbsp;
+        <a href="" title="<?php echo Helper_String::sanitize($this->gameInfo['title']); ?>">
+            <em><?php echo $this->gameInfo['title']; ?></em>
+        </a>
+    </div>
+
+    <div style="border-bottom: 1px solid #ddd; background: #000;">
+        <object type="application/x-shockwave-flash" width="<?php echo $this->gameInfo['width']; ?>" height="<?php echo $this->gameInfo['height']; ?>" data="<?php echo $this->siteMedia; ?>game/<?php echo $this->gameInfo['id']; ?>.swf" style="display: block; margin: auto;">
+            <param name="allowAccessScript" value="never" />
+            <param name="wmode" value="opaque" />
+            <param name="game" value="<?php echo $this->siteMedia; ?>game/<?php echo $this->gameInfo['id']; ?>.swf" />
+        </object>
+    </div>
+
+    <div class="padding-content text-disabled">
+        <a href="http://<?php echo $this->gameInfo['link_name']; ?>.<?php echo $this->siteDomain; ?>" title="View Profile">
+            <img src="<?php echo $this->siteMedia; ?>profile/<?php echo $this->gameInfo['id_user']; ?>.gif" alt="Icon" class="text-img" />
+            <?php echo $this->gameInfo['nick_name']; ?>
+        </a> on <?php echo $this->gameInfo['date']; ?>
+    </div>
+</div>
+        
+<div class="left content-block" style="width: 472px; margin-right: 1.333em;">
+    <div class="block-header">
+        Game Details
+    </div>
+
+    <div class="padding-content">
+<!--        <div id="ratings" class="left" style="margin: 2px 4px;">
+            <img src="/games/images/ratings/<?php echo $this->gameInfo['rating']; ?>.gif" alt="Rating <?php echo $this->gameInfo['rating']; ?>" /><br />
+            <img src="/games/images/types/<?php echo $this->gameInfo['type']; ?>.gif" alt="Type <?php echo $this->gameInfo['type']; ?>" />
+        </div>-->
+
+        <table>
+            <tr>
+                <td>Website:</td>
+                <td><b><a href="<?php echo $this->gameInfo['web_url']; ?>" title="website"><?php echo $this->gameInfo['web_title']; ?></a></b></td></tr>
+            <tr>
+                <td valign="top">Score:</td>
+                <td valign="top"><strong class="score"><?php echo $this->gameInfo['score']; ?></strong> out of 10.00</td></tr>
+            <tr>
+                <td>Size:</td>
+                <td><?php echo $this->gameInfo['size']; ?> MB</td></tr>
+            <tr>
+                <td>Status:</td>
+                <td><?php echo $this->gameInfo['votes']; ?> Votes &amp; <?php echo $this->gameInfo['reviews']; ?> Reviews</td></tr>
+            <tr>
+                <td>Views:</td>
+                <td><?php echo $this->gameInfo['views']; ?> Plays</td></tr>
+        </table><br />
+
+        <?php echo $this->gameInfo['commentary']; ?>
+    </div>
+</div>
+
+<div class="left" style="width: 472px;">
+    <div class="content-span">
+        <div class="content-block">
+            <div class="block-header">
+                Community Reviews
+            </div>
+
+<?php foreach ($this->reviews as $review): ?>
+
+            <div class="padding-content" style="border-bottom: 1px solid #ddd;">
+                <?php echo $review['comment']; ?>
+                <?php echo $review['reply']; ?>
+            </div>
+
+            <div class="padding-content text-disabled">
+                <a href="http://<?php echo $review['link_name']; ?>.<?php echo $this->siteDomain; ?>" title="View Profile">
+                    <img src="<?php echo $this->siteMedia; ?>profile/<?php echo $review['id_user']; ?>.gif" alt="Icon" class="text-img" />
+                    <?php echo $review['nick_name']; ?>
+                </a> on <?php echo $review['date_comment']; ?>
+            </div>
+        </div>
+
+        <div class="content-block">
+
+<?php endforeach; ?>
+
+        </div>
+    </div>
+</div>

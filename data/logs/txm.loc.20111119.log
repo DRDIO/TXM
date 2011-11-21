@@ -1,0 +1,14 @@
+18:02:53 ERR (3): test
+18:04:24 ERR (3): test
+18:04:41 ERR (3): test
+18:05:33 ERR (3): test
+18:06:56|ERR|Log.php|24|call_user_func_array|test
+18:08:01 ERR (3): test
+18:08:33 ERR (3): test
+18:09:53 ERR (3): test
+{time:18:12:29,priorityName:ERR,priority:3,message:test}
+18:14:59 ERR (3): test
+{"time":"18:16:26","priorityName":"ERR","priority":"3","message":"test"}
+{"time":"18:17:11","priorityName":"ERR","priority":"3","message":"test"}
+{"timestamp":"18:17:38","message":"test","priority":3,"priorityName":"ERR","uid":null,"file":"Log.php","line":24,"function":"call_user_func_array"}{"timestamp":"18:19:16","message":"test","priority":3,"priorityName":"ERR","uid":null,"file":"Log.php","line":24,"function":"call_user_func_array"}{"timestamp":"18:19:35","message":"test","priority":3,"priorityName":"ERR","uid":null,"file":"Log.php","line":24,"function":"call_user_func_array"}
+{"timestamp":"18:19:45","message":"test","priority":3,"priorityName":"ERR","uid":null,"file":"Log.php","line":24,"function":"call_user_func_array"}

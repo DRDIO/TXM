@@ -1,0 +1,56 @@
+<div class="left content-block" style="width: 309px; margin-right: 1.333em;">
+    <div class="block-header">
+        Latest Games
+    </div>
+
+    <div class="padding-links">
+
+<?php foreach ($this->newGames as $game): ?>
+
+        <a href="/games/<?php echo $game['id']; ?>/<?php echo Helper_String::toLink($game['title']); ?>/" title="<?php echo $game['title']; ?>">
+            <img src="<?php echo $this->siteMedia; ?>gameimg/<?php echo $game['id']; ?>.gif" alt="<?php echo $game['title']; ?>" class="text-img" />
+            <strong><?php echo $game['title']; ?></strong>
+        </a>
+
+<?php endforeach; ?>
+        
+    </div>
+</div>
+
+<div class="left content-block" style="width: 310px; margin-right: 1.333em;">
+    <div class="block-header">
+        Popular Games
+    </div>
+
+    <div class="padding-links">
+
+<?php foreach ($this->popularGames as $game): ?>
+
+        <a href="/games/<?php echo $game['id']; ?>/<?php echo Helper_String::toLink($game['title']); ?>/" title="<?php echo $game['title']; ?>">
+            <img src="<?php echo $this->siteMedia; ?>gameimg/<?php echo $game['id']; ?>.gif" alt="<?php echo $game['title']; ?>" class="text-img" />
+            <strong><?php echo $game['title']; ?></strong>
+        </a>
+
+<?php endforeach; ?>
+
+    </div>
+</div>
+
+<div class="left content-block" style="width: 309px;">
+    <div class="block-header">
+        Best Games
+    </div>
+
+    <div class="padding-links">
+
+<?php foreach ($this->bestGames as $game): ?>
+
+        <a href="/games/<?php echo $game['id']; ?>/<?php echo Helper_String::toLink($game['title']); ?>/" title="<?php echo $game['title']; ?>">
+            <img src="<?php echo $this->siteMedia; ?>gameimg/<?php echo $game['id']; ?>.gif" alt="<?php echo $game['title']; ?>" class="text-img" />
+            <strong><?php echo $game['title']; ?></strong>
+        </a>
+
+<?php endforeach; ?>
+
+    </div>
+</div>

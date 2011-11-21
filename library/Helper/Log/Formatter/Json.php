@@ -7,44 +7,47 @@ require_once 'Zend/Log/Formatter/Simple.php';
  * @author Kevin Nuut
  *
  */
-class Helper_Log_Formatter_Json extends Zend_Log_Formatter_Simple
+class Helper_Log_Formatter_Json extends Zend_Log_Formatter_Abstract
 {
-    const DEFAULT_FORMAT = '{"time":"%timestamp%","priorityName":"%priorityName%","priority":"%priority%","message":"%message%"}';
+    protected $_format;
+    
+    const DEFAULT_FORMAT = '{"t":"timestamp","p":"priorityName","m":"message"}';
 
     public function __construct($format = null)
     {
-        if (is_array($format) === false || sizeof($format) === 0) {
-            $json = self::DEFAULT_FORMAT . PHP_EOL;
-        } else {
-            $json = '';
-            foreach ($format as $name => $value) {
-                $name  = preg_replace('/(["\\\])/', '\\\\\1', $name);
-                $value = preg_replace('/(["\\\])/', '\\\\\1', $value);
-
-                $json .= ($json !== '' ? ',' : '') . '"' . $name . '":"' . $value . '"';
-            }
-
-            if ($json !== '') {
-                $json = '{' . $json . '}' . PHP_EOL;
-            }
+        if (!$format || !is_string($format)) {
+            $format = self::DEFAULT_FORMAT;
         }
-
-        $this->_format = $json;
+        
+        $this->_format = json_decode($format);        
     }
 
-    public function format($event)
+    public static function factory($options)
     {
-        $output = $this->_format;
-        foreach ($event as $name => $value) {
-            if ((is_object($value) && !method_exists($value,'__toString')) || is_array($value)) {
-                $value = gettype($value);
+        $format = null;
+        if (null !== $options) {
+            if ($options instanceof Zend_Config) {
+                $options = $options->toArray();
             }
 
-            // Strip newlines and spaces
-            $value = preg_replace(array('/(\s+)/', '/(["\\\])/'), array(' ', '\\\\\1'), $value);
-
-            $output = str_replace("%$name%", $value, $output);
+            if (array_key_exists('format', $options)) {
+                $format = $options['format'];
+            }
         }
-        return $output;
+
+        return new self($format);
+    }
+    
+    public function format($event)
+    {
+        $output = array();
+        
+        foreach ((array) $this->_format as $key => $identifier) {
+            if (isset($event[$identifier])) {
+                $output[$key] = $event[$identifier];
+            }
+        }
+        
+        return json_encode($output) . PHP_EOL;        
     }
 }
