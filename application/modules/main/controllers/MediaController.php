@@ -1,4 +1,4 @@
-<?php
+<?php   
 
 class Main_MediaController extends Zend_Controller_Action
 {
@@ -8,12 +8,7 @@ class Main_MediaController extends Zend_Controller_Action
         $this->_helper->viewRenderer->setNoRender(true);
         
         try {
-            $username  = 'kevinnuut';
-            $key       = '55f0dd33854ec4599d37ae6134c648f5';
-            
             $section   = $this->_getParam('section');
-            
-            Helper_Log::debug($section);
             
             $cdnList = array(
                 'game'     => 'http://c815845.r45.cf2.rackcdn.com/',
@@ -27,23 +22,30 @@ class Main_MediaController extends Zend_Controller_Action
                 throw new Exception('media section does not exist');
             }
             
-            $fileName = $cdnList[$section] . $this->_getParam('file');            
-            $headers  = get_headers($fileName);
+            $fileName = $cdnList[$section] . $this->_getParam('file');
+            $handle   = fopen($fileName, 'rb');
             
-            if ($headers) {
-                foreach ($headers as $header) {
-                    if (strpos($header, 'Content') === 0) {
-                        header($header);
-                    }
-                }
+            if ($handle) {
+                $headers = get_headers($fileName);
                 
-                echo file_get_contents($fileName);
+                foreach ($headers as $header) {
+                    header($header);
+                }
+            
+                echo stream_get_contents($handle);
+                
+                fclose($handle);
+                
             } else {
                 header('content-type: image/gif');
                 echo file_get_contents(APPLICATION_DATA . '/../public/img/spacer.gif');
-            }
+            }            
             
             /*
+            $username  = 'kevinnuut';
+            $key       = '55f0dd33854ec4599d37ae6134c648f5';
+            
+            
             $container = Rackspace_Api::getInstance($username, $key, $section);
             
             $filename = $this->_getParam('file');
