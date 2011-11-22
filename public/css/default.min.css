@@ -29,7 +29,7 @@ ol.list-lettered{list-style-type:upper-alpha;}
 .pagination a, .pagination span{display:inline-block;padding:0 0.667em;}
 .pagination-disabled, .text-disabled{color:#ccc;}
 #page{width:80em;margin:1.333em auto;}
-#header{margin-bottom:1.333em;}
+#header{margin-bottom:1.333em;position:relative;}
 #header-logo{display:block;font-family:"Arial Black";letter-spacing:-0.16em;font-size:7em;font-weight:bold;height:0.7em;float:left;line-height:0.65em;overflow:hidden;width:50%;border-bottom:none;text-shadow:0 1px 1px rgba(0, 0, 0, 0.1);}
 #header-logo span{font-family:'Times New Roman';letter-spacing:0;font-size:0.6em;font-style:italic;padding-left:0.3em;}
 #header-status{float:right;text-align:right;width:50%;padding-top:2.5em;}
@@ -55,3 +55,4 @@ a.block-header:active{padding:0.85em 1em 0.65em 1em;}
 .ui-widget-header{border:none;border-radius:2px 2px 0 0;}
 .ui-dialog{padding:0;border-radius:2px;-webkit-box-shadow:0 1px 1px rgba(0, 0, 0, 0.25);-moz-box-shadow:0 1px 1px rgba(0, 0, 0, 0.25);box-shadow:0 1px 1px rgba(0, 0, 0, 0.25);}
 .ui-dialog .ui-dialog-titlebar{background:#2688ed;background:-webkit-gradient(linear, 0 0, 0 100%, from(#2688ed), to(#0073EA));text-shadow:0 1px 1px rgba(0, 0, 0, 0.1);font-size:1.167em;padding:0.857em 1.143em;line-height:1em;color:#fff;font-weight:bold;}
+.googlead{position:absolute;top:1em;right:1em;z-index:1;}
