@@ -1,0 +1,274 @@
+08:01:20|WARN|MediaController.php|31|get_headers|get_headers(): php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:01:20|WARN|MediaController.php|31|get_headers|get_headers(http://c815848.r48.cf2.rackcdn.com/1106.gif): failed to open stream: php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:01:20|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:01:20|WARN|MediaController.php|43|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:02:00|WARN|MediaController.php|31|get_headers|get_headers(): php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:02:00|WARN|MediaController.php|31|get_headers|get_headers(http://c815848.r48.cf2.rackcdn.com/2062.gif): failed to open stream: php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:02:00|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:02:00|WARN|MediaController.php|43|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:02:40|WARN|MediaController.php|31|get_headers|get_headers(): php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:02:40|WARN|MediaController.php|31|get_headers|get_headers(http://c815848.r48.cf2.rackcdn.com/737.gif): failed to open stream: php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:02:40|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:02:40|WARN|MediaController.php|43|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:21|WARN|MediaController.php|31|get_headers|get_headers(): php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:03:21|WARN|MediaController.php|31|get_headers|get_headers(http://c815848.r48.cf2.rackcdn.com/1242.gif): failed to open stream: php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:03:21|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:21|WARN|MediaController.php|43|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:21|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:21|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:21|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:21|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:21|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:21|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:21|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:21|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:21|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:21|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:21|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:21|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:21|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:21|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:21|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:21|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:21|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:21|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:21|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:21|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:21|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:21|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:21|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:21|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:21|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:21|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:21|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:21|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:21|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:21|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:21|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:21|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:21|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:22|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:22|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:22|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:22|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:22|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:22|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:22|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:22|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:22|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:22|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:22|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:22|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:22|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:22|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:22|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:22|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:22|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:22|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:22|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:22|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:22|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:22|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:22|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:22|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:22|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:22|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:22|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:22|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:22|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:22|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:22|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:22|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:22|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:22|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:22|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:22|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:23|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:23|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:23|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:23|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:23|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:23|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:23|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:23|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:23|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:23|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:23|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:23|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:23|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:23|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:23|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:23|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:23|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:23|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:23|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:23|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:23|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:23|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:23|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:23|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:23|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:23|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:23|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:23|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:23|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:23|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:23|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:23|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:23|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:23|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:23|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:23|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:23|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:23|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:23|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:24|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:24|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:24|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:24|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:24|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:24|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:24|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:24|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:24|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:24|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:24|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:24|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:24|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:24|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:24|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:24|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:24|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:24|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:24|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:24|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:24|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:24|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:24|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:24|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:03:24|WARN|MediaController.php|26|fopen|fopen() expects at least 2 parameters, 1 given
+08:03:24|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:03:24|WARN|MediaController.php|40|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:04:52|WARN|MediaController.php|26|fopen|fopen(): php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:52|WARN|MediaController.php|26|fopen|fopen(http://c815848.r48.cf2.rackcdn.com/1158.gif): failed to open stream: php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:52|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:04:52|WARN|MediaController.php|41|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:04:52|WARN|MediaController.php|26|fopen|fopen(): php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:52|WARN|MediaController.php|26|fopen|fopen(http://c815848.r48.cf2.rackcdn.com/1919.gif): failed to open stream: php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:52|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:04:52|WARN|MediaController.php|41|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:04:52|WARN|MediaController.php|26|fopen|fopen(): php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:52|WARN|MediaController.php|26|fopen|fopen(http://c815848.r48.cf2.rackcdn.com/1015.gif): failed to open stream: php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:52|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:04:52|WARN|MediaController.php|41|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:04:52|WARN|MediaController.php|26|fopen|fopen(): php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:52|WARN|MediaController.php|26|fopen|fopen(http://c815848.r48.cf2.rackcdn.com/2007.gif): failed to open stream: php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:52|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:04:52|WARN|MediaController.php|41|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:04:52|WARN|MediaController.php|26|fopen|fopen(): php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:52|WARN|MediaController.php|26|fopen|fopen(http://c815848.r48.cf2.rackcdn.com/2392.gif): failed to open stream: php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:52|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:04:52|WARN|MediaController.php|41|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:04:52|WARN|MediaController.php|26|fopen|fopen(): php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:52|WARN|MediaController.php|26|fopen|fopen(http://c815848.r48.cf2.rackcdn.com/789.gif): failed to open stream: php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:52|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:04:52|WARN|MediaController.php|41|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:04:52|WARN|MediaController.php|26|fopen|fopen(): php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:52|WARN|MediaController.php|26|fopen|fopen(http://c815848.r48.cf2.rackcdn.com/1252.gif): failed to open stream: php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:52|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:04:52|WARN|MediaController.php|41|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:04:52|WARN|MediaController.php|26|fopen|fopen(): php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:52|WARN|MediaController.php|26|fopen|fopen(http://c815848.r48.cf2.rackcdn.com/2080.gif): failed to open stream: php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:52|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:04:52|WARN|MediaController.php|41|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:04:53|WARN|MediaController.php|26|fopen|fopen(): php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:53|WARN|MediaController.php|26|fopen|fopen(http://c815848.r48.cf2.rackcdn.com/2016.gif): failed to open stream: php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:53|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:04:53|WARN|MediaController.php|41|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:04:53|WARN|MediaController.php|26|fopen|fopen(): php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:53|WARN|MediaController.php|26|fopen|fopen(http://c815848.r48.cf2.rackcdn.com/1914.gif): failed to open stream: php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:53|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:04:53|WARN|MediaController.php|41|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:04:53|WARN|MediaController.php|26|fopen|fopen(): php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:53|WARN|MediaController.php|26|fopen|fopen(http://c815848.r48.cf2.rackcdn.com/2001.gif): failed to open stream: php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:53|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:04:53|WARN|MediaController.php|41|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:04:53|WARN|MediaController.php|26|fopen|fopen(): php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:53|WARN|MediaController.php|26|fopen|fopen(http://c815848.r48.cf2.rackcdn.com/1901.gif): failed to open stream: php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:53|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:04:53|WARN|MediaController.php|41|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:04:53|WARN|MediaController.php|26|fopen|fopen(): php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:53|WARN|MediaController.php|26|fopen|fopen(http://c815848.r48.cf2.rackcdn.com/2221.gif): failed to open stream: php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:53|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:04:53|WARN|MediaController.php|41|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:04:53|WARN|MediaController.php|26|fopen|fopen(): php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:53|WARN|MediaController.php|26|fopen|fopen(http://c815848.r48.cf2.rackcdn.com/230.gif): failed to open stream: php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:53|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:04:53|WARN|MediaController.php|41|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:04:53|WARN|MediaController.php|26|fopen|fopen(): php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:53|WARN|MediaController.php|26|fopen|fopen(http://c815848.r48.cf2.rackcdn.com/1131.gif): failed to open stream: php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:53|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:04:53|WARN|MediaController.php|41|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:04:53|WARN|MediaController.php|26|fopen|fopen(): php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:53|WARN|MediaController.php|26|fopen|fopen(http://c815848.r48.cf2.rackcdn.com/1913.gif): failed to open stream: php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:53|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:04:53|WARN|MediaController.php|41|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:04:53|WARN|MediaController.php|26|fopen|fopen(): php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:53|WARN|MediaController.php|26|fopen|fopen(http://c815848.r48.cf2.rackcdn.com/1090.gif): failed to open stream: php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:53|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:04:53|WARN|MediaController.php|41|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:04:53|WARN|MediaController.php|26|fopen|fopen(): php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:53|WARN|MediaController.php|26|fopen|fopen(http://c815848.r48.cf2.rackcdn.com/1875.gif): failed to open stream: php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:53|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:04:53|WARN|MediaController.php|41|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:04:53|WARN|MediaController.php|26|fopen|fopen(): php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:53|WARN|MediaController.php|26|fopen|fopen(http://c815848.r48.cf2.rackcdn.com/1340.gif): failed to open stream: php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:53|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:04:53|WARN|MediaController.php|41|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:04:53|WARN|MediaController.php|26|fopen|fopen(): php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:53|WARN|MediaController.php|26|fopen|fopen(http://c815848.r48.cf2.rackcdn.com/2093.gif): failed to open stream: php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:53|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:04:53|WARN|MediaController.php|41|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:04:54|WARN|MediaController.php|26|fopen|fopen(): php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:54|WARN|MediaController.php|26|fopen|fopen(http://c815848.r48.cf2.rackcdn.com/1999.gif): failed to open stream: php_network_getaddresses: getaddrinfo failed: Name or service not known
+08:04:54|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:04:54|WARN|MediaController.php|41|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:05:39|WARN|MediaController.php|26|fopen|fopen(http://c815848.r48.cf2.rackcdn.com/1030.gif): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found
+
+08:05:39|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:05:39|WARN|MediaController.php|41|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:13:33|NOTICE|Action.php|516|Main_MediaController->indexAction|Undefined variable: headers
+08:16:32|WARN|MediaController.php|26|fopen|fopen(http://c815851.r51.cf2.rackcdn.com/0.gif): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found
+
+08:16:32|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:16:32|WARN|MediaController.php|39|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
+08:20:41|NOTICE|Action.php|516|Main_MediaController->indexAction|Undefined variable: fp
+08:20:41|WARN|MediaController.php|35|stream_get_contents|stream_get_contents() expects parameter 1 to be resource, null given
+08:20:46|NOTICE|Action.php|516|Main_MediaController->indexAction|Undefined variable: fp
+08:20:46|WARN|MediaController.php|35|stream_get_contents|stream_get_contents() expects parameter 1 to be resource, null given
+08:20:55|NOTICE|Action.php|516|Main_MediaController->indexAction|Undefined variable: fp
+08:20:55|WARN|MediaController.php|35|stream_get_contents|stream_get_contents() expects parameter 1 to be resource, null given
+08:20:56|NOTICE|Action.php|516|Main_MediaController->indexAction|Undefined variable: fp
+08:20:56|WARN|MediaController.php|35|stream_get_contents|stream_get_contents() expects parameter 1 to be resource, null given
+08:20:56|NOTICE|Action.php|516|Main_MediaController->indexAction|Undefined variable: fp
+08:20:56|WARN|MediaController.php|35|stream_get_contents|stream_get_contents() expects parameter 1 to be resource, null given
+08:20:57|NOTICE|Action.php|516|Main_MediaController->indexAction|Undefined variable: fp
+08:20:57|WARN|MediaController.php|35|stream_get_contents|stream_get_contents() expects parameter 1 to be resource, null given
+08:20:57|NOTICE|Action.php|516|Main_MediaController->indexAction|Undefined variable: fp
+08:20:57|WARN|MediaController.php|35|stream_get_contents|stream_get_contents() expects parameter 1 to be resource, null given
+08:20:58|NOTICE|Action.php|516|Main_MediaController->indexAction|Undefined variable: fp
+08:20:58|WARN|MediaController.php|35|stream_get_contents|stream_get_contents() expects parameter 1 to be resource, null given
+08:20:59|NOTICE|Action.php|516|Main_MediaController->indexAction|Undefined variable: fp
+08:20:59|WARN|MediaController.php|35|stream_get_contents|stream_get_contents() expects parameter 1 to be resource, null given
+08:20:59|NOTICE|Action.php|516|Main_MediaController->indexAction|Undefined variable: fp
+08:20:59|WARN|MediaController.php|35|stream_get_contents|stream_get_contents() expects parameter 1 to be resource, null given
+08:21:00|NOTICE|Action.php|516|Main_MediaController->indexAction|Undefined variable: fp
+08:21:00|WARN|MediaController.php|35|stream_get_contents|stream_get_contents() expects parameter 1 to be resource, null given
+08:21:01|NOTICE|Action.php|516|Main_MediaController->indexAction|Undefined variable: fp
+08:21:01|WARN|MediaController.php|35|stream_get_contents|stream_get_contents() expects parameter 1 to be resource, null given
+08:21:02|NOTICE|Action.php|516|Main_MediaController->indexAction|Undefined variable: fp
+08:21:02|WARN|MediaController.php|35|stream_get_contents|stream_get_contents() expects parameter 1 to be resource, null given
+08:22:03|WARN|MediaController.php|26|fopen|fopen(http://c815851.r51.cf2.rackcdn.com/0.gif): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found
+
+08:22:03|NOTICE|Action.php|516|Main_MediaController->indexAction|Use of undefined constant APPLICATION_DATA - assumed 'APPLICATION_DATA'
+08:22:03|WARN|MediaController.php|41|file_get_contents|file_get_contents(APPLICATION_DATA/../public/img/spacer.gif): failed to open stream: No such file or directory
