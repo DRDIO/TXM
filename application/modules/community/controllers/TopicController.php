@@ -41,14 +41,13 @@ class Community_TopicController extends Zend_Controller_Action
         // Get actual data to perform row updates
         $threads = (array) $paginator->getCurrentItems();
         $bbcode  = Zend_Markup::factory('Bbcode');
-        $filter  = new Zend_Filter_StripTags(array('allowTags' => array('b', 'br', 'p', 'strong', 'em')));
-        $urlfilt = "/\b((https?:\/\/|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}\/)([^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))/i";
+        $filter  = new Zend_Filter_StripTags(array('allowTags' => array('b', 'br', 'p', 'strong', 'em', 'a'), 'allowAttribs' => array('title', 'href')));
+        $urlreg  = "/((?:https?:\/\/|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}\/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))/i";
         
         foreach ($threads as $id => $thread) {
             $post = preg_replace('/\[(\/?[a-z]+):.*?]/', '[$1]', $thread['post']);
             $post = $bbcode->render($post);
-            $post = $filter->filter($post);
-            $post = preg_replace($urlfilt, '<a href="$1">$1</a>', $post);
+            $post = $filter->filter(html_entity_decode($post));            
             
             $threads[$id]['post'] = $post;
             $threads[$id]['date'] = Helper_Time::getLongDateTime($thread['date']);
