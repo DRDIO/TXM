@@ -1,3 +1,1 @@
-<?php 
-
-require_once('../application/Init.php');
+<?php require_once('../application/Init.php');

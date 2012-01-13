@@ -43,7 +43,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
             ->appendFile($view->siteAssets . 'js/default.js');
 
         Zend_Paginator::setDefaultScrollingStyle('Elastic');
-        Zend_View_Helper_PaginationControl::setDefaultViewPartial('../../../Layout/pagination.phtml');
+        Zend_View_Helper_PaginationControl::setDefaultViewPartial('pagination.phtml');
         Zend_Paginator::setDefaultItemCountPerPage(15);
 
         // Set the registry and view for later use

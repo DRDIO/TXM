@@ -35,9 +35,13 @@ class Helper_Sort
     }
 
     public function __toString()
-    {
-        return $this->_view->partial('../../../Layout/sorter.phtml', array(
-            'sortList' => $this->_sortList));
+    { 
+        try {
+            return $this->_view->partial('partial-sort.phtml', 'main', array(
+                'sortList' => $this->_sortList));
+        } catch (Exception $e) {
+            var_dump($e->getMessage());
+        }
     }
 
     public function getSortBy()

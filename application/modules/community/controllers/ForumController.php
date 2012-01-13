@@ -63,7 +63,5 @@ class Community_ForumController extends Zend_Controller_Action
         // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
         // Set Page Title, Javascript, and CSS
         $this->view->headTitle($forumInfo['forumName'] . ' Forum');
-        $this->view->headLink()->appendStylesheet('/css/community/forum.css');
-        $this->view->headScript()->appendFile('/js/community/forum.js');
     }
 }

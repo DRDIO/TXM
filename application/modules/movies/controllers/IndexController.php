@@ -21,7 +21,5 @@ class Movies_IndexController extends Zend_Controller_Action
         // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
         // Set Page Title, Javascript, and CSS
         $this->view->headTitle('Movies');
-        $this->view->headLink()->appendStylesheet('/css/movies/index.css');
-        $this->view->headScript()->appendFile('/js/movies/index.js');
     }
 }
