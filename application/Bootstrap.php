@@ -34,7 +34,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         // Setup CSS
         $view->headLink(array('rel' => 'favicon', 'href' => '/favicon.ico'))
             // ->appendStylesheet($view->siteAssets . 'css/source/jquery-ui-1.8.2.custom.css')
-            ->appendStylesheet($view->siteAssets . 'css/default.min.css');
+            ->appendStylesheet($view->siteAssets . 'css/default.css');
 
         // Setup JS
         $view->headScript()
