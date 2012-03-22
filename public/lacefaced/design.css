@@ -1,8 +1,8 @@
         body {
-            background: {color:Background} url('{image:Background}') top left fixed repeat;
+            background: #555 url(back.png) 50% 0 repeat;
             margin: 0;
             padding: 0;
-            font-family: {font:Body};
+            font: 12px Trebuchet MS, Arial, Verdana, sans-serif;
         }
         
         .clear {
@@ -16,46 +16,135 @@
         }
         
         #wrapper {
-            width: 845px;
+            width: 996px;
             margin: 0 auto;
+			position: relative;
         }
         
             #wrapper #title {
-                margin: 30px 0;
-                color: #fff;
-                font-size: 50px;
-                font-weight: bold;
-                font-family: {font:Title};
-                text-shadow: 1px 3px 5px rgba(0,0,0, 0.5);
-                letter-spacing: -1px;
+				position: absolute;
+				z-index: 2;
+				top: 1.5em;
+				left: -.5em;
             }
             
                 #wrapper #title a {
-                    color: #fff;
-                    text-decoration: none;
+				    display: block;
+                    background: url(logo.png) 0 0 no-repeat;
+					text-indent: -9999em;
+					overflow: hidden;
+					width: 412px;
+					height: 138px;
                 }
+					
+					#wrapper #title a:hover {
+						opacity: 0.8;
+					}
             
+			#wrapper #nav {
+				display: block;
+				text-align: right;
+				position: absolute;
+				top: 4em;
+				right: 0;
+				z-index: 1;
+			}
+				
+				#wrapper #nav li {
+					float: left;
+				}
+				
+					#wrapper #nav li a {
+						display: block;
+						text-indent: 9999em;
+						overflow: hidden;
+						background: url(links.png) 0 0 no-repeat;
+						height: 69px;
+					}
+					
+						#wrapper #nav li a:hover {
+							opacity: 0.8;
+						}
+					
+					#wrapper #nav li #nav-archive {
+						width: 125px;
+						background-position: 0 0;
+					}
+					
+					#wrapper #nav li #nav-twitter {
+						width: 130px;
+						background-position: -125px 0;
+					}
+					
+					#wrapper #nav li #nav-ask {
+						width: 89px;
+						background-position: -255px 0;
+					}
+					
+					#wrapper #nav li #nav-bestof {
+						width: 110px;
+						background-position: -344px 0;
+					}
+			
             #wrapper #content {
-                width: 520px;
+                width: 646px;
                 float: left;
+				margin-top: 11em;
             }
             
-                #wrapper #content .post {
-                    font-family: {font:Body};
-                    background: #fff;
-                    padding: 10px;
-                    position: relative;
+				#wrapper #content .post {
+					margin-bottom: 3em;
+					position: relative;
+				}
+				
+                #wrapper #content .post .media-container {					                    
+					position: relative;
                 }
+				
+				#wrapper #content .post .copy {
+					width: 544px;
+					margin: 0 3.3em;
+					background: #f2f7f3 url(post-back.png) 0 0 no-repeat;                    
+					border-radius: 0 0 0.5em 0.5em;
+					-moz-border-radius: 0 0 0.5em 0.5em;
+					box-shadow: inset 0 0 2px 2px rgba(255,255,255,1), 0 1em 1em rgba(0,0,0,0.25);
+				}
                     
+					#wrapper #content .post .media-top {
+						position: absolute;
+						background: url(picture-top.png) 0 0 no-repeat;
+						z-index: 1;
+						width: 646px;
+						height: 83px;
+						top: -2px;
+						left: 0;
+					}
+					
                     #wrapper #content .post .media {
+						margin-top: 1px;
+						padding: 5.5em 0 5.5em 0.2em;
                         text-align: center;
-                        margin-bottom: 10px;
+						background: url(picture-side.png) 0 0 repeat-y;
                     }
+					
+					#wrapper #content .post .media img {
+						width: 498px;
+						border: 1px solid #acacac;
+					}
+					
+					#wrapper #content .post .media-bottom {
+						position: absolute;
+						background: url(picture-bottom.png) 0 0 no-repeat;
+						z-index: 1;
+						width: 646px;
+						height: 82px;
+						bottom: -14px;
+						left: 0;
+					}
                     
                     #wrapper #content .post .quotebg {
                         font-family: georgia, serif;
                         font-size: 150px;
-                        color: {color:Background};
                         opacity: 0.2;
                         filter: alpha(opacity=20);
                         -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
@@ -65,7 +154,6 @@
                     }
                     
                     #wrapper #content .post .quote {
-                        color: {color:Background};
                         font-weight: bold;
                         padding: 20px 20px 5px 20px;
                     }
@@ -103,10 +191,54 @@
                         
                     #wrapper #content .post .copy {
                         color: #6e7173;
-                        padding: 10px;
+                        padding: 2em 2em 4em 2em;
+						width: 508px;
+						
                         font-size: 13px;
                         line-height: 15px;
                     }
+					
+					.bottomspread {
+						position: absolute;
+						font-size: 1em;
+						right: 4.2em;
+						bottom: 0.5em;
+					}
+					
+					.bottomspread .bottomnode {
+						float: right;
+						padding: 0.5em 1em;
+						margin-left: 0.5em;
+						
+						background: #3CD1EE;
+						color: #fff;
+						display: block;
+						
+						text-decoration: none;
+						
+						border-radius: 0.25em;
+						box-shadow: inset 0 1px 1px rgba(0,0,0,0.25), 0 0 1px 1px rgba(255,255,255,0.25);
+					}
+					
+					.datelink a {
+						color: #fff !important;
+					}
+					
+					#wrapper #content .post .newquote {
+						margin: 0 3.05em;
+						padding: 2em;
+						font-size: 2em;
+						color: #fff;
+						font-style: italic;
+						background-color: #3cd1ee;
+						border: 1px solid #acacac;
+					}
+					
+					#wrapper #content .post .newquote a {
+						color: #fff !important;
+						border-bottom: 2px dotted #eee;
+						line-height: 1em;
+					}
                         
                         #wrapper #content .post .copy a {
                             color: #6e7173;
@@ -116,6 +248,7 @@
                         #wrapper #content .post .copy p {
                             margin: 10px 0 0 0;
                             padding: 0;
+							line-height: 1.5em;
                         }
                         
                         #wrapper #content .post .copy pre {
@@ -126,26 +259,34 @@
                             overflow: auto;
                         }
                         
-                        #wrapper #content .post .copy > p:first-child {
-                            margin-top: 0;
-                        }
-                        
                         #wrapper #content .post .copy img {
                             max-width: 100%;
                         }
                     
+					#wrapper #content .post .copy p:first-child {
+						margin-top: 0 !important;
+					}
+					
+					#wrapper #content .post .audiobox {
+						padding: 0.6em 6.2em;
+					}
+					
+					#wrapper #content .post .audionext {
+						padding: 8em 4em;
+						width: 402px;
+						background: 50% 50% repeat;
+						border: 1px solid #acacac;
+					}
+					
                     #wrapper #content .post .audio {
+						padding: 2em 0;
                         background: #eaeaea;
-                        float: left;
-                        padding: 7px;
-                        margin-bottom: 10px;
-                        -moz-border-radius: 4px;
-                        -webkit-border-radius: 4px;
-                        border-radius: 4px;
+						border-radius: 0.333em;
+						box-shadow: 0 1em 1em rgba(0,0,0,0.25);
                     }
                                                         
                         #wrapper #content .post .audio .player {
-                            float: left;
+                            
                         }
                         
                             #wrapper #content .post .audio .player .audio_player embed {
@@ -157,7 +298,6 @@
                             height: 13px;
                             float: left;
                             color: #666;
-                            font-family: {font:Accent};
                             font-size: 11px;
                             text-transform: lowercase;
                         }
@@ -200,10 +340,6 @@
                         #wrapper #content .post .asker_container img {
                             margin: 0 12px -7px 0;
                         }
-                        
-                        #wrapper #content .post .asker_container a.asker {
-                            color: {color:Body};
-                        }
                     
                     #wrapper #content .post .title {
                         color: #494949;
@@ -217,21 +353,19 @@
                     }
                                         
                     #wrapper #content .post .chat {
+						text-align: left;
                         background-color: #fff;
-                        border-left: 5px solid #dedddd;
-                        margin: 10px 10px 0 10px;
+                        margin: 0em 5.2em;
                         font-size: 14px;
+						border: 1px solid #acacac;
                     }
                                         
-                        #wrapper #content .post .chat .lines {
-                            margin-left: 1px;
-                        }
                         
                             #wrapper #content .post .chat .lines .line {
                                 background-color: #eaeaea;
                                 color: #494949;
                                 margin-bottom: 1px;
-                                padding: 3px 5px;
+                                padding: 0.5em;
                             }
                             
                             #wrapper #content .post .chat .lines .line.even {
@@ -245,7 +379,6 @@
                         }
                             
                             #wrapper #content .post .link a {
-                                background-color: {color:Background};
                                 color: #fff;
                                 padding: 5px 7px;
                                 -moz-border-radius: 4px;
@@ -260,15 +393,7 @@
                             }
                     
                     #wrapper #content .post .footer {
-                        background: #eaeaea;
-                        -moz-border-radius: 4px;
-                        -webkit-border-radius: 4px;
-                        border-radius: 4px;
-                        font-family: {font:Accent};
-                        font-size: 11px;
-                        color: #666;
-                        padding: 5px 10px;
-                        margin-top: 10px;
+						white-space: nowrap;
                     }
                         
                         #wrapper #content .post .footer.for_permalink:hover {
@@ -280,7 +405,6 @@
                         #wrapper #content .post .footer .date {
                             width: 67%;
                             float: left;
-                            color: #666;
                         }
                         
                         #wrapper #content .post .footer .notes {
@@ -373,7 +497,6 @@
                         
                             #wrapper #content #navigation a {
                                 background-color: #fff;
-                                color: {color:Background};
                                 padding: 5px 10px;
                                 text-decoration: none;
                                 margin-left: 25px;
@@ -407,7 +530,6 @@
                                 -moz-border-radius: 4px;
                                 -webkit-border-radius: 4px;
                                 border-radius: 4px;
-                                font-family: {font:Accent};
                                 font-size: 11px;
                                 color: #666;
                                 margin-top: 10px;
@@ -458,7 +580,6 @@
                     color: #fff;
                     margin: 0 0 15px 0;
                     text-shadow: 1px 3px 5px rgba(0,0,0, 0.5);
-                    font-family: {font:Body};
                     font-size: 20px;
                 }
                 
@@ -475,268 +596,26 @@
                     }
             
             #wrapper #sidebar {
-                width: 250px;
+				background: url(side.png) 0 0 no-repeat;
+				margin-top: 10.5em;
+                width: 314px;
+				height: 553px;
                 float: right;
-                color: {color:Background};
-                font-family: {font:Accent}
             }
-            
-                #wrapper #sidebar a {
-                    color: {color:Background};
-                }
-                
-                #wrapper #sidebar #top {
-                    background: #fff;
-                    padding: 0 20px;
-                    
-                    -webkit-border-top-left-radius: 10px;
-                    -webkit-border-top-right-radius: 10px;
-                    -moz-border-radius-topleft: 10px;
-                    -moz-border-radius-topright: 10px;
-                    border-top-left-radius: 10px;
-                    border-top-right-radius: 10px;
-                }
-                
-                    #wrapper #sidebar #top #avatar {
-                        width: 146px;
-                        height: 146px;
-                        padding: 8px 0 0 9px;
-                        background: url('http://assets.tumblr.com/themes/redux/avatar-bg.png') top left no-repeat transparent;
-                        position: relative;
-                        top: -24px;
-                        left: -5px;
-                    }
-                    
-                    #wrapper #sidebar #top #pages {
-                        margin-bottom: 15px;
-                        font-size: 12px;
-                    }
-                    
-                        #wrapper #sidebar #top #pages.ask_and_submit {
-                            display: none;
-                            {block:AskEnabled}display: block;{/block:AskEnabled}
-                            {block:SubmissionsEnabled}display: block;{/block:SubmissionsEnabled}
-                        }
-                    
-                        #wrapper #sidebar #top #pages a.page {
-                            display: block;
-                            float: left;
-                            background-color: {color:Background};
-                            color: #fff;
-                            padding: 4px 5px;
-                            margin: 0 5px 5px 0;
-                            -webkit-border-radius: 3px;
-                            -moz-border-radius: 3px;
-                            border-radius: 3px;
-                        }
-                        
-                        #wrapper #sidebar #top #pages a.page:last-child {
-                            margin-right: 0;
-                        }
-                        
-                        #wrapper #sidebar #top #pages a.page:hover {
-                            opacity: 0.9;
-                            filter: alpha(opacity=90);
-                            -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
-                        }
-                        
-                    #wrapper #sidebar #top #description {
-                        font-size: 11px;
-                        position: relative;
-                        top: -18px;
-                    }
-                    
-                        #wrapper #sidebar #top #description a {
-                            color: {color:Background};
-                            text-decoration: underline;
-                        }
-                    
-                    #wrapper #sidebar #top #search {
-                        background: #fff;
-                        border: 1px solid {color:Background};
-                        
-                        -moz-border-radius: 4px;
-                        -webkit-border-radius: 4px;
-                        border-radius: 4px;
-                    }
-                    
-                    #wrapper #sidebar #top #search-scope {
-                        padding-top: 5px;
-                        font-size: 11px;
-                        text-align: center;
-                    }
-                    
-                        #wrapper #sidebar #top #search-scope input,
-                        #wrapper #sidebar #top #search-scope label {
-                            cursor: pointer;
-                        }
-                        
-                        #wrapper #sidebar #top #search form {
-                            margin: 0;
-                        }
-                            
-                            #wrapper #sidebar #top #search form .query {
-                                padding: 5px;
-                                border: none;
-                                background: transparent;
-                                outline: none;
-                                width: 125px;
-                                float: left;
-                                color: {color:Background};
-                            }
-                            
-                            #wrapper #sidebar #top #search form .submit {
-                                background: {color:Background};
-                                color: #fff;
-                                border: none;
-                                padding: 5px 7px;
-                                margin: 3px 3px 2px 0;
-                                float: right;
-                                -moz-border-radius: 3px;
-                                -webkit-border-radius: 3px;
-                                border-radius: 3px;
-                                cursor: pointer;
-                            }
-                            
-                            #wrapper #sidebar #top #search form .submit:hover {
-                                opacity: 0.9;
-                                filter: alpha(opacity=90);
-                                -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
-                            }
-                    
-                    #wrapper #sidebar #top .heading {
-                        color: #fff;
-                        font-family: helvetica, arial, sans-serif;
-                        font-size: 17px;
-                        margin-top: 20px;
-                        padding: 10px;
-                        background-color: {color:Background};
-                        -webkit-border-top-left-radius: 4px;
-                        -webkit-border-top-right-radius: 4px;
-                        -moz-border-radius-topleft: 4px;
-                        -moz-border-radius-topright: 4px;
-                        border-top-left-radius: 4px;
-                        border-top-right-radius: 4px;
-                    }
-                    
-                    #wrapper #sidebar #top a .heading {
-                        color: #fff;
-                        text-decoration: none;
-                    }
-                    
-                    #wrapper #sidebar #top .heading#followontumblr {
-                        background: url('http://assets.tumblr.com/themes/redux/sidebar-follow-on-en_US.png') center left no-repeat {color:Background};
-                        text-indent: -9999px;
-                        -moz-border-radius: 4px;
-                        -webkit-border-radius: 4px;
-                        border-radius: 4px;
-                        
-                        {block:German}
-                            background-image: url('http://assets.tumblr.com/themes/redux/sidebar-follow-on-de_DE.png');
-                        {/block:German}
-                        
-                        {block:Japanese}
-                            background-image: url('http://assets.tumblr.com/themes/redux/sidebar-follow-on-ja_JP.png');
-                        {/block:Japanese}
-                        
-                        {block:Italian}
-                            background-image: url('http://assets.tumblr.com/themes/redux/sidebar-follow-on-it_IT.png');
-                        {/block:Italian}
-                        
-                        {block:French}
-                            background-image: url('http://assets.tumblr.com/themes/redux/sidebar-follow-on-fr_FR.png');
-                        {/block:French}
-                    }
-                    
-                    #wrapper #sidebar #top .heading#followontumblr:hover,
-                    #wrapper #sidebar #top .heading#twitter:hover {
-                        opacity: 0.9;
-                        filter: alpha(opacity=90);
-                        -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
-                    }
-                    
-                    #wrapper #sidebar #top .heading#twitter {
-                        background: url('http://assets.tumblr.com/themes/redux/sidebar-twitter.png') right center no-repeat {color:Background};
-                    }
-                    
-                    #wrapper #sidebar #top .heading#following {
-                        background: url('http://assets.tumblr.com/themes/redux/sidebar-following.png') right center no-repeat {color:Background};
-                    }
-                    
-                    #wrapper #sidebar #top .content {
-                        margin-top: 2px;
-                        padding: 7px 10px;
-                        background: #eaeaea;
-                        color: #666;
-                        font-size: 11px;
-                        overflow: hidden;
-                    }
-                    
-                        #wrapper #sidebar #top a {
-                            text-decoration: none;
-                        }
-                    
-                        #wrapper #sidebar #top #following-avatars.content {
-                            padding: 4px;
-                        }
-                    
-                                #wrapper #sidebar #top #following-avatars.content a img {
-                                    margin: 5px;
-                                }
-                                
-                        #wrapper #sidebar #top #buttons {
-                            padding: 20px 0 0 0;
-                        }
-                        
-                            #wrapper #sidebar #top #buttons .button {
-                                width: 35%;
-                                height: 21px;
-                                float: left;
-                                background: left center no-repeat transparent;
-                                padding: 2px 0 0 30px;
-                                font-size: 14px;
-                            }
-                            
-                                #wrapper #sidebar #top #buttons a {
-                                    color: {color:Background};
-                                    text-decoration: none;
-                                }
-                            
-                                #wrapper #sidebar #top #buttons div {
-                                    padding-bottom: 10px;
-                                }
-                            
-                            #wrapper #sidebar #top #buttons .button#button-rss {
-                                background-image: url('http://assets.tumblr.com/themes/redux/button-rss.png?2');
-                                text-transform: capitalize;
-                            }
-                            
-                            #wrapper #sidebar #top #buttons .button#button-random {
-                                background-image: url('http://assets.tumblr.com/themes/redux/button-random.png?2');
-                            }
-                            
-                            #wrapper #sidebar #top #buttons .button#button-archive {
-                                background-image: url('http://assets.tumblr.com/themes/redux/button-archive.png?2');
-                            }
-                            
-                            #wrapper #sidebar #top #buttons .button#button-mobile {
-                                background-image: url('http://assets.tumblr.com/themes/redux/button-mobile.png?2');
-                            }
-                
-                    #wrapper #sidebar #bottom {
-                        background: url('http://assets.tumblr.com/themes/redux/sidebar-bottom.png') top center no-repeat transparent;
-                        width: 250px;
-                        height: 25px;
-                    }
-                    
-                    #wrapper #sidebar #copyright {
-                        text-align: center;
-                        color: #fff;
-                        font-size: 12px;
-                        margin-bottom: 10px;
-                    }
-                    
-                        #wrapper #sidebar #copyright a {
-                            color: #fff;
-                            margin-left: 15px;
-                        }    
+	
+				#wrapper #sidebar #top #photo {
+					margin: 6.5em 0 0 6.7em;
+					
+					background: url(photo.png);
+					width: 154px;
+					height: 245px;
+				}
+				
+				#wrapper #sidebar #top #description {
+					margin: 7em 4em 8em 4.5em;
+					font-size: 1.333em;
+				}
+				
+				#wrapper #content .post a {
+					color: #fff;
+				}
