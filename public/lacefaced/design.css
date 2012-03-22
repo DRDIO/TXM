@@ -1,5 +1,5 @@
         body {
-            background: #555 url(back.png) 50% 0 repeat;
+            background: #555 url(http://txm.com/lacefaced/back.png) 50% 0 repeat;
             margin: 0;
             padding: 0;
             font: 12px Trebuchet MS, Arial, Verdana, sans-serif;
@@ -30,7 +30,7 @@
             
                 #wrapper #title a {
 				    display: block;
-                    background: url(logo.png) 0 0 no-repeat;
+                    background: url(http://txm.com/lacefaced/logo.png) 0 0 no-repeat;
 					text-indent: -9999em;
 					overflow: hidden;
 					width: 412px;
@@ -58,7 +58,7 @@
 						display: block;
 						text-indent: 9999em;
 						overflow: hidden;
-						background: url(links.png) 0 0 no-repeat;
+						background: url(http://txm.com/lacefaced/links.png) 0 0 no-repeat;
 						height: 69px;
 					}
 					
@@ -104,7 +104,7 @@
 				#wrapper #content .post .copy {
 					width: 544px;
 					margin: 0 3.3em;
-					background: #f2f7f3 url(post-back.png) 0 0 no-repeat;                    
+					background: #f2f7f3 url(http://txm.com/lacefaced/post-back.png) 0 0 no-repeat;                    
 					border-radius: 0 0 0.5em 0.5em;
 					-moz-border-radius: 0 0 0.5em 0.5em;
 					box-shadow: inset 0 0 2px 2px rgba(255,255,255,1), 0 1em 1em rgba(0,0,0,0.25);
@@ -112,7 +112,7 @@
                     
 					#wrapper #content .post .media-top {
 						position: absolute;
-						background: url(picture-top.png) 0 0 no-repeat;
+						background: url(http://txm.com/lacefaced/picture-top.png) 0 0 no-repeat;
 						z-index: 1;
 						width: 646px;
 						height: 83px;
@@ -124,7 +124,7 @@
 						margin-top: 1px;
 						padding: 5.5em 0 5.5em 0.2em;
                         text-align: center;
-						background: url(picture-side.png) 0 0 repeat-y;
+						background: url(http://txm.com/lacefaced/picture-side.png) 0 0 repeat-y;
                     }
 					
 					#wrapper #content .post .media img {
@@ -134,7 +134,7 @@
 					
 					#wrapper #content .post .media-bottom {
 						position: absolute;
-						background: url(picture-bottom.png) 0 0 no-repeat;
+						background: url(http://txm.com/lacefaced/picture-bottom.png) 0 0 no-repeat;
 						z-index: 1;
 						width: 646px;
 						height: 82px;
@@ -596,7 +596,7 @@
                     }
             
             #wrapper #sidebar {
-				background: url(side.png) 0 0 no-repeat;
+				background: url(http://txm.com/lacefaced/side.png) 0 0 no-repeat;
 				margin-top: 10.5em;
                 width: 314px;
 				height: 553px;
@@ -606,7 +606,7 @@
 				#wrapper #sidebar #top #photo {
 					margin: 6.5em 0 0 6.7em;
 					
-					background: url(photo.png);
+					background: url(http://txm.com/lacefaced/photo.png);
 					width: 154px;
 					height: 245px;
 				}
