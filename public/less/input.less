@@ -1,0 +1,47 @@
+input, select, textarea, reset, button, .button {
+    padding:        0.5em;
+    vertical-align: middle;
+
+    .shadow();
+    .border();
+    .corners();
+}
+
+input:focus, select:focus, textarea:focus {
+    .border(@color-info);
+    outline: none;
+}
+
+.button {
+    text-decoration: none;
+}
+
+input[type="submit"], input[type="reset"], button, .button {
+    //.shadowglow(@font-size * @size-verysmall, @font-size * @size-verysmall);
+    .gradient();
+
+    font-size: @size-abovemedium;
+    padding:   (@font-size * @size-lesssmall) (@font-size * @size-medium);
+}
+
+input[type="submit"], button, .button {
+    background-color:   @color-link;
+    color:              @color-fontheader;
+
+    .border(darken(@color-link, 10%));
+}
+
+input[type="reset"] {
+    color: @color-fontfaded;
+    opacity: 0.5;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover, button:hover, .button:hover {
+    .gradient(bottom, 0.1);
+    .pressed(@font-size * @size-verysmall);
+}
+
+input[type="checkbox"] {
+    vertical-align: text-bottom;
+}
+

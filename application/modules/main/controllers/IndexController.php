@@ -12,13 +12,12 @@ class Main_IndexController extends Zend_Controller_Action
 
         // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
         // Generate Daily News Posts
-        $dailyNews = Main_Model_Index::getDailyNews(5, true);
 
-        foreach ($dailyNews as $id => $row) {
-            $dailyNews[$id]['title_link'] = Helper_String::toLink($row['title']);
-            $dailyNews[$id]['title']      = htmlentities($row['title']);
-            $dailyNews[$id]['date']       = Helper_Time::getLongDateTime($row['date']);
-        }
+        $communityPosts = Main_Model_Index::getCommunityPosts(null, 9, true);
+
+        $dailyNews      = Main_Model_Index::getDailyNews(5, true);
+
+
 
         // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
         // Get News Posts for Sidebar
@@ -31,12 +30,13 @@ class Main_IndexController extends Zend_Controller_Action
 
         // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
         // Load View
-        $this->view->mediaShowcase = $mediaShowcase;
-        $this->view->mediaMovies   = $mediaMovies;
-        $this->view->mediaGames    = $mediaGames;
+        $this->view->mediaShowcase  = $mediaShowcase;
+        $this->view->mediaMovies    = $mediaMovies;
+        $this->view->mediaGames     = $mediaGames;
 
-        $this->view->dailyNews    = $dailyNews;
-        $this->view->sidebarNews  = $sidebarNews;
+        $this->view->dailyNews      = $dailyNews;
+        $this->view->communityPosts = $communityPosts;
+        $this->view->sidebarNews    = $sidebarNews;
 
         // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
         // Set Page Title, Javascript, and CSS

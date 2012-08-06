@@ -1,4 +1,4 @@
-<div class="content-span">
+<div class="content-list">
     <div class="content-block">
         <div class="block-header">
             <a href="/community" title="Return to Community Forums">
@@ -23,7 +23,7 @@
             </a>
 
 <?php endif; ?>
-        
+
         </div>
 
 <?php foreach ($this->threads as $thread): ?>
@@ -40,9 +40,12 @@
         </div>
     </div>
     <div class="content-block">
-    
+
 <?php endforeach; ?>
 
-        <?php echo $this->paginator; ?>
     </div>
+</div>
+
+<div class="content-block">
+    <?php echo $this->paginator; ?>
 </div>

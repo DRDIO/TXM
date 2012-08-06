@@ -1,177 +1,235 @@
-<div class="content-block">
-    <div class="block-header">
+<section class="block">
+    <h2>
         Enjoy These Movies &amp; Games!
-    </div>
+    </h2>
 
-    <div id="txm-index-splash">
+    <ul id="txm-index-splash"class="media-large">
 
 <?php foreach ($this->mediaShowcase as $row): ?>
 
-        <a href="/<?php echo $row['type']; ?>/view/<?php echo $row['id']; ?>/<?php echo Helper_String::toLink($row['title']); ?>" title="<?php echo htmlentities($row['title']); ?>"  txm-desc="<?php echo htmlentities($row['synopsis']); ?>">
-            <img src="<?php echo $this->conf->cdn->{substr($row['type'], 0, -1) . 'img'}; ?><?php echo $row['id']; ?>.gif" alt="media-<?php echo $row['id']; ?>" />
-        </a>
+        <li>
+            <a href="/<?php echo $row['type']; ?>/view/<?php echo $row['id']; ?>/<?php echo Helper_String::toLink($row['title']); ?>" title="<?php echo htmlentities($row['title']); ?>"  txm-desc="<?php echo htmlentities($row['synopsis']); ?>">
+                <img src="<?php echo $this->conf->cdn->{substr($row['type'], 0, -1) . 'img'}; ?><?php echo $row['id']; ?>.gif" alt="media-<?php echo $row['id']; ?>" />
+            </a>
+        </li>
 
 <?php endforeach; ?>
 
-    </div>
+    </ul>
 
     <div id="txm-index-synopsis" class="ui-widget-content ui-corner-all ui-state-hover"></div>
-</div>
+</section>
 
-<div class="left" style="width: 644px; margin-right: 1.333em;">
-    <div class="left" style="width: 314px; margin-right: 1.333em;">
-        <div class="content-block">
-            <div class="block-header">
+<div class="row">
+    <div class="span4">
+        <section class="block">
+            <h2>
                 Daily Movies
-            </div>
+            </h2>
 
-            <div class="padding-links index-media">
+            <ul class="media-medium">
 
 <?php foreach ($this->mediaMovies as $row): ?>
 
-                <a href="/<?php echo $row['type']; ?>/view/<?php echo $row['id']; ?>/<?php echo Helper_String::toLink($row['title']); ?>" title="<?php echo Helper_String::sanitize($row['title']); ?>">
-                    <img src="<?php echo $this->conf->cdn->{substr($row['type'], 0, -1) . 'img'}; ?><?php echo $row['id']; ?>.gif" />
-                    <span>
-                        <strong><?php echo Helper_String::sanitize($row['title']); ?></strong><br />
-                        <?php echo Helper_String::sanitize($row['synopsis']); ?>
-                    </span>
-                </a>
+                <li>
+                    <a href="/<?php echo $row['type']; ?>/view/<?php echo $row['id']; ?>/<?php echo Helper_String::toLink($row['title']); ?>" title="<?php echo Helper_String::sanitize($row['title']); ?>">
+                        <img src="<?php echo $this->conf->cdn->{substr($row['type'], 0, -1) . 'img'}; ?><?php echo $row['id']; ?>.gif" alt="icon" />
+                        <span>
+                            <h3>
+                                <?php echo Helper_String::sanitize($row['title']); ?>
+                            </h3>
+
+                            <?php echo Helper_String::sanitize($row['synopsis']); ?>
+                        </span>
+                    </a>
+                </li>
 
 <?php endforeach; ?>
 
-            </div>
-        </div>
+            </ul>
+        </section>
     </div>
 
-    <div class="left" style="width: 314px;">
-        <div class="content-block">
-            <div class="block-header">
+    <div class="span4">
+        <section class="block">
+            <h2>
                 Daily Games
-            </div>
+            </h2>
 
-            <div class="padding-links index-media">
+            <ul class="media-medium">
 
 <?php foreach ($this->mediaGames as $row): ?>
 
-                <a href="/<?php echo $row['type']; ?>/view/<?php echo $row['id']; ?>/<?php echo Helper_String::toLink($row['title']); ?>" title="<?php echo Helper_String::sanitize($row['title']); ?>">
-                    <img src="<?php echo $this->conf->cdn->{substr($row['type'], 0, -1) . 'img'}; ?><?php echo $row['id']; ?>.gif" />
-                    <span>
-                        <strong><?php echo Helper_String::sanitize($row['title']); ?></strong><br />
-                        <?php echo Helper_String::sanitize($row['synopsis']); ?>
-                    </span>
-                </a>
+                <li>
+                    <a href="/<?php echo $row['type']; ?>/view/<?php echo $row['id']; ?>/<?php echo Helper_String::toLink($row['title']); ?>" title="<?php echo Helper_String::sanitize($row['title']); ?>">
+                        <img src="<?php echo $this->conf->cdn->{substr($row['type'], 0, -1) . 'img'}; ?><?php echo $row['id']; ?>.gif" alt="icon" />
+                        <span>
+                            <h3>
+                                <?php echo Helper_String::sanitize($row['title']); ?>
+                            </h3>
+
+                            <?php echo Helper_String::sanitize($row['synopsis']); ?>
+                        </span>
+                    </a>
+                </li>
 
 <?php endforeach; ?>
 
-            </div>
-        </div>
+            </span>
+        </section>
     </div>
-    <div class="clr"></div>
+
+    <div class="span4">
+        <section class="block">
+            <h2>
+                Daily Games
+            </h2>
+
+            <ul>
+
+<?php foreach ($this->communityPosts as $row): ?>
+
+                <li>
+                    <a href="/forums/threads/<?php echo $row['id']; ?>/<?php echo Helper_String::toLink($row['title_link']); ?>" title="<?php echo htmlentities($row['title']); ?>">
+                        <img src="<?php echo $this->conf->cdn->profile; ?><?php echo $row['id_user']; ?>.gif" alt="icon" class="text-img" />
+                        <?php echo $row['title']; ?>
+                    </a>
+                </li>
+
+<?php endforeach; ?>
+
+            </ul>
+
+        </section>
+    </div>
+</div>
+
+<div class="row">
+    <div class="span8 linked">
 
 <?php foreach ($this->dailyNews as $row): ?>
 
-    <div class="content-block">
-        <a class="block-header" href="community/topic/<?php echo $row['id']; ?>/<?php echo $row['title_link']; ?>/" title="Read Article">
-            <?php echo $row['title']; ?>
-        </a>
+        <section class="block">
+            <a class="h2" href="community/topic/<?php echo $row['id']; ?>/<?php echo $row['title_link']; ?>/" title="Read Article">
+                <?php echo $row['title']; ?>
+            </a>
 
-        <div class="padding-content">
-            <?php echo $row['post']; ?>
-        </div>
+            <article>
+                <?php echo $row['post']; ?>
+            </article>
 
-        <div class="padding-content" style="width: auto; overflow: hidden; border-top: 1px solid #ddd;">
-            <div class="left text-disabled">
-                <a href="http://<?php echo $row['link_name']; ?>.<?php echo $this->siteDomain; ?>" title="View Profile">
-                    <img src="<?php echo $this->conf->cdn->profile; ?><?php echo $row['id_user']; ?>.gif" alt="Icon" class="text-img" />
-                </a>
+            <footer>
+                <div class="left text-disabled">
+                    <a href="http://<?php echo $row['link_name']; ?>.<?php echo $this->siteDomain; ?>" title="View Profile">
+                        <img src="<?php echo $this->conf->cdn->profile; ?><?php echo $row['id_user']; ?>.gif" alt="Icon" class="text-img" />
+                    </a>
 
-                <a href="http://<?php echo $row['link_name']; ?>.<?php echo $this->siteDomain; ?>" title="View Profile" ><?php echo $row['nick_name']; ?></a> on <?php echo $row['date']; ?>
-            </div>
+                    <a href="http://<?php echo $row['link_name']; ?>.<?php echo $this->siteDomain; ?>" title="View Profile" ><?php echo $row['nick_name']; ?></a> on <?php echo $row['date']; ?>
+                </div>
 
-            <div style="text-align: right;">
-                <?php echo $row['views']; ?> Views &nbsp;|&nbsp;
-                <a href="community/topic/<?php echo $row['id']; ?>/<?php echo $row['title_link']; ?>/" title="Read <?php echo $row['replies']; ?> Comments">
-                    <?php echo $row['replies']; ?> Comments
-                </a>
-            </div>
-        </div>
-    </div>
-
-<?php endforeach; ?>
-
-</div>
-
-<div class="left" style="width: 300px;">
-
-    <div class="content-block">
-        <div class="block-header">
-            What We Are About
-        </div>
-
-        <div class="padding-content">
-            TXM.com <em>is</em> movies and games, created by people from across the Internet. It is a
-            community of artists, developers, and fans.
-            <br /><br />
-
-            It pushes the next generation of creators into the spotlight of animated
-            <a href="/movies" title="Watch Movies">Movies</a> and
-            <a href="/games" title="Play Games">Games</a> as it strives to have the most diverse
-            <a href="/community" title="Engage Community">Community</a>
-            with the help of loyal and caring fans.
-            <br /><br />
-
-            TXM.com encourages an environment of fair critiques and ample voting
-            to give creators the best feedback for constant improvement.
-<!--            <br /><br />
-
-            <a href="/createaccount" title="Create Account">Create an Account</a> to become engaged!-->
-        </div>
-    </div>
-
-    <div class="content-block">
-        <div class="block-header">
-            More News Posts
-        </div>
-
-        <div class="padding-links">
-
-<?php foreach ($this->sidebarNews as $row): ?>
-
-            <a href="/forums/threads/<?php echo $row['id']; ?>/<?php echo Helper_String::toLink($row['title_link']); ?>" title="<?php echo htmlentities($row['title']); ?>">
-                <img src="<?php echo $this->conf->cdn->profile; ?><?php echo $row['id_user']; ?>.gif" alt="Icon" class="text-img" />
-                <?php echo $row['title']; ?></a>
+                <div style="text-align: right;">
+                    <?php echo $row['views']; ?> Views &nbsp;|&nbsp;
+                    <a href="community/topic/<?php echo $row['id']; ?>/<?php echo $row['title_link']; ?>/" title="Read <?php echo $row['replies']; ?> Comments">
+                        <?php echo $row['replies']; ?> Comments
+                    </a>
+                </div>
+            </footer>
+        </section>
 
 <?php endforeach; ?>
 
-        </div>
     </div>
 
-    <div class="content-block">
-        <div class="block-header">
-            Sponsored Partnerships
+    <div class="span4">
+        <section class="block">
+            <h2>
+                What We Are About
+            </h2>
+
+            <article>
+                TXM.com <em>is</em> movies and games, created by people from across the Internet. It is a
+                community of artists, developers, and fans.
+                <br /><br />
+
+                It pushes the next generation of creators into the spotlight of animated
+                <a href="/movies" title="Watch Movies">Movies</a> and
+                <a href="/games" title="Play Games">Games</a> as it strives to have the most diverse
+                <a href="/community" title="Engage Community">Community</a>
+                with the help of loyal and caring fans.
+                <br /><br />
+
+                TXM.com encourages an environment of fair critiques and ample voting
+                to give creators the best feedback for constant improvement.
+    <!--            <br /><br />
+
+                <a href="/createaccount" title="Create Account">Create an Account</a> to become engaged!-->
+            </article>
+        </section>
+
+        <section class="block">
+            <h2>
+                More News Posts
+            </h2>
+
+            <ul>
+
+    <?php foreach ($this->sidebarNews as $row): ?>
+
+                <li>
+                    <a href="/forums/threads/<?php echo $row['id']; ?>/<?php echo Helper_String::toLink($row['title_link']); ?>" title="<?php echo htmlentities($row['title']); ?>">
+                        <img src="<?php echo $this->conf->cdn->profile; ?><?php echo $row['id_user']; ?>.gif" alt="Icon" class="text-img" />
+                        <?php echo $row['title']; ?>
+                    </a>
+                </li>
+
+    <?php endforeach; ?>
+
+            </ul>
+        </section>
+
+        <section class="block">
+            <h2>
+                Sponsored Partnerships
+            </h2>
+
+            <ul>
+                <li>
+                    <a href="http://www.youtube.com/lorenandtxm" title="Austin Based Film and Animation Studio" target="_blank">Loren Productions (Short Films)</a>
+                </li>
+                <li>
+                    <a href="http://www.diverge.ws/" title="Multiplayer Online Flash Games" target="_blank">Diverge Creations (Online Games)</a>
+                </li>
+                <li>
+                    <a href="http://gamemusic4all.blogspot.com/" title="Promotion of Gaming Music" target="_blank">Game Music 4 All (Music Promoter)</a>
+                </li>
+                <li>
+                    <a href="http://www.shamoozal.com/" title="Episodic Rabbit Cartoon" target="_blank">Shamoozal (Episodic Comedy)</a>
+                </li>
+                <li>
+                    <a href="http://www.razoric.com/" target="_blank">Razoric</a>
+                </li>
+                <li>
+                    <a href="http://www.psychogoldfish.com/" target="_blank">Psycho Goldfish</a>
+                </li>
+                <li>
+                    <a href="http://www.revivaleyes.com/" target="_blank">Revival Eyes</a>
+                </li>
+            </ul>
         </div>
 
-        <div class="padding-links">
-            <a href="http://www.youtube.com/lorenandtxm" title="Austin Based Film and Animation Studio" target="_blank">Loren Productions (Short Films)</a>
-            <a href="http://www.diverge.ws/" title="Multiplayer Online Flash Games" target="_blank">Diverge Creations (Online Games)</a>
-            <a href="http://gamemusic4all.blogspot.com/" title="Promotion of Gaming Music" target="_blank">Game Music 4 All (Music Promoter)</a>
-            <a href="http://www.shamoozal.com/" title="Episodic Rabbit Cartoon" target="_blank">Shamoozal (Episodic Comedy)</a>
-            <a href="http://www.razoric.com/" target="_blank">Razoric</a>
-            <a href="http://www.psychogoldfish.com/" target="_blank">Psycho Goldfish</a>
-            <a href="http://www.revivaleyes.com/" target="_blank">Revival Eyes</a>
-        </div>
-    </div>
+        <section class="block">
+            <h2>
+                Additional Flash Portals
+            </h2>
 
-    <div class="content-block">
-        <div class="block-header">
-            Additional Flash Portals
-        </div>
-
-        <div class="padding-links">
-            <a href="http://www.newgrounds.com/" title="Flash Movies &amp; Games" target="_blank">Newgrounds (Forefather of Flash)</a>
-            <a href="http://www.flashportal.com/" title="Manul Flash Uploads" target="_blank">Flash Portal (Manual Flash Portal)</a>
-        </div>
+            <ul>
+                <li>
+                    <a href="http://www.newgrounds.com/" title="Flash Movies &amp; Games" target="_blank">Newgrounds (Forefather of Flash)</a>
+                </li>
+                <li>
+                    <a href="http://www.flashportal.com/" title="Manul Flash Uploads" target="_blank">Flash Portal (Manual Flash Portal)</a>
+                </li>
+            </ul>
+        </section>
     </div>
 </div>
-
-<div class="clr"></div>

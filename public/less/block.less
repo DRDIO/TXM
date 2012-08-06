@@ -1,0 +1,126 @@
+.block {
+    .corners();
+    .shadow();
+
+    margin-bottom: 1.333em;
+    background: #fff;
+    overflow: hidden;
+
+    h2, a.h2 {
+        .gradient();
+
+        background-color: @color-link;
+        color:            @color-fontheader;
+        display:          block;
+        font-size:        1.167em;
+        line-height:      @font-size;
+        padding:          (@font-size * 1.333em);
+
+        a {
+            color: inherit;
+        }
+    }
+
+    a.h2:hover {
+        background-color: lighten(@color-link, 10%);
+    }
+
+    article {
+        padding: 1.333em;
+    }
+
+    footer {
+        border-top: 1px solid @color-divider;
+        padding: 1.333em;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            border-bottom:  1px solid @color-divider;
+
+            a {
+                display:        block;
+                overflow:       hidden;
+                padding:        1.333em;
+
+                h3 {
+                    margin: 0;
+                    color: @color-link;
+                    font-weight: bold;
+                    font-size: 1.167em;
+                }
+
+                span {
+                    color: @color-font;
+                }
+
+                &:hover {
+                    background-color: lighten(@color-link, 50%);
+                }
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+
+    .media-medium {
+        img {
+            .corners();
+            .shadow();
+
+            height: 4.5em;
+            width:  4.5em;
+
+            float: left;
+            margin-right: 1em;
+        }
+
+        span {
+            display:  block;
+            overflow: hidden;
+            height:   4.5em;
+        }
+    }
+
+    .media-large {
+        padding: 0.666em;
+        height: 20.333em;
+
+        li {
+            float:          left;
+            border-bottom:  none;
+
+            a {
+                padding: 0.666em;
+
+                img {
+                    .shadow();
+
+                    width:  8.5em;
+                    height: 8.5em;
+                }
+            }
+        }
+    }
+}
+
+
+.txm-index-splash-clone {
+    .corners();
+    .shadow(0, 2em, 0.75);
+
+    position: absolute;
+    top:      0;
+    left:     0;
+
+    img {
+        width:  10em;
+        height: 10em;
+        border: 1.5em solid @color-fontheader;
+    }
+}

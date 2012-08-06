@@ -1,0 +1,118 @@
+.shadow(@offset: @size-verysmall, @size: @size-verysmall, @opacity: 0.15) {
+    box-shadow:         0 @offset @size rgba(128, 128, 128, @opacity);
+    -webkit-box-shadow: 0 @offset @size rgba(128, 128, 128, @opacity);
+    -moz-box-shadow:    0 @offset @size rgba(128, 128, 128, @opacity);
+
+    margin-bottom: @offset + @size;
+}
+
+.glow(@offset: @size-verysmall, @size: @size-small, @opacity: 0.25) {
+    box-shadow: inset 0 @offset @size rgba(255, 255, 255, @opacity);
+}
+
+.shadowglow(@offset: @size-verysmall, @size: @size-small, @opacity: 0.25) {
+    box-shadow:         inset 0 @offset @offset rgba(255, 255, 255, (@opacity / 2)), 0 @offset @size rgba(128, 128, 128, @opacity);
+    -webkit-box-shadow: inset 0 @offset @offset rgba(255, 255, 255, (@opacity / 2)), 0 @offset @size rgba(128, 128, 128, @opacity);
+    -moz-box-shadow:    inset 0 @offset @offset rgba(255, 255, 255, (@opacity / 2)), 0 @offset @size rgba(128, 128, 128, @opacity);
+
+    margin-bottom: @offset + @size;
+}
+
+.border(@color: @color-border) {
+    border: 1px solid @color;
+}
+
+.gradient(@direction: bottom, @opacity: 0.1) {
+    background-image:         linear-gradient(@direction, rgba(0,0,0,@opacity), rgba(255,255,255,@opacity));
+    background-image: -webkit-linear-gradient(@direction, rgba(0,0,0,@opacity), rgba(255,255,255,@opacity));
+    background-image:    -moz-linear-gradient(@direction, rgba(0,0,0,@opacity), rgba(255,255,255,@opacity));
+}
+
+.pressed(@size: @size-verysmall) {
+    margin-top: @size;
+    margin-bottom: @size-verysmall;
+    box-shadow: none;
+}
+
+.corners(@radius: @size-verysmall) {
+    border-radius:         @radius;
+    -webkit-border-radius: @radius;
+    -moz-border-radius:    @radius;
+}
+
+.corners-bottom(@radius: @size-verysmall) {
+    border-radius:         0 0 @radius @radius;
+    -webkit-border-radius: 0 0 @radius @radius;
+    -moz-border-radius:    0 0 @radius @radius;
+}
+
+.corners-top(@radius: @size-verysmall) {
+    border-radius:         @radius @radius 0 0;
+    -webkit-border-radius: @radius @radius 0 0;
+    -moz-border-radius:    @radius @radius 0 0;
+}
+
+.boxsizing(@boxmodel) {
+  -webkit-box-sizing: @boxmodel;
+     -moz-box-sizing: @boxmodel;
+      -ms-box-sizing: @boxmodel;
+          box-sizing: @boxmodel;
+}
+
+.clearfix() {
+    *zoom: 1;
+
+    &:before, &:after {
+        display: table;
+        content: '';
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+.inputblock() {
+  display: block;
+  width: 100%;
+  min-height: 28px;        // Make inputs at least the height of their button counterpart
+  .boxsizing(border-box); // Makes inputs behave like true block-level elements
+}
+
+.tab-focus() {
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+.spanX(@index) when(@index > 0) {
+    (~".span@{index}") { .span(@index); }
+    .spanX(@index - 1);
+}
+
+.spanX(0) {
+
+}
+
+.span(@columns) {
+    width:  (@grid-fluidwidth * @columns) + (@grid-fluidgutter * (@columns - 1));
+    *width: (@grid-fluidwidth * @columns) + (@grid-fluidgutter * (@columns - 1)) - (.5 / @grid-rowwidth * 100 * 1%);
+}
+
+.row {
+    .clearfix();
+}
+
+[class*="span"] {
+    .inputblock();
+
+    float:          left;
+    margin-left:    @grid-fluidgutter;
+    *margin-left:   @grid-fluidgutter - (.5 / @grid-rowwidth * 100 * 1%);
+}
+
+[class*="span"]:first-child {
+    margin-left: 0;
+}
+
+.spanX(@grid-colcount);

@@ -15,7 +15,6 @@ class Community_IndexController extends Zend_Controller_Action
         // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
         // Set Page Title, Javascript, and CSS
         $this->view->headTitle('Community');
-        $this->view->headLink()->appendStylesheet('/css/community/index.css');
         $this->view->headScript()->appendFile('/js/forums/index.js');
     }
 }

@@ -1,0 +1,93 @@
+form.form {
+    margin-bottom: 1em;
+
+    ul {
+        padding: 0;
+        list-style: none;
+
+        li {
+            .corners();
+            display: block;
+            width: 100%;
+            margin-top: 0.167em;
+            background-color: @color-error;
+            color: @color-fontheader;
+            opacity: 0.25;
+            padding: 0.333em 0.666em;
+        }
+    }
+
+    section, fieldset {
+        padding: 1em 1.333em 0;
+    }
+
+    >section input {
+        width: 16em;
+    }
+
+    section {
+        overflow: hidden;
+
+        &.errors input {
+            border: 1px solid @color-error;
+        }
+
+        div {
+            float: left;
+        }
+
+        label {
+            display: block;
+            float: left;
+            padding: 0.5em 1em 0 0;
+            width: 25%;
+            max-width: 16em;
+            vertical-align: text-bottom;
+
+            &.required:after {
+                content: ' *';
+                color:   @color-info;
+            }
+        }
+    }
+
+    fieldset {
+        border: none;
+        overflow: hidden;
+
+        legend {
+            display: block;
+            float: left;
+            padding: 0.5em 1em 0.5em 0;
+            width: 25%;
+            max-width: 16em;
+        }
+
+        section {
+            float: left;
+            padding: 0;
+
+            label {
+                display: none;
+            }
+
+            input {
+                margin-right: 0.5em;
+            }
+        }
+    }
+
+    hr {
+        margin: 1em 1.333em 0;
+        border: none;
+        border-top: 1px dotted @color-border;
+    }
+
+    aside {
+        display: inline-block;
+        color: @color-fontfaded;
+        opacity: 0.5;
+        margin: 0 0 0 0.5em;
+        font-style: italic;
+    }
+}

@@ -1,7 +1,7 @@
 <?php
 
 class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
-{    
+{
     protected function _initPage()
     {
         // Bootstrap View and Autloader, which are called in Page
@@ -32,15 +32,25 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         $view->headTitle('TXM.com')->setSeparator(' | ');
 
         // Setup CSS
-        $view->headLink(array('rel' => 'favicon', 'href' => '/favicon.ico'))
-            // ->appendStylesheet($view->siteAssets . 'css/source/jquery-ui-1.8.2.custom.css')
-            ->appendStylesheet($view->siteAssets . 'css/default.css');
+        $view->headLink(array('rel' => 'favicon', 'href' => '/favicon.ico'));
+
+        if (APPLICATION_ENV == 'production') {
+            $view->headLink()->appendStylesheet($view->siteAssets . 'css/less.min.css');
+        } else {
+            $view->headLink(array('rel' => 'stylesheet/less', 'type' => 'text/css', 'href' => '/less/bootstrap.less'));
+        }
 
         // Setup JS
         $view->headScript()
             ->appendFile($view->siteAssets . 'js/source/jquery-1.4.2.min.js')
             ->appendFile($view->siteAssets . 'js/source/jquery-ui-1.8.2.custom.min.js')
             ->appendFile($view->siteAssets . 'js/default.js');
+
+        if (APPLICATION_ENV != 'production') {
+            $view->headScript()
+                ->appendFile($view->siteAssets . 'js/source/less-1.3.0.min.js')
+                ->appendScript("less.env='development';less.watch();localStorage.clear();");
+        }
 
         Zend_Paginator::setDefaultScrollingStyle('Elastic');
         Zend_View_Helper_PaginationControl::setDefaultViewPartial('pagination.phtml');
@@ -50,24 +60,24 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         Zend_Registry::set('siteUser', $siteUser);
         $view->siteUser     = $siteUser;
     }
-    
+
     protected function _initHelperLog()
-    {        
+    {
         $this->bootstrap('log');
         $log = $this->getResource('log');
-        
-        $log->registerErrorHandler();        
+
+        $log->registerErrorHandler();
         Helper_Log::init($log);
     }
-    
+
     protected function _initConf()
-    {   
+    {
         $this->bootstrap('view');
-         
+
         $view     = $this->getResource('view');
-        $options  = $this->getOptions();        
+        $options  = $this->getOptions();
         $conf     = new Zend_Config($options['conf']);
-        
+
         Zend_Registry::set('conf', $conf);
         $view->conf = $conf;
     }

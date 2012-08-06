@@ -40,6 +40,38 @@ class Main_Model_Index extends Main_Model_Abstract
         return $result;
     }
 
+    public static function getCommunityPosts($forumId = null, $limit = 15, $random = false)
+    {
+        $db = self::getDb();
+
+        $select = $db->select()
+            ->from(array('t' => 'forums_topics'), array(
+                't.id',
+                't.id_user',
+                't.title'))
+            ->where('t.deleted = 0')
+            ->limit($limit);
+
+        if ($forumId) {
+            $select->where('t.id_forum = ?', 2);
+        }
+
+        if ($random) {
+            $select->order('RAND()');
+        } else {
+            $select->order('t.date DESC');
+        }
+
+        $result = $db->fetchAssoc($select);
+
+        foreach ($result as $id => $row) {
+            $result[$id]['title_link'] = Helper_String::toLink($row['title']);
+            $result[$id]['title']      = Helper_String::sanitize($row['title']);
+        }
+
+        return $result;
+    }
+
     public static function getDailyNews($limit = 5, $random = false)
     {
         $db = self::getDb();
@@ -59,8 +91,8 @@ class Main_Model_Index extends Main_Model_Abstract
                 't.id_post = p.id', array())
             ->joinInner(array('u' => 'txm_users'),
                 't.id_user = u.id', array())
-            ->where('t.id_forum = ?', 2)
             ->where('t.deleted = 0')
+            ->where('t.id_forum = ?', 2)
             ->limit($limit);
 
         if ($random) {
@@ -69,30 +101,19 @@ class Main_Model_Index extends Main_Model_Abstract
             $select->order('t.date DESC');
         }
 
-        return $db->fetchAssoc($select);
+        $result = $db->fetchAssoc($select);
+
+        foreach ($result as $id => $row) {
+            $result[$id]['title_link'] = Helper_String::toLink($row['title']);
+            $result[$id]['title']      = Helper_String::sanitize($row['title']);
+            $result[$id]['date']       = Helper_Time::getLongDateTime($row['date']);
+        }
+
+        return $result;
     }
 
     public static function getSidebarNews($limit = 10, $random = false)
     {
-        $db = self::getDb();
-
-        $select = $db->select()
-            ->from(array('f' => 'forums'), array(
-                't.id',
-                't.id_user',
-                't.title'))
-            ->joinInner(array('t' => 'forums_topics'),
-                'f.id = t.id_forum', array())
-            ->where('f.id = ?', 2)
-            ->where('t.deleted = 0')
-            ->limit($limit);
-
-        if ($random) {
-            $select->order('RAND()');
-        } else {
-            $select->order('t.date DESC');
-        }
-
-        return $db->fetchAssoc($select);
+        return self::getCommunityPosts(2, $limit, $random);
     }
 }
