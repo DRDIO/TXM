@@ -1,18 +1,22 @@
-<div class="content-block">
-    <div class="block-header">
+<section class="block">
+    <h2>
         Browse the Community Forums!
-    </div>
+    </h2>
 
-    <div class="padding-links blocks">
+    <ul class="media-halflinks">
 
 <?php foreach ($this->forums as $row): ?>
 
-        <a href="/community/forum/<?php echo $row['id']; ?>" title="<?php echo $row['name']; ?>">
-            <strong><?php echo $row['name']; ?></strong><br />
-            <?php echo $row['description']; ?>
-        </a>
+        <li>
+            <a href="/community/forum/<?php echo $row['id']; ?>" title="<?php echo $row['name']; ?>">
+                <h3><?php echo $row['name']; ?></h3>
+                <span>
+                    <?php echo $row['description']; ?>
+                </span>
+            </a>
+        </li>
 
 <?php endforeach; ?>
 
-    </div>
-</div>
+    </ul>
+</section>

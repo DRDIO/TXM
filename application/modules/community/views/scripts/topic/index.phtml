@@ -1,51 +1,71 @@
-<div class="content-list">
-    <div class="content-block">
-        <div class="block-header">
+<div class="linked">
+    <section class="block">
+        <div class="h2">
             <a href="/community" title="Return to Community Forums">
                 Community
             </a>
 
             &nbsp;&raquo;&nbsp;
-            <a href="/community/forum/<?php echo $this->topicInfo['forumId']; ?>" title="Return to <?php echo $this->topicInfo['forumName']; ?> Forum">
-                <?php echo $this->topicInfo['forumName']; ?>
+            <a href="/community/forum/<?php echo $this->topic['forumId']; ?>" title="Return to <?php echo $this->topic['forumName']; ?> Forum">
+                <?php echo $this->topic['forumName']; ?>
             </a>
 
             &nbsp;&raquo;&nbsp;
-            <a href="<?php echo $this->url(array('page' => 1)); ?>" title="<?php echo ($this->topicInfo['page'] != 1 ? 'Return to Page 1 of Topic' : 'Refresh Topic'); ?>">
-                <em><?php echo $this->topicInfo['topicName']; ?></em>
+            <a href="<?php echo $this->url(array('page' => 1)); ?>" title="<?php echo ($this->topic['page'] != 1 ? 'Return to Page 1 of Topic' : 'Refresh Topic'); ?>">
+                <em><?php echo $this->topic['topicName']; ?></em>
             </a>
 
-<?php if ($this->topicInfo['page'] != 1): ?>
+<?php if ($this->topic['page'] != 1): ?>
 
             &nbsp;&raquo;&nbsp;
             <a href="<?php echo $this->url(); ?>" title="Refresh Page">
-                Page <?php echo $this->topicInfo['page']; ?>
+                Page <?php echo $this->topic['page']; ?>
             </a>
 
 <?php endif; ?>
 
         </div>
 
-<?php foreach ($this->threads as $thread): ?>
+<?php foreach ($this->threads as $count => $thread): ?>
 
-        <div class="padding-content" style="border-bottom: 1px solid #ddd;">
+<?php if ($count != 0): ?>
+
+    <section class="block">
+
+<?php endif; ?>
+
+        <article>
             <?php echo $thread['post']; ?>
-        </div>
+        </article>
 
-        <div class="padding-content text-disabled">
-            <a href="http://<?php echo $thread['link_name']; ?>.<?php echo $this->siteDomain; ?>" title="View Profile" style="border-bottom: none; line-height: 0;">
-                <img src="<?php echo $this->conf->cdn->profile; ?><?php echo $thread['id_user']; ?>.gif" alt="Icon" class="text-img" />
-                <?php echo $thread['nick_name']; ?>
-            </a> on <?php echo $thread['date']; ?>
-        </div>
-    </div>
-    <div class="content-block">
+        <footer>
+            <div class="left text-disabled">
+                <a href="http://<?php echo $thread['link_name']; ?>.<?php echo $this->siteDomain; ?>" title="View Profile">
+                    <img src="<?php echo $this->conf->cdn->profile; ?><?php echo $thread['id_user']; ?>.gif" alt="Icon" class="text-img" />
+                </a>
+
+                <a href="http://<?php echo $thread['link_name']; ?>.<?php echo $this->siteDomain; ?>" title="View Profile" ><?php echo $thread['nick_name']; ?></a> on <?php echo $thread['date']; ?>
+            </div>
+
+<?php if ($count == 0): ?>
+
+            <div class="right">
+                <?php echo $this->topic['views']; ?> Views &nbsp;|&nbsp;
+                <a href="community/topic/<?php echo $this->topic['topicId']; ?>/<?php echo Helper_String::toLink($this->topic['topicName']); ?>/" title="Read <?php echo $this->topic['replies']; ?> Comments">
+                    <?php echo $this->topic['replies']; ?> Comments
+                </a>
+            </div>
+
+<?php endif; ?>
+
+        </footer>
+    </section>
 
 <?php endforeach; ?>
 
-    </div>
+    </section>
 </div>
 
-<div class="content-block">
+<section class="block">
     <?php echo $this->paginator; ?>
-</div>
+</section>

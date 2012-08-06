@@ -10,7 +10,7 @@ class Community_TopicController extends Zend_Controller_Action
         $page    = $this->_getParam('page');
         $sortKey = $this->_getParam('sort');
         $dirKey  = $this->_getParam('dir');
-        
+
         $topicInfo = Community_Model_Topic::getTopicInfo($topicId);
 
         // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -22,7 +22,7 @@ class Community_TopicController extends Zend_Controller_Action
         $sorter  = Helper_Sort::factory($this->view, $sortList, $sortKey, $dirKey);
         $sortBy  = $sorter->getSortBy();
         $sortDir = $sorter->getSortDir();
-        
+
         $threadsSelect = Community_Model_Topic::getThreadsSelect($topicId, $sortBy, $sortDir);
 
         // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -34,7 +34,7 @@ class Community_TopicController extends Zend_Controller_Action
         $paginator->setCurrentPageNumber($page);
         $paginator->setPageRange(7);
         $paginator->setView($this->view);
-        
+
         // Get actual page number for general info
         $topicInfo['page'] = $paginator->getCurrentPageNumber();
 
@@ -43,19 +43,19 @@ class Community_TopicController extends Zend_Controller_Action
         $bbcode  = Zend_Markup::factory('Bbcode');
         $filter  = new Zend_Filter_StripTags(array('allowTags' => array('b', 'br', 'p', 'strong', 'em', 'a'), 'allowAttribs' => array('title', 'href')));
         $urlreg  = "/((?:https?:\/\/|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}\/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))/i";
-        
+
         foreach ($threads as $id => $thread) {
             $post = preg_replace('/\[(\/?[a-z]+):.*?]/', '[$1]', $thread['post']);
             $post = $bbcode->render($post);
-            $post = $filter->filter(html_entity_decode($post));            
-            
+            $post = $filter->filter(html_entity_decode($post));
+
             $threads[$id]['post'] = $post;
             $threads[$id]['date'] = Helper_Time::getLongDateTime($thread['date']);
         }
 
         // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
         // Load View
-        $this->view->topicInfo = $topicInfo;
+        $this->view->topic     = $topicInfo;
         $this->view->threads   = $threads;
         $this->view->paginator = $paginator;
         $this->view->sorter    = $sorter;

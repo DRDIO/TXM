@@ -6,13 +6,14 @@
     background: #fff;
     overflow: hidden;
 
-    h2, a.h2 {
+    h2, .h2 {
         .gradient();
 
         background-color: @color-link;
         color:            @color-fontheader;
         display:          block;
         font-size:        1.167em;
+        font-weight:      bold;
         line-height:      @font-size;
         padding:          (@font-size * 1.333em);
 
@@ -30,8 +31,9 @@
     }
 
     footer {
+        overflow:   hidden;
         border-top: 1px solid @color-divider;
-        padding: 1.333em;
+        padding:    1.333em;
     }
 
     ul {
@@ -58,7 +60,7 @@
                 }
 
                 &:hover {
-                    background-color: lighten(@color-link, 50%);
+                    background-color: lighten(@color-link, 40%);
                 }
             }
 
@@ -105,6 +107,16 @@
                     height: 8.5em;
                 }
             }
+        }
+    }
+
+    .media-halflinks {
+        li {
+            .boxsizing(border-box);
+
+            float: left;
+            width: 50%;
+            border-right: 1px solid @color-divider;
         }
     }
 }

@@ -12,6 +12,8 @@ class Community_Model_Topic extends Main_Model_Abstract
                 'forumId'     => 'ft.id_forum',
                 'forumName'   => 'f.name',
                 'topicName'   => 'ft.title',
+                'ft.views',
+                'ft.replies',
                 'threadCount' => 'COUNT(*)'))
             ->joinLeft(array('f' => 'forums'), 'f.id = ft.id_forum', array())
             ->joinLeft(array('ftp' => 'forums_topics_posts'), 'ft.id = ftp.id_topic', array())

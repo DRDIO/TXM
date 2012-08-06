@@ -41,7 +41,6 @@ class Main_IndexController extends Zend_Controller_Action
         // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
         // Set Page Title, Javascript, and CSS
         $this->view->headTitle('Indie Flash Movies & Games');
-        $this->view->headLink()->appendStylesheet($this->view->siteAssets . 'css/index/index.css');
         $this->view->headScript()->appendFile($this->view->siteAssets . 'js/index/index.js');
     }
 }
