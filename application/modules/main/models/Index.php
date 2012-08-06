@@ -2,24 +2,45 @@
 
 class Main_Model_Index extends Main_Model_Abstract
 {
-    public static function getRandomMovies()
+    public static function getRandomMedia($type = 'movies', $limit = 5)
     {
         $db = self::getDb();
-        
+
+        $type = ($type == 'games') ? $type : 'movies';
+
         $select = $db->select()
-            ->from('movies', array(
+            ->from($type, array(
                 'id',
                 'title',
                 'synopsis'))
             ->where('approved = 1')
             ->where('deleted = 0')
             ->order('RAND()')
-            ->limit(36);
+            ->limit($limit);
 
-        return $db->fetchAssoc($select);
+        $result = $db->fetchAssoc($select);
+
+        foreach ($result as $id => $row) {
+            $result[$id]['type'] = $type;
+
+            if (!$row['synopsis']) {
+                $result[$id]['synopsis'] = '...';
+            }
+        }
+
+        return $result;
     }
 
-    public static function getDailyNews()
+    public static function getRandomShowcase()
+    {
+        $result = self::getRandomMedia('movies', 8) + self::getRandomMedia('games', 8);
+
+        shuffle($result);
+
+        return $result;
+    }
+
+    public static function getDailyNews($limit = 5, $random = false)
     {
         $db = self::getDb();
 
@@ -40,13 +61,18 @@ class Main_Model_Index extends Main_Model_Abstract
                 't.id_user = u.id', array())
             ->where('t.id_forum = ?', 2)
             ->where('t.deleted = 0')
-            ->order('t.date DESC')
-            ->limitPage(1, 5);
+            ->limit($limit);
+
+        if ($random) {
+            $select->order('RAND()');
+        } else {
+            $select->order('t.date DESC');
+        }
 
         return $db->fetchAssoc($select);
     }
 
-    public static function getSidebarNews()
+    public static function getSidebarNews($limit = 10, $random = false)
     {
         $db = self::getDb();
 
@@ -59,8 +85,13 @@ class Main_Model_Index extends Main_Model_Abstract
                 'f.id = t.id_forum', array())
             ->where('f.id = ?', 2)
             ->where('t.deleted = 0')
-            ->order('t.date DESC')
-            ->limitPage(5, 10);
+            ->limit($limit);
+
+        if ($random) {
+            $select->order('RAND()');
+        } else {
+            $select->order('t.date DESC');
+        }
 
         return $db->fetchAssoc($select);
     }
