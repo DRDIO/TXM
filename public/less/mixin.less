@@ -1,4 +1,4 @@
-.shadow(@offset: @size-verysmall, @size: @size-verysmall, @opacity: 0.15, @color: 128, @force: 0) {
+.shadow(@offset: (@font-size * @size-2), @size: (@font-size * @size-2), @opacity: 0.15, @color: 128, @force: 0) {
     box-shadow:         0 @offset @size @force rgba(@color, @color, @color, @opacity);
     -webkit-box-shadow: 0 @offset @size @force rgba(@color, @color, @color, @opacity);
     -moz-box-shadow:    0 @offset @size @force rgba(@color, @color, @color, @opacity);
@@ -6,11 +6,11 @@
     margin-bottom: @offset + @size;
 }
 
-.glow(@offset: @size-verysmall, @size: @size-small, @opacity: 0.25) {
+.glow(@offset: (@font-size * @size-2), @size: (@font-size * @size-4), @opacity: 0.25) {
     box-shadow: inset 0 @offset @size rgba(255, 255, 255, @opacity);
 }
 
-.shadowglow(@offset: @size-verysmall, @size: @size-small, @opacity: 0.25) {
+.shadowglow(@offset: (@font-size * @size-2), @size: (@font-size * @size-4), @opacity: 0.25) {
     box-shadow:         inset 0 @offset @offset rgba(255, 255, 255, (@opacity / 2)), 0 @offset @size rgba(128, 128, 128, @opacity);
     -webkit-box-shadow: inset 0 @offset @offset rgba(255, 255, 255, (@opacity / 2)), 0 @offset @size rgba(128, 128, 128, @opacity);
     -moz-box-shadow:    inset 0 @offset @offset rgba(255, 255, 255, (@opacity / 2)), 0 @offset @size rgba(128, 128, 128, @opacity);
@@ -34,25 +34,25 @@
             transform: scale(@size, @size);
 }
 
-.pressed(@size: @size-verysmall) {
+.pressed(@size: (@font-size * @size-2)) {
     margin-top: @size;
-    margin-bottom: @size-verysmall;
+    margin-bottom: @size;
     box-shadow: none;
 }
 
-.corners(@radius: @size-verysmall) {
+.corners(@radius: (@font-size * @size-2)) {
     border-radius:         @radius;
     -webkit-border-radius: @radius;
     -moz-border-radius:    @radius;
 }
 
-.corners-bottom(@radius: @size-verysmall) {
+.corners-bottom(@radius: (@font-size * @size-2)) {
     border-radius:         0 0 @radius @radius;
     -webkit-border-radius: 0 0 @radius @radius;
     -moz-border-radius:    0 0 @radius @radius;
 }
 
-.corners-top(@radius: @size-verysmall) {
+.corners-top(@radius: (@font-size * @size-2)) {
     border-radius:         @radius @radius 0 0;
     -webkit-border-radius: @radius @radius 0 0;
     -moz-border-radius:    @radius @radius 0 0;
@@ -83,12 +83,6 @@
   width: 100%;
   min-height: 28px;        // Make inputs at least the height of their button counterpart
   .boxsizing(border-box); // Makes inputs behave like true block-level elements
-}
-
-.tab-focus() {
-    outline: thin dotted #333;
-    outline: 5px auto -webkit-focus-ring-color;
-    outline-offset: -2px;
 }
 
 .spanX(@index) when(@index > 0) {

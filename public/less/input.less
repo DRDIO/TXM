@@ -1,5 +1,5 @@
 input, select, textarea, reset, button, .button {
-    padding:        0.5em;
+    padding:        (@font-size * @size-6);
     vertical-align: middle;
 
     .shadow();
@@ -9,6 +9,7 @@ input, select, textarea, reset, button, .button {
 
 input:focus, select:focus, textarea:focus {
     .border(@color-info);
+
     outline: none;
 }
 
@@ -17,28 +18,27 @@ input:focus, select:focus, textarea:focus {
 }
 
 input[type="submit"], input[type="reset"], button, .button {
-    //.shadowglow(@font-size * @size-verysmall, @font-size * @size-verysmall);
     .gradient();
 
-    font-size: @size-abovemedium;
-    padding:   (@font-size * @size-lesssmall) (@font-size * @size-medium);
+    font-size: (@font-size * @size-14);
+    padding:   (@font-size * @size-6) (@font-size);
 }
 
 input[type="submit"], button, .button {
-    background-color:   @color-link;
-    color:              @color-fontheader;
-
     .border(darken(@color-link, 10%));
+
+    background-color: @color-link;
+    color:            @color-fontheader;
 }
 
 input[type="reset"] {
-    color: @color-fontfaded;
+    color:   @color-fontfaded;
     opacity: 0.5;
 }
 
 input[type="submit"]:hover, input[type="reset"]:hover, button:hover, .button:hover {
     .gradient(bottom, 0.1);
-    .pressed(@font-size * @size-verysmall);
+    .pressed(@font-size * @size-2);
 }
 
 input[type="checkbox"] {

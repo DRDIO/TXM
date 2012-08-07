@@ -47,18 +47,6 @@ ul, ol {
     background: @color-dark;
 }
 
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-/* Core */
-
-
-ol.list-lettered {
-    list-style-type: upper-alpha;
-}
-
-.grid {
-    overflow: hidden;
-}
-
 .clr {
     clear: both;
     height: 0;
@@ -73,131 +61,42 @@ ol.list-lettered {
     float: right;
 }
 
-.text-img {
-    width: 1.333em;
-    height: 1.333em;
-    margin-right: 0.5em;
-    vertical-align: text-bottom;
-    border-radius: 0.167em;
-    -moz-border-radius: 0.167em;
-    overflow: hidden;
-    display: inline-block;
-}
-
-.padding-content, .padding-links a, .data td, .data th {
-    padding: 1em 1.333em;
-}
-
-.padding-links a {
-    border-bottom: 1px solid @color-divider;
-    display: block;
-    overflow: hidden;
-    width: auto;
-}
-
-    .padding-links a:last-child {
-        border-bottom: none;
-    }
-
-    .data tr:hover td, .padding-links a:hover {
-        background: #e5f2ff;
-    }
-
 .text-center {
     text-align: center;
 }
 
-
-.pagination {
-   padding: 1em 0.667em;
-   text-align: center;
-   width: auto;
-   overflow: hidden;
+.text-disabled {
+    color: @color-border;
 }
 
-    .pagination a.left, .pagination a.right {
-        width: 3em;
-    }
+.pagination {
+    padding: 1em 0.667em;
+    text-align: center;
+    width: auto;
+    overflow: hidden;
 
-    .pagination div {
-        width: 61.333em;
-    }
-
-        .pagination div * {
-            border-right: 0.083em dotted #CCC;
-        }
-
-            .pagination div :last-child {
-                border-right: none;
-            }
-
-    .pagination a, .pagination span {
+    a, span {
         display: inline-block;
         padding: 0 0.667em;
     }
 
-    .pagination-disabled, .text-disabled {
-        color: #ccc;
+    a.left, a.right {
+        width: 3em;
     }
 
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-/* NEW STYLES */
+    div {
+        width: 61.333em;
 
+        * {
+            border-right: 0.083em dotted #CCC;
 
-
-    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-
-
-
-    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-
-    #content {
-        width: auto;
-        overflow: hidden;
-        margin-bottom: 0.333em;
-    }
-
-        .content-list {
-            background: #EBEEF2;
-            border-radius: 0.167em;
-            -moz-border-radius: 0.167em;
-            -webkit-box-shadow: 0 0 4em rgba(255, 255, 255, 0.75) inset;
-
-            .content-block:last-child {
-                margin-bottom: 0;
+            &:last-child {
+                border-right: none;
             }
         }
+    }
 
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-/* Widgets */
-
-.ui-widget-content {
-    border: none;
+    .pagination-disabled {
+        color: @color-divider;
+    }
 }
-
-.ui-widget-header {
-    border: none;
-    border-radius: 2px 2px 0 0;
-}
-
-.ui-dialog {
-    padding: 0;
-    border-radius: 2px;
-    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
-    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
-}
-
-.ui-dialog .ui-dialog-titlebar {
-    background: #2688ed;
-    background: -webkit-gradient(linear, 0 0, 0 100%, from(#2688ed), to(#0073EA));
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    font-size: 1.167em;
-    padding: 0.857em 1.143em;
-    line-height: 1em;
-    color: #fff;
-    font-weight: bold;
-}
-
-

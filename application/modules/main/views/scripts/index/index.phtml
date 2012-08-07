@@ -82,16 +82,16 @@
     <div class="span4">
         <section class="block">
             <h2>
-                Daily Games
+                Community Topics
             </h2>
 
-            <ul>
+            <ul class="media-lineitems">
 
 <?php foreach ($this->communityPosts as $row): ?>
 
                 <li>
                     <a href="/forums/threads/<?php echo $row['id']; ?>/<?php echo Helper_String::toLink($row['title_link']); ?>" title="<?php echo htmlentities($row['title']); ?>">
-                        <img src="<?php echo $this->conf->cdn->profile; ?><?php echo $row['id_user']; ?>.gif" alt="icon" class="text-img" />
+                        <img src="<?php echo $this->conf->cdn->profile; ?><?php echo $row['id_user']; ?>.gif" alt="icon" />
                         <?php echo $row['title']; ?>
                     </a>
                 </li>
@@ -121,7 +121,7 @@
             <footer>
                 <div class="left text-disabled">
                     <a href="http://<?php echo $row['link_name']; ?>.<?php echo $this->siteDomain; ?>" title="View Profile">
-                        <img src="<?php echo $this->conf->cdn->profile; ?><?php echo $row['id_user']; ?>.gif" alt="Icon" class="text-img" />
+                        <img src="<?php echo $this->conf->cdn->profile; ?><?php echo $row['id_user']; ?>.gif" alt="Icon" />
                     </a>
 
                     <a href="http://<?php echo $row['link_name']; ?>.<?php echo $this->siteDomain; ?>" title="View Profile" ><?php echo $row['nick_name']; ?></a> on <?php echo $row['date']; ?>
@@ -171,13 +171,13 @@
                 More News Posts
             </h2>
 
-            <ul>
+            <ul class="media-lineitems">
 
     <?php foreach ($this->sidebarNews as $row): ?>
 
                 <li>
                     <a href="/forums/threads/<?php echo $row['id']; ?>/<?php echo Helper_String::toLink($row['title_link']); ?>" title="<?php echo htmlentities($row['title']); ?>">
-                        <img src="<?php echo $this->conf->cdn->profile; ?><?php echo $row['id_user']; ?>.gif" alt="Icon" class="text-img" />
+                        <img src="<?php echo $this->conf->cdn->profile; ?><?php echo $row['id_user']; ?>.gif" alt="Icon" />
                         <?php echo $row['title']; ?>
                     </a>
                 </li>

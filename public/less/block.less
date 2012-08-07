@@ -24,6 +24,27 @@
         }
     }
 
+    table {
+        width: 100%;
+        margin: 0;
+        border-spacing: 0;
+
+        th {
+            font-size: @font-size * @size-14;
+        }
+
+        th, td {
+            text-align: left;
+            padding: @font-size * @size-16;
+            border: none;
+            border-bottom: 1px solid @color-divider;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+    }
+
     a.h2:hover {
         background-color: lighten(@color-link, 10%);
     }
@@ -143,6 +164,19 @@
             float: left;
             width: 50%;
             border-right: 1px solid @color-divider;
+        }
+    }
+
+    .media-lineitems, footer, table {
+        img {
+            width:              1.333em;
+            height:             1.333em;
+            margin-right:       0.5em;
+            vertical-align:     text-bottom;
+            border-radius:      0.167em;
+            -moz-border-radius: 0.167em;
+            overflow:           hidden;
+            display:            inline-block;
         }
     }
 }

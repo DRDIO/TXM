@@ -26,6 +26,10 @@
             font-style: italic;
             padding-left: 0.3em;
         }
+
+        &:hover {
+            color: lighten(@color-link, 5%);
+        }
     }
 
     .googlead {
@@ -86,13 +90,12 @@
                     line-height:      1em;
 
                     &:hover {
-                        background: #2b95ff;
-                        background: -webkit-gradient(linear, 0 0, 0 100%, from(#2b95ff), to(#2688ed));
+                        background-color: lighten(@color-link, 5%);
                     }
 
                     &:active {
-                        padding-top: 0.85em;
-                        padding-bottom: 0.65em;
+                        padding-top: 0.8m;
+                        padding-bottom: 0.7em;
                     }
                 }
 

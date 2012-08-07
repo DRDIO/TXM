@@ -20,7 +20,7 @@
 
     <footer>
         <a href="http://<?php echo $this->gameInfo['link_name']; ?>.<?php echo $this->siteDomain; ?>" title="View Profile" class="text-disabled">
-            <img src="<?php echo $this->conf->cdn->profile; ?><?php echo $this->gameInfo['id_user']; ?>.gif" alt="Icon" class="text-img" />
+            <img src="<?php echo $this->conf->cdn->profile; ?><?php echo $this->gameInfo['id_user']; ?>.gif" alt="Icon" />
             <?php echo $this->gameInfo['nick_name']; ?>
         </a> on <?php echo $this->gameInfo['date']; ?>
     </footer>
@@ -83,7 +83,7 @@
 
             <footer>
                 <a href="http://<?php echo $review['link_name']; ?>.<?php echo $this->siteDomain; ?>" title="View Profile" class="text-disabled">
-                    <img src="<?php echo $this->conf->cdn->profile; ?><?php echo $review['id_user']; ?>.gif" alt="Icon" class="text-img" />
+                    <img src="<?php echo $this->conf->cdn->profile; ?><?php echo $review['id_user']; ?>.gif" alt="icon" />
                     <?php echo $review['nick_name']; ?>
                 </a> on <?php echo $review['date_comment']; ?>
             </footer>
