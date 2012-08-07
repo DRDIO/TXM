@@ -44,7 +44,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         $view->headScript()
             ->appendFile($view->siteAssets . 'js/source/jquery-1.4.2.min.js')
             ->appendFile($view->siteAssets . 'js/source/jquery-ui-1.8.2.custom.min.js')
-            ->appendFile($view->siteAssets . 'js/default.js');
+            ->appendFile($view->siteAssets . 'js/default.js?' . uniqid());
 
         if (APPLICATION_ENV != 'production') {
             $view->headScript()

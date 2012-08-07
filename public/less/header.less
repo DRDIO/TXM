@@ -1,0 +1,111 @@
+#header {
+    margin: 1.333em 0;
+    position: relative;
+
+    #logo {
+        display:        block;
+        font-family:    'Arial Black';
+        letter-spacing: -0.16em;
+        font-size:      7em;
+        font-weight:    bold;
+        height:         0.7em;
+        line-height:    0.65em;
+        overflow:       hidden;
+        width:          50%;
+        text-shadow:    0 1px 1px rgba(0, 0, 0, 0.1);
+
+        h1 {
+          font-size: 1em;
+          margin:    0;
+        }
+
+        span {
+            font-family: 'Times New Roman';
+            letter-spacing: 0;
+            font-size: 0.6em;
+            font-style: italic;
+            padding-left: 0.3em;
+        }
+    }
+
+    .googlead {
+        .shadow();
+
+        background: #fff;
+        position:   absolute;
+        top:        2em;
+        right:      1em;
+        z-index:    1;
+        height:     5em;
+    }
+
+    #user {
+        position: absolute;
+        top: 0;
+        right: 1em;
+        text-align: right;
+        line-height: 1em;
+
+        a {
+            display: inline-block;
+            padding: 0 1em;
+            border-right: 1px solid #e1e1e1;
+
+            &:last-child {
+                border-right: none;
+                padding-right: 0;
+            }
+        }
+    }
+
+    nav {
+        .gradient();
+        .shadow();
+        .corners();
+
+        background-color: @color-link;
+        overflow:   hidden;
+
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                float: left;
+                border-left:      1px solid rgba(0, 0, 0, 0.1);
+                border-right:     1px solid rgba(255, 255, 255, 0.1);
+
+                a {
+                    color:            #fff;
+                    padding:          0.75em 1.5em;
+                    display:          block;
+                    font-weight:      bold;
+                    font-size:        1.333em;
+                    text-decoration:  none;
+                    text-shadow:      0 1px 1px rgba(0, 0, 0, 0.25);
+                    line-height:      1em;
+
+                    &:hover {
+                        background: #2b95ff;
+                        background: -webkit-gradient(linear, 0 0, 0 100%, from(#2b95ff), to(#2688ed));
+                    }
+
+                    &:active {
+                        padding-top: 0.85em;
+                        padding-bottom: 0.65em;
+                    }
+                }
+
+                &:first-child {
+                    border-left: none;
+                }
+
+                &:last-child {
+                    border-right: none;
+                    width: 0;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+}

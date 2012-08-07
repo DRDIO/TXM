@@ -1,56 +1,70 @@
-<div class="left content-block" style="width: 309px; margin-right: 1.333em;">
-    <div class="block-header">
-        Latest Movies
-    </div>
+<div class="row">
+    <div class="span4">
+        <section class="block">
+            <h2>
+                Latest Movies
+            </h2>
 
-    <div class="padding-links">
+            <ul>
+
 
 <?php foreach ($this->newMovies as $movie): ?>
 
-        <a href="/movies/<?php echo $movie['id']; ?>/<?php echo Helper_String::toLink($movie['title']); ?>/" title="<?php echo $movie['title']; ?>">
-            <img src="<?php echo $this->conf->cdn->movieimg; ?><?php echo $movie['id']; ?>.gif" alt="<?php echo $movie['title']; ?>" class="text-img" />
-            <strong><?php echo $movie['title']; ?></strong>
-        </a>
+                <li>
+                    <a href="/movies/<?php echo $movie['id']; ?>/<?php echo Helper_String::toLink($movie['title']); ?>/" title="<?php echo $movie['title']; ?>">
+                        <img src="<?php echo $this->conf->cdn->movieimg; ?><?php echo $movie['id']; ?>.gif" alt="<?php echo $movie['title']; ?>" class="text-img" />
+                        <strong><?php echo $movie['title']; ?></strong>
+                    </a>
+                </li>
 
 <?php endforeach; ?>
-        
-    </div>
-</div>
 
-<div class="left content-block" style="width: 310px; margin-right: 1.333em;">
-    <div class="block-header">
-        Popular Movies
+            </ul>
+        </section>
     </div>
 
-    <div class="padding-links">
+    <div class="span4">
+        <section class="block">
+            <h2>
+                Popular Movies
+            </h2>
+
+            <ul>
 
 <?php foreach ($this->popularMovies as $movie): ?>
 
-        <a href="/movies/<?php echo $movie['id']; ?>/<?php echo Helper_String::toLink($movie['title']); ?>/" title="<?php echo $movie['title']; ?>">
-            <img src="<?php echo $this->conf->cdn->movieimg; ?><?php echo $movie['id']; ?>.gif" alt="<?php echo $movie['title']; ?>" class="text-img" />
-            <strong><?php echo $movie['title']; ?></strong>
-        </a>
+                <li>
+                    <a href="/movies/<?php echo $movie['id']; ?>/<?php echo Helper_String::toLink($movie['title']); ?>/" title="<?php echo $movie['title']; ?>">
+                        <img src="<?php echo $this->conf->cdn->movieimg; ?><?php echo $movie['id']; ?>.gif" alt="<?php echo $movie['title']; ?>" class="text-img" />
+                        <strong><?php echo $movie['title']; ?></strong>
+                    </a>
+                </li>
 
 <?php endforeach; ?>
 
-    </div>
-</div>
-
-<div class="left content-block" style="width: 309px;">
-    <div class="block-header">
-        Best Movies
+            </ul>
+        </section>
     </div>
 
-    <div class="padding-links">
+    <div class="span4">
+        <section class="block">
+            <h2>
+                Best Movies
+            </h2>
 
+            <ul>
 <?php foreach ($this->bestMovies as $movie): ?>
 
-        <a href="/movies/<?php echo $movie['id']; ?>/<?php echo Helper_String::toLink($movie['title']); ?>/" title="<?php echo $movie['title']; ?>">
-            <img src="<?php echo $this->conf->cdn->movieimg; ?><?php echo $movie['id']; ?>.gif" alt="<?php echo $movie['title']; ?>" class="text-img" />
-            <strong><?php echo $movie['title']; ?></strong>
-        </a>
+                <li>
+                    <a href="/movies/<?php echo $movie['id']; ?>/<?php echo Helper_String::toLink($movie['title']); ?>/" title="<?php echo $movie['title']; ?>">
+                        <img src="<?php echo $this->conf->cdn->movieimg; ?><?php echo $movie['id']; ?>.gif" alt="<?php echo $movie['title']; ?>" class="text-img" />
+                        <strong><?php echo $movie['title']; ?></strong>
+                    </a>
+                </li>
 
 <?php endforeach; ?>
 
+            </ul>
+        </section>
     </div>
 </div>

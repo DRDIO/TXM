@@ -1,5 +1,5 @@
-<div class="content-block">
-    <div class="block-header">
+<section class="block">
+    <div class="h2">
         <a href="/movies" title="Return to Movies">
             Movies
         </a>
@@ -10,7 +10,7 @@
         </a>
     </div>
 
-    <div style="border-bottom: 1px solid #ddd; background: #000;">
+    <div class="media-box">
         <object type="application/x-shockwave-flash" width="<?php echo $this->movieInfo['width']; ?>" height="<?php echo $this->movieInfo['height']; ?>" data="<?php echo $this->conf->cdn->movie; ?><?php echo $this->movieInfo['id']; ?>.swf" style="display: block; margin: auto;">
             <param name="allowAccessScript" value="never" />
             <param name="wmode" value="opaque" />
@@ -18,73 +18,88 @@
         </object>
     </div>
 
-    <div class="padding-content text-disabled">
-        <a href="http://<?php echo $this->movieInfo['link_name']; ?>.<?php echo $this->siteDomain; ?>" title="View Profile">
+    <footer>
+        <a href="http://<?php echo $this->movieInfo['link_name']; ?>.<?php echo $this->siteDomain; ?>" title="View Profile" class="text-disabled">
             <img src="<?php echo $this->conf->cdn->profile; ?><?php echo $this->movieInfo['id_user']; ?>.gif" alt="Icon" class="text-img" />
             <?php echo $this->movieInfo['nick_name']; ?>
         </a> on <?php echo $this->movieInfo['date']; ?>
+    </footer>
+</section>
+
+<div class="row">
+    <div class="span4">
+        <section class="block">
+            <h2>
+                Movie Details
+            </h2>
+
+    <!--        <div id="ratings" class="left" style="margin: 2px 4px;">
+                <img src="/movies/images/ratings/<?php echo $this->movieInfo['rating']; ?>.gif" alt="Rating <?php echo $this->movieInfo['rating']; ?>" /><br />
+                <img src="/movies/images/types/<?php echo $this->movieInfo['type']; ?>.gif" alt="Type <?php echo $this->movieInfo['type']; ?>" />
+            </div>-->
+
+            <table>
+                <tr>
+                    <td valign="top">Score:</td>
+                    <td valign="top"><strong class="score"><?php echo $this->movieInfo['score']; ?></strong> out of 10.00</td></tr>
+                <tr>
+                    <td>Status:</td>
+                    <td><?php echo $this->movieInfo['votes']; ?> Votes &amp; <?php echo $this->movieInfo['reviews']; ?> Reviews</td></tr>
+                <tr>
+                    <td>Views:</td>
+                    <td><?php echo $this->movieInfo['views']; ?> Plays</td></tr>
+                <tr>
+                    <td>Website:</td>
+                    <td><b><a href="<?php echo $this->movieInfo['web_url']; ?>" title="website"><?php echo $this->movieInfo['web_title']; ?></a></b></td></tr>
+
+            </table>
+
+            <article>
+                <?php echo $this->movieInfo['commentary']; ?>
+            </article>
+        </section>
     </div>
-</div>
-        
-<div class="left content-block" style="width: 472px; margin-right: 1.333em;">
-    <div class="block-header">
-        Movie Details
-    </div>
 
-    <div class="padding-content">
-<!--        <div id="ratings" class="left" style="margin: 2px 4px;">
-            <img src="/movies/images/ratings/<?php echo $this->movieInfo['rating']; ?>.gif" alt="Rating <?php echo $this->movieInfo['rating']; ?>" /><br />
-            <img src="/movies/images/types/<?php echo $this->movieInfo['type']; ?>.gif" alt="Type <?php echo $this->movieInfo['type']; ?>" />
-        </div>-->
-
-        <table>
-            <tr>
-                <td>Website:</td>
-                <td><b><a href="<?php echo $this->movieInfo['web_url']; ?>" title="website"><?php echo $this->movieInfo['web_title']; ?></a></b></td></tr>
-            <tr>
-                <td valign="top">Score:</td>
-                <td valign="top"><strong class="score"><?php echo $this->movieInfo['score']; ?></strong> out of 10.00</td></tr>
-            <tr>
-                <td>Size:</td>
-                <td><?php echo $this->movieInfo['size']; ?> MB</td></tr>
-            <tr>
-                <td>Status:</td>
-                <td><?php echo $this->movieInfo['votes']; ?> Votes &amp; <?php echo $this->movieInfo['reviews']; ?> Reviews</td></tr>
-            <tr>
-                <td>Views:</td>
-                <td><?php echo $this->movieInfo['views']; ?> Plays</td></tr>
-        </table><br />
-
-        <?php echo $this->movieInfo['commentary']; ?>
-    </div>
-</div>
-
-<div class="left" style="width: 472px;">
-    <div class="content-span">
-        <div class="content-block">
-            <div class="block-header">
+    <div class="span8 linked">
+        <section class="block">
+            <h2>
                 Community Reviews
-            </div>
-        
-<?php foreach ($this->reviews as $review): ?>
+            </h2>
 
-            <div class="padding-content" style="border-bottom: 1px solid #ddd;">
+<?php if ($this->reviews): ?>
+
+<?php foreach ($this->reviews as $count => $review): ?>
+
+<?php if ($count != 0): ?>
+
+        <section class="block">
+
+<?php endif; ?>
+
+            <article>
                 <?php echo $review['comment']; ?>
                 <?php echo $review['reply']; ?>
-            </div>
+            </article>
 
-            <div class="padding-content text-disabled">
-                <a href="http://<?php echo $review['link_name']; ?>.<?php echo $this->siteDomain; ?>" title="View Profile">
+            <footer>
+                <a href="http://<?php echo $review['link_name']; ?>.<?php echo $this->siteDomain; ?>" title="View Profile" class="text-disabled">
                     <img src="<?php echo $this->conf->cdn->profile; ?><?php echo $review['id_user']; ?>.gif" alt="Icon" class="text-img" />
                     <?php echo $review['nick_name']; ?>
                 </a> on <?php echo $review['date_comment']; ?>
-            </div>
-        </div>
-
-        <div class="content-block">
+            </footer>
+        </section>
 
 <?php endforeach; ?>
 
-        </div>
+<?php else: ?>
+
+        <section class="block">
+            <article>
+                No comments at this time.
+            </article>
+        </section>
+
+<?php endif; ?>
+
     </div>
 </div>
