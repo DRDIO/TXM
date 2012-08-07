@@ -271,7 +271,7 @@ form.form ul li {
 }
 form.form section,
 form.form fieldset {
-  padding: 1em 1.333em 0;
+  padding: 1.333em 1.333em 0;
 }
 form.form > section input {
   width: 16em;
@@ -319,9 +319,9 @@ form.form fieldset section input {
   margin-right: 0.5em;
 }
 form.form hr {
-  margin: 1em 1.333em 0;
+  margin: 1.333em 0 0 0;
   border: none;
-  border-top: 1px dotted #cccccc;
+  border-top: 1px solid #eeeeee;
 }
 form.form aside {
   display: inline-block;
