@@ -34,6 +34,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         // Setup CSS
         $view->headLink(array('rel' => 'favicon', 'href' => '/favicon.ico'));
 
+        // In development, run live CSS Less (compile it for production)
         if (APPLICATION_ENV == 'production') {
             $view->headLink()->appendStylesheet($view->siteAssets . 'css/less.min.css');
         } else {
@@ -42,9 +43,11 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 
         // Setup JS
         $view->headScript()
-            ->appendFile($view->siteAssets . 'js/source/jquery-1.4.2.min.js')
+            ->appendFile('https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
+            ->appendFile('https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js')
             ->appendFile($view->siteAssets . 'js/default.js');
 
+        // In development, run live CSS Less (compile it for production)
         if (APPLICATION_ENV != 'production') {
             $view->headScript()
                 ->appendFile($view->siteAssets . 'js/source/less-1.3.0.min.js')
