@@ -1,5 +1,7 @@
 <?php
 
+header('Content-Type: text/html; charset=UTF-8');
+
 defined('HTTP_HOST')
     || define('HTTP_HOST', $_SERVER['HTTP_HOST']);
 
